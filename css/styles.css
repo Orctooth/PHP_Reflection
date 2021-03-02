@@ -1,0 +1,8 @@
+.header {
+  display: flex;
+}
+.logo .header {
+  flex: auto 1;
+}
+
+/*# sourceMappingURL=styles.css.map */
