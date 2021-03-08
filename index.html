@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="css/styles.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="icon" href="img\netmatters-ltd.webp">
 
     </head>
 
@@ -12,8 +13,24 @@
         <!-- header container that will house the following: logo, support and contact buttons (lg only)
              3cx link (xs only), hamburger menu, search bar  -->
         <header class="header">
-            <a href="netmatters.co.uk"><img class="logo" src="img/f-logo.png" alt="Netmatters logo"></a>
-            <a href="" alt="call via 3cx"><img class="header-icon"></a>
+            <div class="header-top">
+                <a href="netmatters.co.uk"><img class="logo" src="img/f-logo.png" alt="Netmatters logo"></a>
+                <a class="support" href="" alt="call support"><svg  xmlns="http://www.w3.org/2000/svg"  fill="#000" height=30px width=30px viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"/></svg></a>
+                <button class="hamburger hamburger--elastic" type="button">
+                    <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                    </span><br>
+                    <span>MENU</span>
+                </button>
+                
+            </div>
+            <div class="searchbar-mobile">
+                <form action="/action_page.php">
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"><svg xmlns="http://www.w3.org/2000/svg" height=20px width=20px fill="#333645" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg></i></button>
+                    
+                </form>
+            </div>
         </header>
 
         <!-- navbar nested just above the banner. To be completed later  -->
@@ -23,90 +40,149 @@
 
         <!-- banner that will eventually contain slides. for now it hosts a static image under text -->
         <div class="banner">
-            <picture class="banner-image"><img src="img/home-57sJ.jpg" alt="banner image"></picture>
+            <div class="banner-overlay">
+                <div class="banner-text">
+                    <h1>IT SUPPORT</h1>
+                    <p>Fast and cost-effective IT support services for your business</p>
+                    <button class="btn-banner"><a href="https://www.netmatters.co.uk/our-culture">FIND OUT MORE <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" width="1rem" height="1rem" transform="translate(0, 0)" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg></a></button>
+                </div>
+            </div>
 
         </div>
 
         <!-- Cards with links to what appear to be the same resources as those listed in the navbar -->
         <div class="nav-cards">
             
-            <div class="card">
+            <a href="https://www.netmatters.co.uk/bespoke-software">
+            <div class="card-nav card-bespoke">
+                
                 <div class="nav-icon-con bespoke">
-                <span><img src="img/grid.svg" alt="bespoke software" style="width:20%"></span><br>
+                <span>
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#fff" width="40px" height="40px" transform="translate(-10, 15)" viewBox="0 0 32 32">
+                        <title>grid</title>
+                        <path d="M7 12h-6c-0.553 0-1 0.447-1 1v6c0 0.553 0.447 1 1 1h6c0.553 0 1-0.447 1-1v-6c0-0.553-0.447-1-1-1zM6 17c0 0.553-0.447 1-1 1h-2c-0.553 0-1-0.447-1-1v-2c0-0.553 0.447-1 1-1h2c0.553 0 1 0.447 1 1v2zM7 0h-6c-0.553 0-1 0.447-1 1v6c0 0.553 0.447 1 1 1h6c0.553 0 1-1.447 1-2v-5c0-0.553-0.447-1-1-1zM6 5c0 0.553-0.447 1-1 1h-2c-0.553 0-1-0.447-1-1v-2c0-0.553 0.447-1 1-1h2c0.553 0 1 0.447 1 1v2zM7 24h-6c-0.553 0-1 0.447-1 1v6c0 0.553 0.447 1 1 1h6c0.553 0 1-0.447 1-1v-6c0-0.553-0.447-1-1-1zM6 29c0 0.553-0.447 1-1 1h-2c-0.553 0-1-0.447-1-1v-2c0-0.553 0.447-1 1-1h2c0.553 0 1 0.447 1 1v2zM19 12h-6c-0.553 0-1 0.447-1 1v6c0 0.553 0.447 1 1 1h6c0.553 0 1-0.447 1-1v-6c0-0.553-0.447-1-1-1zM18 17c0 0.553-0.447 1-1 1h-2c-0.553 0-1-0.447-1-1v-2c0-0.553 0.447-1 1-1h2c0.553 0 1 0.447 1 1v2zM19 24h-6c-0.553 0-1 0.447-1 1v6c0 0.553 0.447 1 1 1h6c0.553 0 1-0.447 1-1v-6c0-0.553-0.447-1-1-1zM18 29c0 0.553-0.447 1-1 1h-2c-0.553 0-1-0.447-1-1v-2c0-0.553 0.447-1 1-1h2c0.553 0 1 0.447 1 1v2zM31 12h-6c-0.553 0-1 0.447-1 1v6c0 0.553 0.447 1 1 1h6c0.553 0 1-0.447 1-1v-6c0-0.553-0.447-1-1-1zM30 17c0 0.553-0.447 1-1 1h-2c-0.553 0-1-0.447-1-1v-2c0-0.553 0.447-1 1-1h2c0.553 0 1 0.447 1 1v2zM31 0h-6c-0.553 0-1 0.447-1 1v6c0 0.553 0.447 1 1 1h6c0.553 0 1-1.447 1-2v-5c0-0.553-0.447-1-1-1zM30 5c0 0.553-0.447 1-1 1h-2c-0.553 0-1-0.447-1-1v-2c0-0.553 0.447-1 1-1h2c0.553 0 1 0.447 1 1v2zM19 0h-6c-0.553 0-1 0.447-1 1v6c0 0.553 0.447 1 1 1h6c0.553 0 1-1.447 1-2v-5c0-0.553-0.447-1-1-1zM18 5c0 0.553-0.447 1-1 1h-2c-0.553 0-1-0.447-1-1v-2c0-0.553 0.447-1 1-1h2c0.553 0 1 0.447 1 1v2zM31 24h-6c-0.553 0-1 0.447-1 1v6c0 0.553 0.447 1 1 1h6c0.553 0 1-0.447 1-1v-6c0-0.553-0.447-1-1-1zM30 29c0 0.553-0.447 1-1 1h-2c-0.553 0-1-0.447-1-1v-2c0-0.553 0.447-1 1-1h2c0.553 0 1 0.447 1 1v2z"></path>
+                    </svg>
+                </span><br>
                 </div>
                 <h3>Bespoke Software</h3>
                 <hr class="spacer-rule">
                 <span>Tailored software solutions to improve business productivity and online profits.
                      Our expert team will ensure a software solution.</span><br>
-                <button>READ MORE</button>
+                <button class="btn-nav" id="btn-bespoke">READ MORE</button>
+                
             </div>
+            </a>
             
-            <div class="card">
+            <a href="https://www.netmatters.co.uk/it-support">
+            <div class="card-nav card-IT">
                 <div class="nav-icon-con IT">
-                    <span><img src="img/display.svg" alt="IT support" style="width:20%"></span><br>
+                    <span>
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#fff" width="1.75rem" height="1.75rem" transform="translate(-10, 15)" viewBox="0 0 32 32">
+                            <title>display</title>
+                            <path d="M0 2v20h32v-20h-32zM30 20h-28v-16h28v16zM21 24h-10l-1 4-2 2h16l-2-2z"></path>
+                        </svg>
+                    </span><br>
                 </div>
                 
                 <h3>IT Support</h3>
                 <hr class="spacer-rule">
                 <span>Remotely managed IT services that is catered to your businesses needs, adds value and reduces costs.</span><br>
-                <button>READ MORE</button>
+                <button class="btn-nav" id="btn-IT">READ MORE</button>
             </div>
+            </a>
 
-            <div class="card">
+            <a href="https://www.netmatters.co.uk/digital-marketing">
+            <div class="card-nav card-marketing">
                 <div class="nav-icon-con marketing">
-                    <span><img src="img/connection-empty.svg" alt="digital marketing" style="width:20%"></span><br>
+                    <span>
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#fff" width="1.75rem" height="1.75rem" transform="translate(-10, 15)" viewBox="0 0 24 24">
+                            <title>connection-empty</title>
+                            <path d="M14 2v4h-4v4h-4v4h-4v8h19v-20h-7zM7 20h-3v-4h3v4zM11 20h-3v-8h3v8zM15 20h-3v-12h3v12zM19 20h-3v-16h3v16z"></path>
+                        </svg>
+                    </span><br>
                 </div>
                 
                 <h3>Digital Marketing</h3>
                 <hr class="spacer-rule">
                 <span>Driving brand awareness and ROI through creative digital marketing campaigns. We review and monitor online performances.</span><br>
-                <button>READ MORE</button>
+                <button class="btn-nav" id="btn-marketing">READ MORE</button>
             </div>
+            </a>
 
-            <div class="card">
+            <a href="https://www.netmatters.co.uk/telecoms-services">
+            <div class="card-nav card-telecoms">
                 <div class="nav-icon-con telecoms">
-                    <span><img src="img/phone-alt.svg" alt="Telecoms services" style="width:20%"></span><br>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" width="1.75rem" height="1.75rem" transform="translate(-10, 15)" viewBox="0 0 512 512">
+                            <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                            <path d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z"/>
+                        </svg>
+                    </span><br>
                 </div>
                 
                 <h3>Telecoms Services</h3>
                 <hr class="spacer-rule">
                 <span>Stay connected with bespoke telecoms solutions when you need it most.</span><br>
-                <button>READ MORE</button>
+                <button class="btn-nav" id="btn-telecoms">READ MORE</button>
             </div>
+            </a>
 
-            <div class="card">
+            <a href="https://www.netmatters.co.uk/web-design">
+            <div class="card-nav card-web">
                 <div class="nav-icon-con web-design">
-                    <span><img src="img/code.svg" alt="Web design" style="width:20%"></span><br>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" width="1.75rem" height="1.75rem" transform="translate(-10, 15)" viewBox="0 0 640 512">
+                            <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free
+                            (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                            <path d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"/>
+                        </svg>
+                    </span><br>
                 </div>
                
                 <h3>Web Design</h3>
                 <hr class="spacer-rule">
                 <span>User-centric design for businesses looking to make a lasting first impression.</span><br>
-                <button>READ MORE</button>
+                <button class="btn-nav" id="btn-web">READ MORE</button>
             </div>
+            </a>
 
-            <div class="card">
+            <a href="https://www.netmatters.co.uk/cyber-security">
+            <div class="card-nav card-security">
                 <div class="nav-icon-con security">
-                    <span><img src="img/shield-alt.svg" alt="cyber security" style="width:20%"></span><br>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" width="1.75rem" height="1.75rem" transform="translate(-10, 15)" viewBox="0 0 512 512">
+                            <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                            <path d="M466.5 83.7l-192-80a48.15 48.15 0 0 0-36.9 0l-192 80C27.7 91.1 16 108.6 16 128c0 198.5 114.5 335.7 221.5 380.3 11.8 4.9 25.1 4.9 36.9 0C360.1 472.6 496 349.3 496 128c0-19.4-11.7-36.9-29.5-44.3zM256.1 446.3l-.1-381 175.9 73.3c-3.3 151.4-82.1 261.1-175.8 307.7z"/>
+                        </svg>
+                    </span><br>
                 </div>
               
                 <h3>Cyber Security</h3>
                 <hr class="spacer-rule">
                 <span>Ensuring your online business stays secure 24/7, 365 days of the year</span><br>
-                <button>READ MORE</button>
+                <button class="btn-nav" id="btn-security">READ MORE</button>
             </div>
+            </a>
 
-            <div class="card">
+            <a href="https://www.netmatters.co.uk/scs-web-developer-course">
+            <div class="card-nav card-schools">
                 <div class="nav-icon-con schools">
-                    <span><img src="img/school.svg" alt="developer training" style="width:20%"></span><br>
+                    <span>
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#fff" width="1.75rem" height="1.75rem" transform="translate(-10, 15)" viewBox="0 0 24 24">
+                            <title>school</title>
+                            <path d="M12 3l11.016 6v8.016h-2.016v-6.938l-9 4.922-11.016-6zM5.016 13.172l6.984 3.844 6.984-3.844v4.031l-6.984 3.797-6.984-3.797v-4.031z"></path>
+                        </svg>
+    
+                    </span><br>
                 </div>
                
                 <h3>Developer Training</h3>
                 <hr class="spacer-rule">
                 <span>Have you considered a career in web development 
                     but you aren’t sure where to start?</span><br>
-                <button>READ MORE</button>
+                <button class="btn-nav" id="btn-school">READ MORE</button>
             </div>
+            </a>
 
         </div>
 
@@ -117,52 +193,59 @@
                 <p><strong>Netmatters Ltd is a leading web design, IT support and digital marketing agency based in Wymondham, Norfolk.</strong></p>
                 <p>Founded in 2008, we work with businesses from a variety of industries to gain new prospects, nurture existing leads and further grow their sales.</p>
                 <p>We provide cost effective, reliable solutions to a range of services; from bespoke cloud-based management systems, workflow and IT solutions through to creative website development and integrated digital campaigning.</p>
-                <button class="btn-culture">Our culture <img src="img/arrow-right.svg" alt="go to about page"></button>
+                <button class="btn-culture"><a href="https://www.netmatters.co.uk/our-culture">OUR CULTURE <img src="img/arrow-right.svg" alt="go to about page"></a></button>
+                
+                
             </section>
 
         </div>
 
+        <!-- very small section containing just the header for the following articles section -->
+        <div class="news-header-section">
+            <h2 class="latest">LATEST</h2>
+        </div>
+        
         <!-- The second collection of cards appear to be links to links to articles.
         These are all uniform -->
         <div class="news-cards">
-            <h2>LATEST</h2>
-            <hr class="spacer-rule">
+            
             <div class="card">
-                <img src="img/netmatters-is-carbon-qa1v.webp" alt="carbon neutral" style="width:100%">
-                <div class="container">
-                  <h4><b>Netmatters is carbon neutral!</b></h4>
+                <a class="minilink" href="https://www.netmatters.co.uk/news/web-design">NEWS</a>
+                <a href="https://www.netmatters.co.uk/netmatters-is-carbon-neutral"><img src="img/netmatters-is-carbon-qa1v.webp" alt="carbon neutral" style="width:100%"></a>
+                <div class="news-container">
+                  <h4><a class="heading-link">Netmatters is carbon neutral!</a></h4>
                   <p>As a business, Netmatters pledged that 2021 would be the year that we became carbon neutral....</p>
-                  <button>READ MORE</button>
+                  <button class="readmore-btn"><a href="https://www.netmatters.co.uk/netmatters-is-carbon-neutral">READ MORE</a></button>
                   <hr>
-                  <img src="img/netmatters-ltd.webp" alt="netmatters logo">
-                  <p><strong>Posted by Netmatters Ltd</strong></p>
-                  <p>2nd March 2021</p>
+                  <div class="card-foot">
+                    <div class="avatar">
+                        <img class="minilogo" src="img/netmatters-ltd.webp" alt="netmatters logo">
+                    </div>
+                    <div class="post-info">
+                        <h4><strong>Posted by Netmatters Ltd</strong></h4>
+                        <p>2nd March 2021</p>
+                    </div>
+                  </div>
                 </div>
             </div>
 
             <div class="card">
-                <img src="img/faizel-achieves-the-1BKd.webp" alt="Faizel" style="width:100%">
-                <div class="container">
-                  <h4><b>Faizel Achieves the Long Service Award</b></h4>
+                <a class="minilink" href="https://www.netmatters.co.uk/news/web-design">NEWS</a>
+                <a href="https://www.netmatters.co.uk/news/faizel-achieves-the-long-service-award"><img src="img/faizel-achieves-the-1BKd.webp" alt="Faizel" style="width:100%"></a>
+                <div class="news-container">
+                  <h4><a class="heading-link">Faizel Achieves the Long Service Award</a></h4>
                   <p>Netmatters would like to take this time to congratulate our Commercial Head of Web, Faizel De...</p>
-                  <button>READ MORE</button>
+                  <button class="readmore-btn"><a href="https://www.netmatters.co.uk/news/faizel-achieves-the-long-service-award">READ MORE</a></button>
                   <hr>
-                  <img src="img/netmatters-ltd.webp" alt="netmatters logo">
-                  <p><strong>Posted by Netmatters Ltd</strong></p>
-                  <p>26th February 2021</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="img/congratulations-to-adam-VzNf.webp" alt="congratulations-to-adam" style="width:100%">
-                <div class="container">
-                  <h4><b>Congratulations to Adam Lyon for Graduating t...</b></h4>
-                  <p>We are pleased to announce that after spending 9 months on our Scion Coalition Scheme (SCS)...</p>
-                  <button>READ MORE</button>
-                  <hr>
-                  <img src="img/netmatters-ltd.webp" alt="netmatters logo">
-                  <p><strong>Posted by Netmatters Ltd</strong></p>
-                  <p>25th February 2021</p>
+                  <div class="card-foot">
+                    <div class="avatar">
+                        <img class="minilogo" src="img/netmatters-ltd.webp" alt="netmatters logo">
+                    </div>
+                    <div class="post-info">
+                        <h4><strong>Posted by Netmatters Ltd</strong></h4>
+                        <p>26th February 2021</p>
+                    </div>
+                  </div>
                 </div>
             </div>
 
@@ -172,27 +255,54 @@
             "crane" & "northern diver" contain links. All highlight with colour on hover -->
             <!-- This container is hidden at xs display -->
         <div class="companies">
-            <img src="img/busseys.png" alt ="Busseys logo">
-            <img src="img/crane.png" alt ="Crane Garden Buildings logo">
-            <img src="img/beat.png" alt ="Beat charity logo">
-            <img src="img/northern.png" alt ="Northern Diver logo">
+            <!-- busseys -->
+            <div class="con-bus">
+                <div class="tooltiptext tbus">
+                    <h3>Busseys</h3><hr class="spacer-rule"><p>One of the UK's leading Ford dealerships.</p>
+                </div>
+                <img class="busseys" src="img/busseys-bw.jpg" alt ="Busseys logo"><img class="busseys-b" src="img/busseys.png" alt ="Busseys logo">
+            </div>
+            <!-- crane -->
+            <div class="con-crane">
+                <div class="tooltiptext tcrane">
+                    <h3>Crane Garden Builders</h3><hr class="spacer-rule"><p>Leading manufacturer and supplier of high-end garden rooms, summerhouses, workshops and sheds in the UK.</p>
+                </div>
+                <a href ="https://www.netmatters.co.uk/new-website-developed-for-crane-garden-buildings"><img class="crane" src="img/crane-bw.jpg" alt ="Crane Garden Buildings logo"><img class="crane-b" src="img/crane.png" alt ="Crane logo"></a>
+            </div>
+            <!-- beat -->
+            <div class="con-beat">
+                <div class="tooltiptext tbeat">
+                    <h3>Beat</h3><hr class="spacer-rule"><p>The UK's eating disorder charity founded in 1989.</p>
+                </div>
+                <img class="beat" src="img/beat-bw.jpg" alt ="Beat charity logo"><img class="beat-b" src="img/beat.png" alt ="Beat logo">
+            </div>
+            <!-- northern -->
+            <div class="con-north">
+                <div class="tooltiptext tnorth">
+                    <h3>Northern Diver</h3><hr class="spacer-rule"><p>Global water based equipment manufacturers for sport, military, commercial and rescue businesses.</p>
+                </div>
+                <a href="https://www.netmatters.co.uk/new-northern-diver-website-is-live"><img class="northern" src="img/northern-bw.jpg" alt ="Northern Diver logo"><img class="northern-b" src="img/northern.png" alt ="northern logo"></a>
+            </div>
 
         </div>
 
         <!-- form field for signing up to the newsletter.
         this consists of a name and email field, check-box and submit button -->
         <div class="sign-up-form">
+            <h2>Email Newsletter Sign-Up</h2>
             <form class="form" action="index.html" method="post">
-                <label for="name">Your name *</label>
-                <input type="text" id="name" name="user_name"><br>
-                <label for="mail">Your email *</label>
-                <input type="email" id="mail" name="user_email"><br>
+                <label for="name">Your Name <span class="ast">*</span></label><br>
+                <input class="field" type="text" id="name" name="user_name"><br>
+                <label for="mail">Your Email <span class="ast">*</span></label><br>
+                <input class="field" type="email" id="mail" name="user_email"><br>
 
-                <label for="marketing-info" class="container">Please tick this box if you wish to receive marketing information from us. 
-                    Please see our Privacy Policy for more information on how we use your data.</label>
-                <input class ="check" type="checkbox" id="marketing-info" value="opt-in" name="user-opt">
+                <div class="checkbox">
+                    <label for="marketing-info">Please tick this box if you wish to receive marketing information from us. 
+                        Please see our <a href="https://www.netmatters.co.uk/privacy-policy">Privacy Policy</a> for more information on how we use your data.</label>
+                    <input class ="check" type="checkbox" id="marketing-info" value="opt-in" name="user-opt">
+                </div>
                 
-                <button type="submit">Subscribe</button>
+                <button type="submit">SUBSCRIBE</button>
 
             </form>
 
@@ -201,49 +311,65 @@
         <footer>
             <!-- main footer section containing the usual contact details, social media links etc -->
             <div class="footer-main">
-                <h3>CONTACT US</h3><br>
-                <p>11 Penfold Drive<br>
-                    Wymondham<br>
-                    Norfolk<br>
-                    NR18 0WZ<br>
-                </p>
-                <p>
-                    Tel: <a href="https://www.netmatters.co.uk/01603704020">01603 70 40 20</a><br>
-                    Email: <a href="mailto:support@netmatters.com">support@netmatters.com</a><br>
-                </p>
-                <h3>ABOUT NETMATTERS</h3>
-                <ul>
-                    <li><a href="https://www.netmatters.co.uk/news">News</a></li>
-                    <li><a href="https://www.netmatters.co.uk/our-careers">Our Careers</a></li>
-                    <li><a href="https://www.netmatters.co.uk/team">Our Team</a></li>
-                    <li><a href="https://www.netmatters.co.uk/office-tour">Our Office Tour</a></li>
-                    <li><a href="https://www.netmatters.co.uk/privacy-policy">Privacy Policy</a></li>
-                    <li><a href="https://www.netmatters.co.uk/cookie-policy">Cookie Policy</a></li>
-                    <li><a href="https://www.netmatters.co.uk/terms-and-conditions">Terms &amp; Conditions</a></li>
-                    <li><a href="https://www.netmatters.co.uk/terms-and-conditions/uk-domains">UK Domains</a></li>
-                </ul>
-                <h3>WEBSITE</h3>
-                <ul>
-                    <li><a href="https://www.netmatters.co.uk/sitemap.xml">Sitemap</a></li>
-                    <li>&copy; Copyright Netmatters Ltd. 2021</li>
-                    <li>All rights reserved</li>
-                </ul>
-                <h3>SOCIAL MEDIA</h3>
+                <!-- first column -->
+                <div class="contact">
+                    <h4>CONTACT US</h4><br>
+                    <p>11 Penfold Drive<br>
+                        Wymondham<br>
+                        Norfolk<br>
+                        NR18 0WZ<br>
+                    </p>
+                    <p>
+                        Tel: <a href="https://www.netmatters.co.uk/01603704020">01603 70 40 20</a><br>
+                        Email: <a href="mailto:support@netmatters.com">support@netmatters.com</a><br>
+                    </p>
+                </div>
+                <!-- second column -->
+                <div class="about">
+                    <h4>ABOUT NETMATTERS</h4>
+                    <ul>
+                        <li><a href="https://www.netmatters.co.uk/news">News</a></li>
+                        <li><a href="https://www.netmatters.co.uk/our-careers">Our Careers</a></li>
+                        <li><a href="https://www.netmatters.co.uk/team">Our Team</a></li>
+                        <li><a href="https://www.netmatters.co.uk/office-tour">Our Office Tour</a></li>
+                        <li><a href="https://www.netmatters.co.uk/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="https://www.netmatters.co.uk/cookie-policy">Cookie Policy</a></li>
+                        <li><a href="https://www.netmatters.co.uk/terms-and-conditions">Terms &amp; Conditions</a></li>
+                        <li><a href="https://www.netmatters.co.uk/terms-and-conditions/uk-domains">UK Domains</a></li>
+                    </ul>
+                </div>
+                <!-- third column -->
+                <div class="website">
+                    <h4>WEBSITE</h4>
+                    <ul>
+                        <li><a href="https://www.netmatters.co.uk/sitemap.xml">Sitemap</a></li>
+                        <li>&copy; Copyright Netmatters Ltd. 2021</li>
+                        <li>All rights reserved</li>
+                    </ul>
+                </div>
+                <!-- fourth column -->
                 
-                <a href="https://www.facebook.com/netmatters/"><div class="social"> <img src="img/facebook-f.svg" alt="facebook" ></div></a>
-                <a href="https://twitter.com/netmattersltd"><div class="social"><img src="img/twitter.svg" alt="twitter"></div></a>
-                <a href="https://www.linkedin.com/company/netmatters-ltd/"><div class="social"><img src="img/linkedin-in.svg" alt="linked-in"></div></a>
+                <h4>SOCIAL MEDIA</h4>
+                <div class="social-con">
+                    <a href="https://www.facebook.com/netmatters/"><div class="social"> <img src="img/facebook-f.svg" alt="facebook" ></div></a>
+                    <a href="https://twitter.com/netmattersltd"><div class="social"><img src="img/twitter.svg" alt="twitter"></div></a>
+                    <a href="https://www.linkedin.com/company/netmatters-ltd/"><div class="social"><img src="img/linkedin-in.svg" alt="linked-in"></div></a>
+                </div>
+               
             </div>
             <!-- awards and memberships section. This section is hidden at xs display -->
-            <div class="awards">
-                <img src="img/silver-microsoft-partner.jpg" alt="silver microsoft partner member">
-                <img src="img/future-50.jpg" alt="future-50 member">
-                <img src="img/qms.jpg" alt="qms member">
-                <img src="img/norfolk-carbon-charter.jpg" alt="silver norfolk-carbon-charter award">
-                <img src="img/investing-in-future-growth.jpg" alt="business awards future growth investment winner">
-                <img src="img/princess-royal-training.jpg" alt="princess-royal-training award 2020">
-                <img src="img/skills-of-tomorrow.jpg" alt="business awards skills-of-tomorrow winner">
+            <div class="awards-1">
+                <div class="con-badge"><img src="img/PartnerBadge.png" alt="google-partner"></div>
+                <div class="con-ms"><img src="img/silver-microsoft-partner.jpg" alt="silver microsoft partner member"></div>
+                <div class="con-future"><img class="future" src="img/future-50-bw.jpg" alt="future-50 member"><img class="future-b" src="img/future-50.jpg" alt="future-50"></div>
+                <div class="con-qms"><img src="img/qms.jpg" alt="qms member"></div>
+                <div class="con-norfolk"><img class="norfolk" src="img/norfolk-carbon-charter-bw.jpg" alt="silver norfolk-carbon-charter award"><img class="norfolk-b" src="img/norfolk-carbon-charter.jpg" alt="norfolk-carbon-charter"></div>
 
+            </div>
+            <div class="awards-2">
+                <div class="con-investing"><img class="investing" src="img/investing-in-future-growth-bw.jpg" alt="business awards future growth investment winner"><img class="investing-b" src="img/investing-in-future-growth.jpg" alt="future-growth"></div>
+                <div class="con-princess"><img class="princess" src="img/princess-royal-training-bw.jpg" alt="princess-royal-training award 2020"><img class="princess-b" src="img/princess-royal-training.jpg" alt="princess-royal-training"></div>
+                <div class="con-skills"><img class="skills" src="img/skills-of-tomorrow-bw.jpg" alt="business awards skills-of-tomorrow winner"><img class="skills-b" src="img/skills-of-tomorrow.jpg" alt="skills-of-tomorrow"></div>
             </div>
         </footer>
 
