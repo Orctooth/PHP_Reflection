@@ -109,6 +109,7 @@
 .header-top {
   display: flex;
   align-items: baseline;
+  justify-content: space-around;
   padding: 20px 0;
   flex-direction: row;
 }
@@ -176,6 +177,67 @@
   flex-wrap: nowrap;
 }
 
+.xl-btn {
+  display: block;
+  padding: 15px 10px;
+  font-size: 1.125rem;
+  border: none;
+  border-radius: 3px;
+  color: white;
+}
+
+.xl-support {
+  background-color: #4183d7;
+}
+
+.xl-support:hover {
+  background-color: #2a6ec6;
+}
+
+.xl-contact {
+  background-color: #999aa2;
+}
+
+.xl-contact:hover {
+  background-color: #84858f;
+}
+
+@media only screen and (max-width: 768px) {
+  .searchbar-lg {
+    display: none;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .xl-btn {
+    display: none;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .lg-search-input {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .support {
+    display: none;
+  }
+
+  .searchbar-mobile {
+    display: none;
+  }
+
+  .search-btn {
+    background-color: #999aa2;
+    border: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 3px;
+  }
+
+  .search-svg {
+    fill: #fff;
+  }
+}
 .banner {
   height: 85vh;
   min-width: 100%;
@@ -264,6 +326,28 @@
   margin-bottom: -10px;
 }
 
+@media only screen and (min-width: 992px) {
+  .xl-row-nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .bespoke, .IT, .marketing {
+    max-width: 33.3%;
+    float: left;
+    display: block;
+  }
+}
+@media only screen and (min-width: 1260px) {
+  .xxl-row-nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .lg-row-nav {
+    display: inline;
+  }
+}
 .news-header-section {
   padding: 0px 15px;
   margin: 0px 0px;
@@ -290,6 +374,26 @@
   box-shadow: 0px 10px 12px #ddd;
 }
 
+@media only screen and (min-width: 768px) {
+  .news-cards {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .card-news {
+    max-width: 100vh;
+    flex-grow: 1;
+    transform: scale(0.8);
+  }
+}
+.news-img-link {
+  transition: transform 0.4s ease-in-out;
+}
+
+.news-img-link:hover {
+  transform: scale(1.2);
+}
+
 .readmore-btn {
   color: #fff;
   background-color: #926fb1;
@@ -311,13 +415,9 @@
 .card {
   display: block;
   max-width: 100%;
-  height: auto;
+  height: 20vh;
   position: relative;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
-}
-
-.card a {
-  max-width: 90%;
 }
 
 .heading-link {
@@ -362,8 +462,8 @@
 
 .minilink {
   position: absolute;
-  top: 0%;
-  left: 85%;
+  top: 10px;
+  right: 0%;
   background-color: #926fb1;
   color: #fff;
   text-decoration: none;
@@ -401,7 +501,7 @@
   display: flex;
   flex-direction: column;
   flex-basis: block;
-  padding: 30px 50px;
+  padding: 30px 0px;
 }
 
 .sign-up-form h2 {
@@ -413,7 +513,9 @@
   background-color: #333645;
   border-radius: 3px;
   border: none;
+  height: auto;
   margin-bottom: 10px;
+  margin-top: 10px;
   padding: 5px 15px;
 }
 
@@ -439,23 +541,47 @@
   text-decoration: underline;
 }
 
+.form {
+  padding: 50px 30px;
+}
+
+@media only screen and (min-width: 992px) {
+  .form-box {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+  }
+
+  .form-group {
+    padding: 0px 15px;
+    margin-bottom: 15px;
+    width: 50%;
+    height: 47px;
+  }
+}
 .footer-main {
   background-color: #333645;
+  display: flex;
   flex-direction: column;
   padding: 47px 0px;
 }
-
-.contact {
-  flex-grow: 1;
-  align-self: left;
+.footer-main h4 {
+  margin-bottom: 26px;
+}
+.footer-main p {
+  font-size: 0.8125rem;
+  line-height: 1.375rem;
 }
 
 .footer-main p, h4, li, a {
   color: #fff;
   text-decoration: none;
   list-style-type: none;
-  margin-left: 10px;
-  margin-top: 10px;
+}
+
+.contact, .social-con, .about, .website {
+  padding: 0px 15px;
+  margin-bottom: 30px;
 }
 
 .footer-main a:hover {
@@ -465,6 +591,7 @@
 .social {
   box-sizing: border-box;
   border: none;
+  margin-top: 30px;
   width: 100%;
   transition: background-color 0.3s;
   display: block;
@@ -475,15 +602,18 @@
   text-align: center;
   text-decoration: none;
   flex-grow: 1;
-  padding: 15px 50px;
+  padding: 0px 15px;
   flex-wrap: wrap;
   flex-basis: stretch;
+  margin-bottom: 10px;
+  float: left;
 }
 
 .social-con a {
   display: inline-block;
   height: auto;
   width: 40%;
+  margin: 0px 15px;
   justify-content: space-between;
 }
 
@@ -494,13 +624,52 @@
 .companies {
   display: flex;
   flex-basis: inline;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: row;
   max-width: 100%;
   margin: 0px 49px;
   padding: 50px 15px;
 }
 
+.company {
+  flex-grow: 1;
+  transform: scale(0.8);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1260px) {
+  .lg-column {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .footer-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+@media only screen and (min-width: 1260px) {
+  .contact,
+.about,
+.website,
+.social-con {
+    display: block;
+    padding: 0px 30px;
+    width: 25%;
+    margin: 0px 15px;
+    float: left;
+    font-size: 16px;
+  }
+
+  .footer-main {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-around;
+    align-items: stretch;
+  }
+}
 .busseys-b, .crane-b, .beat-b, .northern-b,
 .future-b, .norfolk-b, .investing-b, .princess-b, .skills-b {
   display: none;
@@ -521,12 +690,12 @@
   left: 0%;
   line-height: 30px;
   margin-left: -60px;
-  font-size: 0.1rem;
+  font-size: 1.2rem;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 10%;
-  padding-bottom: 50%;
-  margin-bottom: 50px;
+  padding-bottom: 20%;
+  margin-bottom: 70px;
 }
 
 .tooltiptext::after {
@@ -591,7 +760,7 @@
 .awards-1 {
   display: flex;
   flex-basis: inline;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: row;
 }
 
@@ -668,12 +837,6 @@ ul {
   border: none;
 }
 
-.field {
-  margin-left: 0.5rem;
-  width: 90%;
-  justify-self: center;
-}
-
 .nav-cards a {
   color: #333645;
 }
@@ -703,14 +866,18 @@ ul {
 
 .card-nav span {
   padding: 30px 30px;
+  text-align: center;
 }
 
 .nav-icon-con {
   border-radius: 50%;
-  width: 3em;
-  height: 3em;
-  padding: 1% 1%;
-  margin: 10px 45%;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 17px;
+  display: block;
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 58px;
 }
 
 .btn-nav {
@@ -852,9 +1019,33 @@ ul {
   fill: #926fb1;
 }
 
+@media only screen and (min-width: 768px) {
+  .lg-row-nav {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+
+  .card-security, .card-schools, .card-web, .card-telecoms {
+    width: 50%;
+    display: block;
+    float: left;
+    padding: 0px 15px;
+  }
+}
 * {
   font-family: "Poppins", sans-serif;
-  font-size: 1.25rem;
+  font-size: 1rem;
+}
+* ul, * li, * a, * p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
 }
 
 *:focus {

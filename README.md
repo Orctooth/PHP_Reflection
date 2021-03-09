@@ -23,3 +23,5 @@ Break-points:
 
 at 992px or higher everything will be displayed as first described
 
+1260px or higher is largest breakpoint
+
