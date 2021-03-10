@@ -1,0 +1,173 @@
+//header queries
+@media only screen and (max-width:768px){
+    .searchbar-lg{
+        display: none;
+    }
+
+    
+}
+
+@media only screen and (max-width:992px){
+    .xl-btn{
+        display: none;
+    }
+}
+
+@media only screen and (min-width:992px){
+
+    .lg-search-input{
+        display: none;
+    }
+
+}
+
+@media only screen and (min-width:768px){
+    .support{
+        display: none;
+    }
+
+    .searchbar-mobile{
+        display: none;
+    }
+
+    .search-btn{
+        background-color: #999aa2;
+        border: none;
+        height: 40px;
+        width: 40px;
+        border-radius: 3px;
+    }
+    .search-svg{
+        fill: #fff;
+    }
+}
+
+
+//nav-card queries
+@media only screen and (min-width: 768px){
+    .lg-row-nav{
+        display:flex;
+        justify-content: space-between;
+        flex-grow: 1;
+    }
+
+    .card-security,.card-schools,.card-web,.card-telecoms{
+        width: 50%;
+        display:block;
+        float:left;
+        padding: 0px 15px;
+
+    }
+}
+
+//culture query
+@media only screen and (min-width:992px){
+    .culture-back{
+        background-image: url("../img/netmatters-transp.png");
+    }
+}
+
+//news queries
+@media only screen and (min-width: 992px){
+    .xl-row-nav{
+        display:flex;
+        justify-content: space-between;
+    }
+
+    .bespoke,.IT,.marketing{
+        max-width: 33.3%;
+        float:left;
+        display:block;
+    }
+
+}
+
+@media only screen and (min-width: 1260px){
+    .xxl-row-nav{
+        display:flex;
+        justify-content: space-between;
+    }
+    .lg-row-nav{
+        display: inline;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .news-cards{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .card-news{
+        max-width: 100vh;
+        flex-grow: 1;
+        transform: scale(0.8);
+    }
+
+}
+
+//sign-up query
+@media only screen and (min-width: 992px){
+    .form-box{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 30px;
+    }
+    .form-group{
+        padding: 0px 15px;
+        margin-bottom: 15px;
+        width: 50%;
+        height: 47px;
+    }
+}
+
+//footer queries
+@media (min-width: 768px) {
+    footer {
+        .footer-main {
+            width: 750px;
+            margin: 50px auto 0;
+    
+            .footer-content {
+                flex-direction: row;
+                flex-wrap: wrap;
+    
+                & > div {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 993px) {
+    footer {
+
+        .footer-main {
+            width: 975px;
+
+            .footer-content {
+                & > div {
+                    width: 25%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1278px) {
+    footer {
+
+        .footer-main {
+            width: 1260px;
+        }
+    } 
+}
+
+//company queries
+
+@media only screen and (max-width: 768px){
+    .companies, .awards-1, .awards-2{
+        display:none;
+    }
+}
