@@ -1,24 +1,12 @@
 //header queries
+
+//show large searchbar
 @media only screen and (max-width:768px){
     .searchbar-lg{
-        visibility: hidden;
-    }   
+        display: none;
+    }  
 }
-
-@media only screen and (max-width:992px){
-    .xl-btn{
-        visibility: hidden;
-    }
-}
-
-@media only screen and (min-width:992px){
-
-    .lg-search-input{
-        visibility: hidden;
-    }
-
-}
-
+//hide call button and mobile search
 @media only screen and (min-width:768px){
     .support{
         & > a{
@@ -28,22 +16,150 @@
 
     .searchbar-mobile{
         visibility: hidden;
+    }    
+}
+//show desktop/tablet search bar
+@media only screen and (min-width:768px){
+    .searchbar-lg{
+        position:absolute;
+        top:15px;
+        right: 140px;
+
+        & > form{
+            position:relative;
+            border: 1px solid #999aa2;
+            box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+            & > input{
+                height: 40px;
+                border:none;
+
+                &:focus{
+                    
+                    border-color: #5bc0de;
+                    box-shadow: inset 0 0 8px rgb(91 192 222 / 60%);
+                    
+                }
+            }
+            & > button{
+                position: absolute;
+                background-color: #999aa2;
+                border: inherit;
+                height: 42px;
+                width: 40px;
+                border-radius: 3px;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+                top:-1px;
+                right: -40px;
+                & svg{
+                    fill: #fff;
+                }
+            }
+        }
+        
+    }
+}
+//show support and contact buttons
+@media only screen and (max-width:992px){
+    .big-beautiful-button{
+        display: none;
+    }
+}
+
+//show contact buttons
+@media only screen and (min-width:992px){
+    //hide tablet/desktop searchbar
+    .searchbar-lg{
+        & > form{
+            & > input{
+                display:none;
+            }
+            & > button{
+                border-radius: 3px;
+            }
+        }
+        
     }
 
-    .search-btn{
-        background-color: #999aa2;
-        border: none;
+    .support-xl{
+        display:flex;
+        justify-content: space-around;
+        flex-direction: row;
+        border:none;
+        border-radius:3px;
+        color:#fff;
         height: 40px;
-        width: 40px;
-        border-radius: 3px;
+        width:100px;
+        position: absolute;
+        top:15px;
+        right: 305px;
+        & > svg{
+            display:block;
+        }
     }
-    .search-svg{
-        fill: #fff;
+
+    .contact-xl{
+        display:flex;
+        justify-content: space-around;
+        flex-direction: row;
+        border:none;
+        border-radius:3px;
+        color:#fff;
+        height: 40px;
+        width:100px;
+        position: absolute;
+        top:15px;
+        right: 200px;
+        & > svg{
+            display:block;
+        }
+    }
+
+}
+
+
+
+@media only screen and (min-width:1260px){
+    .searchbar-lg{
+        & > form{
+            & > input{
+                display:block;
+            }
+            & > button{
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+            }
+        }
+        
+    }
+
+    .support-xl{
+        right: 505px;
+    }
+
+    .contact-xl{
+        right: 400px;
     }
 }
 
 
-//nav-card queries
+
+
+//culture query
+@media only screen and (min-width:992px){
+    .culture-back{
+        background-image: url("../img/netmatters-transp.png");
+
+        & > p,h1{
+            width: 50%;
+        }
+    }
+    
+}
+
+//nav queries
+
 @media only screen and (min-width: 768px) and (max-width:1260px){
     .lg-row-nav{
         display:flex;
@@ -60,18 +176,11 @@
     }
 }
 
-//culture query
-@media only screen and (min-width:992px){
-    .culture-back{
-        background-image: url("../img/netmatters-transp.png");
-    }
-}
-
-//nav queries
 @media only screen and (min-width: 992px){
     .xl-row-nav{
         display:flex;
         justify-content: space-between;
+        margin: 45px auto;
     }
 
     .bespoke,.IT,.marketing{
@@ -88,20 +197,29 @@
     .xxl-row-nav{
         display:flex;
         flex-direction: row;
+        justify-content: stretch;
+        margin: 45px auto;
+    }
+
+    .lg-row-nav{
+        display:flex;
         justify-content: space-around;
-        width:1260px;
+        margin: 0 auto;
+        padding: 0 0;
     }
 
     .card-security,.card-schools,.card-web,.card-telecoms{
-        width: 20%;
+        width: 45%;
+        height: 100%;
         display:block;
-        float:center;
+        float:left;
         margin: 0 auto;
         padding: 0 auto;
-
     }
 
 }
+
+//news queries
 
 @media only screen and (min-width: 768px){
     .news-cards{
@@ -121,12 +239,13 @@
     .news-image:hover{
                 
         .img-overlay{
-            opacity: 0.5;
-            background-color: #fff;
+            
+            
 
             & > img {
                 transform: scale(1.2);
-                
+                opacity: 0.5;
+                background-color: #fff;
             }
 
         }             
@@ -188,6 +307,7 @@
 
         .footer-main {
             width: 1260px;
+            padding-top: 30px;
         }
     } 
 }

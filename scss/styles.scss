@@ -5,7 +5,7 @@ $navy-ish: #333645;
 
 //universal declarations
 *{
-    
+    margin:0 0;
     -moz-appearance:none;
     -webkit-appearance:none;
     -o-appearance:none;
@@ -75,59 +75,69 @@ $hamburger-types: (
 @import "elastic";
 
 //header
+.logo{
+    margin: 15px 15px;
+    display:block;
+    width:300px;
+    
+}
+
 .header{
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 20vh;
 
 
     //first line of header including logo,burger,etc.
     & > .header-top{
         display: flex;
         align-items: baseline;
-        justify-content: space-around;
-        padding: 20px 40px;
+        vertical-align: middle;
+        //padding: 20px 40px;
         flex-direction: row;
-        margin: 10px 30px;
-        max-width: 80%;
+        margin: 0px auto;
+        position: relative;
+        float:center;
 
-        & > .logo{
-            max-width: 100%;
-            img{
-                vertical-align: middle;
-            }
-            display:block;
-        }
+       
 
         & > .support, .hamburger{
             margin-left: auto;
+            position: absolute;
+            
+            //margin-right: 30px;
+            & > svg{
+                vertical-align: middle;
+            }
         }
 
         & > .support{
-            padding: 0px;
             display: block;
+            top: 15px;
+            right: 80px;
+            
 
             &:hover{
                 border-bottom: solid black 3px;
             }
         }
 
-        & > .xl-btn{
-            display: block;
-            padding: 15px 10px;
-            font-size: 1.125rem;
-            border: none;
-            border-radius: 3px;
-            color: white;
+        & > .big-beautiful-button{
+            padding: 5px 5px;
         }
         
-        & > .xl-support{
+        
+        & > .support-xl{
             background-color: #4183d7;
             &:hover{
                 background-color: #2a6ec6;
             }
+            & > svg {
+                padding-top: 5px;
+            }
         }
         
-        & > .xl-contact{
+        & > .contact-xl{
             background-color: #999aa2;
             &:hover{
                 background-color: #84858f;
@@ -140,8 +150,10 @@ $hamburger-types: (
             margin-bottom: 10px;
             border-radius: 3px;
             font-size: 1.125rem;
-            transform: scale(0.7);
+            transform: scale(0.6);
             display: block;
+            top: 0px;
+            right: 0px;
 
             &:hover{
                 background-color: #22242e;
@@ -150,11 +162,15 @@ $hamburger-types: (
     }
 
     //searchbar that appears in xs displays
-    & > .searchbar-mobile{
+    & > .searchbar{
         display: flex;
         flex-wrap: nowrap;
+        justify-content: center;
+        margin-right: 45px;
+        
 
         & > form{
+            //box-shadow: inset 0 0 8px rgb(91 192 222 / 60%);
             & > input[type=text]{
                 padding: 6px;
                 margin-top: 8px;
@@ -164,7 +180,7 @@ $hamburger-types: (
                 border-bottom: 2px solid #ddd;
                 border-right: none;
                 background-color: rgba(0,0,0,.1);
-                box-shadow: inset 0 0 8px rgb(91 192 222 / 60%);
+               
                 border-top-left-radius: 2px;
                 border-bottom-left-radius: 2px;
                 color: #555;
@@ -174,6 +190,9 @@ $hamburger-types: (
     
                 &:focus{
                     box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+                    & ~ #mobile-sbtn{
+                        box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+                    }
                 }
             }
             
@@ -182,7 +201,6 @@ $hamburger-types: (
                 margin-top: 8px;
                 margin-right: 16px;
                 background-color: rgba(0,0,0,.1);
-                box-shadow: inset 0 0 8px rgb(91 192 222 / 60%);
                 border-top: 2px solid #ddd;
                 border-right: 2px solid #ddd;
                 border-bottom: 2px solid #ddd;
@@ -191,7 +209,7 @@ $hamburger-types: (
                 border-bottom-right-radius: 2px;
                 font-size: 17px;
                 cursor: pointer;
-                height: 63px;
+                height: 47px;
                 position: absolute;
                 float: right;
     
@@ -235,7 +253,7 @@ $hamburger-types: (
     
             text-align: center;
             display: block;
-            padding: 10% 10%;
+            padding: 20% 10%;
             justify-content: center;
             color:#fff;
             & > a{
@@ -252,6 +270,7 @@ $hamburger-types: (
 
                 &:hover{
                     background-color: #2a6ec6;
+                    cursor: pointer;
                 }
             }
         }
@@ -389,6 +408,7 @@ $hamburger-types: (
     }
     background-color: #67809f;
     color: #fff;
+    cursor: pointer;
 }
 
 .card-IT:hover{
@@ -405,6 +425,7 @@ $hamburger-types: (
     }
     background-color: #4183d7;
     color: #fff;
+    cursor: pointer;
 }
 
 .card-marketing:hover{
@@ -421,6 +442,7 @@ $hamburger-types: (
     }
     background-color: #2ecc71;
     color: #fff;
+    cursor: pointer;
 }
 
 .card-telecoms:hover{
@@ -436,6 +458,7 @@ $hamburger-types: (
     }
     background-color: #d64541;
     color: #fff;
+    cursor: pointer;
 }
 
 .card-web:hover{
@@ -452,6 +475,7 @@ $hamburger-types: (
     }
     background-color: #926fb1;
     color: #fff;
+    cursor: pointer;
 }
 
 .card-security:hover{
@@ -468,6 +492,7 @@ $hamburger-types: (
     }
     background-color: #f62459;
     color: #fff;
+    cursor: pointer;
 }
 
 .card-schools:hover{
@@ -484,6 +509,7 @@ $hamburger-types: (
     }
     background-color: #926fb1;
     color: #fff;
+    cursor: pointer;
 }
 
 //Culture styles
@@ -492,14 +518,13 @@ $hamburger-types: (
     background-repeat: no-repeat;
     background-size: cover;
     padding: 15px 15px;
+    text-align: left;
 
     & > p,h1{
         color:#fff;
-        padding: 15px 0px;
+        padding: 15px 15px;
     }
-    & > a{
-        color: $navy-ish;
-    }
+   
 
     & > .btn-culture{
         color: #333645;
@@ -509,11 +534,23 @@ $hamburger-types: (
         display: block;
         width: auto;
         padding: 5px 15px;
+        padding-right: 40px;
         border: none;
         line-height: 35px;
         margin-top: 15px;
         margin-bottom: 30px;
+        margin-left:15px;
         justify-content: space-between;
+
+        & > a{
+            color: $navy-ish;
+            position: relative;
+            & > img{
+                position: absolute;
+                top: 0px;
+                left: 110%;
+            }
+        }
 
         &:hover{
             background-color:#ebebeb;
@@ -523,13 +560,14 @@ $hamburger-types: (
 
 //Articles styles
 .news-header-section{
-    padding: 10px 15px;
+    padding: 10px 30px;
     margin-bottom: 30px;
     box-shadow: 0px 10px 12px #ddd;
     position: relative;
 
     & > .latest{
         border-bottom: #333645 5px solid;
+        padding-left:0px;
         padding-bottom: 30px;
         display: inline-block;
         margin-bottom: -10px;
@@ -552,6 +590,7 @@ $hamburger-types: (
             text-decoration: none;
             z-index: 1;
             padding: 5px 10px;
+            font-weight: 600;
         
             &:hover{
                 text-decoration: underline;
@@ -631,14 +670,15 @@ $hamburger-types: (
 
                     & > .minilogo{
                         height: auto;
-                        max-width: 47px;
+                        width: 47px;
                         
                     }
                 }
 
                 & > .post-info{
                     padding-left: 20px;
-                    line-height: 10px;
+                    padding-top: 20px;
+                    line-height: 20px;
                     height:auto;
                     font-size: .875rem;
                     & > p{
@@ -811,6 +851,7 @@ $hamburger-types: (
             padding: 5px 15px;
             &:hover{
                 background-color: #121419;
+                cursor: pointer;
             }
         }
         
@@ -824,6 +865,7 @@ $hamburger-types: (
     &:hover{
         color: #121419;
         text-decoration: underline;
+        cursor: pointer;
     }
 }
 
@@ -842,6 +884,7 @@ footer {
         .footer-content {
             display: flex;
             flex-direction: column;
+            padding: 30px 0px;
     
             // targets all divs which are direct children of footer-content
             & > div {
