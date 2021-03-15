@@ -4,7 +4,19 @@
 @media only screen and (max-width:768px){
     .searchbar-lg{
         display: none;
-    }  
+    }
+    
+    .searchbar-mobile{
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+
+            & > button{
+                margin-right: 20px;
+            }
+        }
+    }
+    
 }
 //hide call button and mobile search
 @media only screen and (min-width:768px){
@@ -97,6 +109,7 @@
         & > svg{
             display:block;
         }
+        
     }
 
     .contact-xl{
@@ -121,10 +134,17 @@
 
 
 @media only screen and (min-width:1260px){
+    
+    .header-top{
+        width:1278px;
+        margin: 0 auto;
+    }
+    
     .searchbar-lg{
         & > form{
             & > input{
                 display:block;
+                
             }
             & > button{
                 border-top-left-radius: 0px;
@@ -136,20 +156,56 @@
 
     .support-xl{
         right: 505px;
+        @-moz-document url-prefix(){
+            right:605px;
+        }
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            right:605px;
+        }
+        
     }
 
     .contact-xl{
         right: 400px;
+        @-moz-document url-prefix(){
+            right:500px;
+        }
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            right:500px;
+        }
+    }
+}
+
+//banner query
+@media only screen and (min-width:1260px)
+{
+    .banner-text{
+        display: flex;
+        float: left;
+        align-items:left;
+        & > span{
+            & > p{
+                text-align: left;
+            }
+        }
+        
     }
 }
 
 
-
-
 //culture query
 @media only screen and (min-width:992px){
-    .culture-back{
+    .culture{
         background-image: url("../img/netmatters-transp.png");
+        background-repeat: no-repeat;
+        background-color: $navy-ish;
+        background-position: right;
+    }
+    .culture-back{
+        width: 1278px;
+        margin: 0 auto;
+        background-color: rgba(0,0,0,0);
+        
 
         & > p,h1{
             width: 50%;
@@ -179,21 +235,35 @@
 @media only screen and (min-width: 992px){
     .xl-row-nav{
         display:flex;
+        width: 992px;
         justify-content: space-between;
-        margin: 45px auto;
+        align-content: center;
+        margin: 25px auto;
+        & > .card-nav{
+            @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+                width: 33.3%;
+            }
+        }
     }
 
     .bespoke,.IT,.marketing{
-        max-width: 33.3%;
+        width: 33.3%;
         float:left;
         display:block;
         margin: 0 auto;
         padding: 0 auto;
+        
     }
+    
 
 }
 
 @media only screen and (min-width: 1260px){
+    .nav-cards{
+        width: 1268px;
+        margin: 0 auto;
+    }
+    
     .xxl-row-nav{
         display:flex;
         flex-direction: row;
@@ -201,11 +271,17 @@
         margin: 45px auto;
     }
 
+    .xl-row-nav{
+        margin: 0 auto;
+        width: 1268px;
+    }
+
     .lg-row-nav{
         display:flex;
         justify-content: space-around;
         margin: 0 auto;
         padding: 0 0;
+        
     }
 
     .card-security,.card-schools,.card-web,.card-telecoms{
@@ -215,8 +291,21 @@
         float:left;
         margin: 0 auto;
         padding: 0 auto;
+        
     }
 
+    
+
+
+
+}
+
+@-moz-document url-prefix(){
+    .card-nav{
+        & > p{
+            margin-bottom: 15px;
+        }
+    }
 }
 
 //news queries
@@ -225,17 +314,29 @@
     .news-cards{
         display: flex;
         justify-content: space-between;
+        & > .card:last-of-type{
+            display: none;
+        }
     }
 
     .card-news{
         max-width: 100vh;
         flex-grow: 1;
         transform: scale(0.8);
+        
     }
 
 }
 
 @media only screen and (min-width: 1260px){
+    .news-cards{
+        width: 1278px;
+        margin: 0 auto;
+        & > .card:last-of-type{
+            display: block;
+        }
+    }
+    
     .news-image:hover{
                 
         .img-overlay{
@@ -266,8 +367,18 @@
         width: 50%;
         height: 47px;
     }
+    .sign-up-form{
+        width: 1010px;
+        margin: 0 auto;
+    }
 }
 
+@media only screen and (min-width: 1260px){
+    .sign-up-form{
+        width: 1278px;
+        margin: 0 auto;
+    }
+}
 //footer queries
 @media (min-width: 768px) {
     footer {
@@ -291,9 +402,11 @@
     footer {
 
         .footer-main {
-            width: 975px;
+            width: 1010px;
+            margin: 0 auto;
 
             .footer-content {
+                
                 & > div {
                     width: 25%;
                 }
@@ -302,14 +415,41 @@
     }
 }
 
-@media (min-width: 1278px) {
+@media (min-width: 1260px) {
     footer {
 
         .footer-main {
-            width: 1260px;
+            
             padding-top: 30px;
+
+            & > .footer-content{
+                width: 1278px;
+                margin: 0 auto;
+                margin-left: -100px;
+            }
+            
         }
     } 
+}
+
+@-moz-document url-prefix(){
+    .button-container{
+        & > a {
+            & > img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+}
+
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .button-container{
+        & > a{
+            margin-bottom: 15px;
+        }
+    }
 }
 
 //company queries
@@ -317,5 +457,17 @@
 @media only screen and (max-width: 768px){
     .companies, .awards-1, .awards-2, .awards{
         display:none;
+    }
+}
+
+@media only screen and (min-width: 1260px){
+    .companies{
+        width: 1278px;
+        margin: 0 auto;
+    }
+
+    .awards-1, .awards-2{
+        width: 1278px;
+        margin: 0 auto;
     }
 }

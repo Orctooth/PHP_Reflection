@@ -2,17 +2,17 @@
 Mockup of the Netmatters landing page created in response to a task.
 
 --TODO--UPDATED 10/3/21
-Structure scss consistently
+Create 3rd card so that at max display there are 3 news articles displayed in a row.
 
-Runover of mobile layout and styling
+Mobile: stacked vertically.
 
-Consider display on IE and FF - keep checking
 
-Consider pushing big sections in the scss into partials
 
 Break-points: 
 
-768px or less mobile
+425px or less mobile
+
+768px or less tablet
 
 768px or higher med
 

@@ -85,7 +85,7 @@ $hamburger-types: (
 .header{
     padding-top: 5px;
     padding-bottom: 5px;
-    height: 20vh;
+    height: 30vh;
 
 
     //first line of header including logo,burger,etc.
@@ -167,6 +167,7 @@ $hamburger-types: (
         flex-wrap: nowrap;
         justify-content: center;
         margin-right: 45px;
+        
         
 
         & > form{
@@ -283,11 +284,13 @@ $hamburger-types: (
 
 
 .nav-cards{
+    
+
+
+    
     & > span{
-        color: #333645;
-        &:hover{
-            color: #fff;
-        }
+        //color: #333645;
+        
     }
     & > button:hover{
         cursor:pointer;
@@ -307,6 +310,16 @@ $hamburger-types: (
             border: 1px solid #ccc;
             border-radius: 3px;
             margin: 1.5rem 1.5rem;
+            & > h3, p{
+                color: #333645;
+                font-weight: 400;
+            }
+            &:hover{
+                //color: #fff;
+                & > p, h3{
+                    color: #fff;
+                }
+            }
             
             & > .nav-icon-con{
                 border-radius: 50%;
@@ -574,125 +587,127 @@ $hamburger-types: (
     }
 }
 
-.news-cards{
-    padding: 50px 0px;
+.news-section{
     box-shadow: 0px 10px 12px #ddd;
-
-    & > .card-news{
-        margin: 40px 30px;
-
-        & > .minilink{
-            position: absolute;
-            top: 10px;
-            right: 0%;
-            background-color: #926fb1;
-            color: #fff;
-            text-decoration: none;
-            z-index: 1;
-            padding: 5px 10px;
-            font-weight: 600;
-        
-            &:hover{
-                text-decoration: underline;
-                cursor: pointer;
-            }
-        }
-
-        
-
-        & > .news-image{
-            width: 100%;
-            border-radius: 3px;
-            border:none;
-            overflow: hidden;
-
-            & > .img-overlay{
-                opacity: 1;
-                transition: opacity 0.3s;
-
-                & > img{
-                    width: 100%;
-                    transition: transform .3s;
-                }
-            }
-        }
-
-        & > .news-container{
-            padding: 30px 30px;
-            z-index: 1;
-
-            & > hr{
-                color: #ddd;
-            }
-            
-            & > p{
-                color: #666;
-                margin-bottom: 20px;
-            }
-            & > h4{
-                color: #000;
-            }
-
-            & > .heading-link{
-                color: #926fb1;
+    .news-cards{
+        padding: 50px 0px;
+        & > .card-news{
+            margin: 40px 30px;
+    
+            & > .minilink{
+                position: absolute;
+                top: 10px;
+                right: 0%;
+                background-color: #926fb1;
+                color: #fff;
                 text-decoration: none;
+                z-index: 1;
+                padding: 5px 10px;
+                font-weight: 600;
+            
                 &:hover{
                     text-decoration: underline;
                     cursor: pointer;
                 }
             }
-
-            & > .readmore-btn{
-                color: #fff;
-                background-color: #926fb1;
-                border-radius: 3px;
-                border: none;
-                margin-bottom: 10px;
-                padding: 10px 15px;
+    
             
-                &:hover{
-                    background-color: #7e57a0;
-                    cursor: pointer;
+    
+            & > .news-image{
+                width: 100%;
+                border-radius: 3px;
+                border:none;
+                overflow: hidden;
+    
+                & > .img-overlay{
+                    opacity: 1;
+                    transition: opacity 0.3s;
+    
+                    & > img{
+                        width: 100%;
+                        transition: transform .3s;
+                    }
                 }
             }
-
-            & > .card-foot{
-                display:flex;
-                flex-direction: wrap;
-                flex-wrap: nowrap;
-                justify-content: flex-start;
-                vertical-align: middle;
-                width:100%;
-
-                & > .avatar, .post-info{
-                    display: inline-block;
-                    vertical-align: middle;
-
-                    & > .minilogo{
-                        height: auto;
-                        width: 47px;
-                        
-                    }
-                }
-
-                & > .post-info{
-                    padding-left: 20px;
-                    padding-top: 20px;
-                    line-height: 20px;
-                    height:auto;
-                    font-size: .875rem;
-                    & > p{
-                        color: #666;
-                    }
-                }
-                & > .avatar{
-                    margin-top: 15px;
+    
+            & > .news-container{
+                padding: 30px 30px;
+                z-index: 1;
+    
+                & > hr{
+                    color: #ddd;
                 }
                 
+                & > p{
+                    color: #666;
+                    margin-bottom: 20px;
+                }
+                & > h4{
+                    color: #000;
+                }
+    
+                & > .heading-link{
+                    color: #926fb1;
+                    text-decoration: none;
+                    &:hover{
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+                }
+    
+                & > .readmore-btn{
+                    color: #fff;
+                    background-color: #926fb1;
+                    border-radius: 3px;
+                    border: none;
+                    margin-bottom: 10px;
+                    padding: 10px 15px;
+                
+                    &:hover{
+                        background-color: #7e57a0;
+                        cursor: pointer;
+                    }
+                }
+    
+                & > .card-foot{
+                    display:flex;
+                    flex-direction: wrap;
+                    flex-wrap: nowrap;
+                    justify-content: flex-start;
+                    vertical-align: middle;
+                    width:100%;
+    
+                    & > .avatar, .post-info{
+                        display: inline-block;
+                        vertical-align: middle;
+    
+                        & > .minilogo{
+                            height: auto;
+                            width: 47px;
+                            
+                        }
+                    }
+    
+                    & > .post-info{
+                        padding-left: 20px;
+                        padding-top: 20px;
+                        line-height: 20px;
+                        height:auto;
+                        font-size: .875rem;
+                        & > p{
+                            color: #666;
+                        }
+                    }
+                    & > .avatar{
+                        margin-top: 15px;
+                    }
+                    
+                }
             }
         }
     }
 }
+
 
 //companies
 .companies{
@@ -716,8 +731,8 @@ $hamburger-types: (
 
         & > .tooltiptext {
             visibility: hidden;
-            width: 300px;
-            height: 200px;
+            max-width:280px;
+            height: auto;
             background-color: #333645;
             color: #fff;
             text-align: center;
@@ -726,15 +741,22 @@ $hamburger-types: (
             position: absolute;
             z-index: 1;
             bottom: 100%;
-            left: 0%;
+            left: 25%;
             line-height: 30px;
             margin-left: -60px;
-            font-size: 1.2rem;
-            padding-left: 20px;
-            padding-right: 20px;
-            padding-top:10%;
-            padding-bottom: 80%;
+            padding: 20px;
             margin-bottom: 70px;
+            font-size: 1.0rem;
+
+            & > h3{
+                padding: 10px 10px;
+            }
+
+            & > p{
+                padding: 10px 10px;
+            }
+
+            
         
             &::after{
                 content: "";
@@ -749,8 +771,19 @@ $hamburger-types: (
         
             & > .spacer-rule{
                 background-color: #fff;
+                margin: 0 45%;
             }
+
+            
         
+        }
+
+        & > .tbeat{
+            left: 0%;
+            width: 200px;
+        }
+        & > .tcrane{
+            left: 20%;
         }
     }
 
@@ -874,6 +907,8 @@ footer {
     background-color: #333645;
 
     .footer-main{
+       
+
         
     
         p {
@@ -885,13 +920,16 @@ footer {
             display: flex;
             flex-direction: column;
             padding: 30px 0px;
+            width: 428px;
+            margin: 0 auto;
+           
     
             // targets all divs which are direct children of footer-content
             & > div {
                 color: white;
                 text-decoration: none;
-                padding: 0px 15px;
                 margin-bottom: 30px;
+                
     
                 ul li {
                     list-style-type: none;
