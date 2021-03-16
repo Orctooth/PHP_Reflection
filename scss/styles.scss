@@ -51,6 +51,10 @@ $navy-ish: #333645;
     outline:none;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 // Settings for hammmburger
 // ==================================================
 $hamburger-padding-x           : 15px !default;
@@ -99,130 +103,164 @@ $hamburger-types: (
         position: relative;
         float:center;
 
-       
-
-        & > .support, .hamburger{
+        .buttons{
+            display:flex;
+            //float:right;
+            justify-content: space-around;
             margin-left: auto;
-            position: absolute;
-            
-            //margin-right: 30px;
-            & > svg{
-                vertical-align: middle;
-            }
-        }
 
-        & > .support{
-            display: block;
-            top: 15px;
-            right: 80px;
-            
-
-            &:hover{
-                border-bottom: solid black 3px;
-            }
-        }
-
-        & > .big-beautiful-button{
-            padding: 5px 5px;
-        }
-        
-        
-        & > .support-xl{
-            background-color: #4183d7;
-            &:hover{
-                background-color: #2a6ec6;
-            }
-            & > svg {
-                padding-top: 5px;
-            }
-        }
-        
-        & > .contact-xl{
-            background-color: #999aa2;
-            &:hover{
-                background-color: #84858f;
-            }
-        }
-
-        & > .hamburger{
-            background-color: #333645;
-            color: #fff;
-            margin-bottom: 10px;
-            border-radius: 3px;
-            font-size: 1.125rem;
-            transform: scale(0.6);
-            display: block;
-            top: 0px;
-            right: 0px;
-
-            &:hover{
-                background-color: #22242e;
-            }
-        }
-    }
-
-    //searchbar that appears in xs displays
-    & > .searchbar{
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: center;
-        margin-right: 45px;
-        
-        
-
-        & > form{
-            //box-shadow: inset 0 0 8px rgb(91 192 222 / 60%);
-            & > input[type=text]{
-                padding: 6px;
-                margin-top: 8px;
-                font-size: 17px;
-                border-top: 2px solid #ddd;
-                border-left: 2px solid #ddd;
-                border-bottom: 2px solid #ddd;
-                border-right: none;
-                background-color: rgba(0,0,0,.1);
-               
-                border-top-left-radius: 2px;
-                border-bottom-left-radius: 2px;
-                color: #555;
-                height: 47px;
-                width: 80vw;
-                position:relative;
-    
-                &:focus{
-                    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
-                    & ~ #mobile-sbtn{
-                        box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
-                    }
+            & > .support, .hamburger{
+                position:absolute;
+                & > svg{
+                    vertical-align: middle;
                 }
             }
-            
-            & > button{
-                padding: 12px 10px;
-                margin-top: 8px;
-                margin-right: 16px;
-                background-color: rgba(0,0,0,.1);
-                border-top: 2px solid #ddd;
-                border-right: 2px solid #ddd;
-                border-bottom: 2px solid #ddd;
-                border-left: none;
-                border-top-right-radius: 2px;
-                border-bottom-right-radius: 2px;
-                font-size: 17px;
-                cursor: pointer;
-                height: 47px;
-                position: absolute;
-                float: right;
+    
+            & > .support{
+                display: block;
+                top: 20px;
+                right: 100px;
+                
     
                 &:hover{
-                    background: #ccc;
+                    border-bottom: solid black 3px;
                 }
             }
-
+    
+            & > .big-beautiful-button{
+                padding: 5px 5px;
+            }
+            
+            
+            & > .support-xl{
+                background-color: #4183d7;
+                &:hover{
+                    background-color: #2a6ec6;
+                }
+                & > svg {
+                    padding-top: 5px;
+                }
+            }
+            
+            & > .contact-xl{
+                background-color: #999aa2;
+                &:hover{
+                    background-color: #84858f;
+                }
+            }
+    
+            & > .hamburger{
+                background-color: #333645;
+                color: #fff;
+                margin-bottom: 10px;
+                border-radius: 3px;
+                font-size: 1.125rem;
+                transform: scale(0.55);
+                display: block;
+                top: -1px;
+                right: 0px;
+    
+                &:hover{
+                    background-color: #22242e;
+                }
+            }
         }
+
+       
 
         
     }
+
+    
+    & > .header-bottom{
+        //searchbar that appears in xs displays
+        & > .searchbar{
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            margin-right: 45px;
+            
+            
+
+            & > form{
+                //box-shadow: inset 0 0 8px rgb(91 192 222 / 60%);
+                & > input[type=text]{
+                    padding: 6px;
+                    margin-top: 8px;
+                    font-size: 17px;
+                    border-top: 2px solid #ddd;
+                    border-left: 2px solid #ddd;
+                    border-bottom: 2px solid #ddd;
+                    border-right: none;
+                    background-color: rgba(0,0,0,.1);
+                
+                    border-top-left-radius: 2px;
+                    border-bottom-left-radius: 2px;
+                    color: #555;
+                    height: 47px;
+                    width: 80vw;
+                    position:relative;
+        
+                    &:focus{
+                        box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+                        & ~ #mobile-sbtn{
+                            box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+                        }
+                    }
+                }
+                
+                & > button{
+                    padding: 12px 10px;
+                    margin-top: 8px;
+                    margin-right: 16px;
+                    background-color: rgba(0,0,0,.1);
+                    border-top: 2px solid #ddd;
+                    border-right: 2px solid #ddd;
+                    border-bottom: 2px solid #ddd;
+                    border-left: none;
+                    border-top-right-radius: 2px;
+                    border-bottom-right-radius: 2px;
+                    font-size: 17px;
+                    cursor: pointer;
+                    height: 47px;
+                    position: absolute;
+                    float: right;
+        
+                    &:hover{
+                        background: #ccc;
+                    }
+                }
+
+            }
+
+            
+        }
+
+        & > .navbar{
+            display:flex;
+            & > .bar-child{
+                height: 100%;
+                width: 100%;
+                background-color: $navy-ish;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: #fff;
+                border-right:#666 2px solid;
+                border-left: #000 2px solid;
+                border-bottom: #ccc 2px solid;
+                font-size: 32px;
+
+                & > svg{
+                    width: 10%;
+                    height:10%;
+                    padding: 15px 15px;
+                }
+            }
+        }
+    }
+    
+    
 
 }
 
@@ -233,7 +271,7 @@ $hamburger-types: (
 //Banner styles
 
 .banner{
-   height: 85vh;
+   height: 100%;
    min-width: 100%;
    background-image: url("../img/home-57sJ.jpg");
    background-size: cover;
@@ -285,13 +323,6 @@ $hamburger-types: (
 
 .nav-cards{
     
-
-
-    
-    & > span{
-        //color: #333645;
-        
-    }
     & > button:hover{
         cursor:pointer;
     }
@@ -527,7 +558,7 @@ $hamburger-types: (
 
 //Culture styles
 .culture-back{
-    background-color: #333645;
+    //background-color: #333645;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 15px 15px;
@@ -571,11 +602,19 @@ $hamburger-types: (
     }
 }
 
+.culture{
+    background-color: #333645;
+}
+
 //Articles styles
+.news-header-con{
+    box-shadow: 0px 10px 12px #ddd;
+}
+
 .news-header-section{
     padding: 10px 30px;
     margin-bottom: 30px;
-    box-shadow: 0px 10px 12px #ddd;
+   
     position: relative;
 
     & > .latest{
@@ -590,9 +629,11 @@ $hamburger-types: (
 .news-section{
     box-shadow: 0px 10px 12px #ddd;
     .news-cards{
-        padding: 50px 0px;
+        padding: 10px 0px;
+        margin: 0px auto;
+        //justify-content: stretch;
         & > .card-news{
-            margin: 40px 30px;
+            margin: 20px 20px;
     
             & > .minilink{
                 position: absolute;
@@ -715,9 +756,9 @@ $hamburger-types: (
     flex-basis: inline;
     justify-content: space-between;
     flex-direction: row;
-    max-width: 100%;
-    margin: 0px auto;
-    padding: 50px 15px;
+    //max-width: 100%;
+    margin: 0px 100px;
+    padding: 50px 0px;
 
     & > .company{
         display: inline-block;
@@ -822,7 +863,8 @@ $hamburger-types: (
     display: flex;
     flex-direction: column;
     flex-basis: block;
-    padding: 30px 0px;
+    padding: 30px 30px;
+    margin: 0 30px;
 
     & > .form{
         padding: 0px 30px;
@@ -919,8 +961,7 @@ footer {
         .footer-content {
             display: flex;
             flex-direction: column;
-            padding: 30px 0px;
-            width: 428px;
+            padding: 30px 30px;
             margin: 0 auto;
            
     

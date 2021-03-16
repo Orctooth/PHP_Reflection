@@ -84,11 +84,14 @@
     //hide tablet/desktop searchbar
     .searchbar-lg{
         & > form{
+            border:none;
             & > input{
                 display:none;
+                
             }
             & > button{
                 border-radius: 3px;
+                right: 10px;
             }
         }
         
@@ -133,15 +136,16 @@
 
 
 
-@media only screen and (min-width:1260px){
+@media only screen and (min-width:1280px){
     
     .header-top{
-        width:1278px;
+        width:1298px;
         margin: 0 auto;
     }
     
     .searchbar-lg{
         & > form{
+            border: 1px solid #999aa2;
             & > input{
                 display:block;
                 
@@ -149,6 +153,7 @@
             & > button{
                 border-top-left-radius: 0px;
                 border-bottom-left-radius: 0px;
+                right:-40px;
             }
         }
         
@@ -177,16 +182,23 @@
 }
 
 //banner query
-@media only screen and (min-width:1260px)
+@media only screen and (min-width:1280px)
 {
     .banner-text{
-        display: flex;
-        float: left;
-        align-items:left;
+        
+        & > h1{
+            text-align: left;
+            margin: 0 auto;
+        }
         & > span{
             & > p{
                 text-align: left;
+                margin: 0 auto;
             }
+        }
+        & > button{
+            float: left;
+            margin: 0 auto;
         }
         
     }
@@ -202,7 +214,7 @@
         background-position: right;
     }
     .culture-back{
-        width: 1278px;
+        width: 1298px;
         margin: 0 auto;
         background-color: rgba(0,0,0,0);
         
@@ -216,7 +228,7 @@
 
 //nav queries
 
-@media only screen and (min-width: 768px) and (max-width:1260px){
+@media only screen and (min-width: 768px) and (max-width:1280px){
     .lg-row-nav{
         display:flex;
         justify-content: space-around;
@@ -235,7 +247,7 @@
 @media only screen and (min-width: 992px){
     .xl-row-nav{
         display:flex;
-        width: 992px;
+        width: 1010px;
         justify-content: space-between;
         align-content: center;
         margin: 25px auto;
@@ -258,9 +270,9 @@
 
 }
 
-@media only screen and (min-width: 1260px){
+@media only screen and (min-width: 1280px){
     .nav-cards{
-        width: 1268px;
+        width: 1298px;
         margin: 0 auto;
     }
     
@@ -273,7 +285,7 @@
 
     .xl-row-nav{
         margin: 0 auto;
-        width: 1268px;
+        width: 1298px;
     }
 
     .lg-row-nav{
@@ -320,17 +332,14 @@
     }
 
     .card-news{
-        max-width: 100vh;
-        flex-grow: 1;
-        transform: scale(0.8);
-        
+        padding: 0 0px; 
     }
 
 }
 
-@media only screen and (min-width: 1260px){
+@media only screen and (min-width: 1280px){
     .news-cards{
-        width: 1278px;
+        width: 1298px;
         margin: 0 auto;
         & > .card:last-of-type{
             display: block;
@@ -340,9 +349,6 @@
     .news-image:hover{
                 
         .img-overlay{
-            
-            
-
             & > img {
                 transform: scale(1.2);
                 opacity: 0.5;
@@ -373,9 +379,9 @@
     }
 }
 
-@media only screen and (min-width: 1260px){
+@media only screen and (min-width: 1280px){
     .sign-up-form{
-        width: 1278px;
+        width: 1298px;
         margin: 0 auto;
     }
 }
@@ -383,12 +389,11 @@
 @media (min-width: 768px) {
     footer {
         .footer-main {
-            width: 750px;
-            margin: 0px auto 0;
     
             .footer-content {
                 flex-direction: row;
                 flex-wrap: wrap;
+                padding: 30px 15px;
     
                 & > div {
                     width: 50%;
@@ -398,39 +403,26 @@
     }
 }
 
-@media (min-width: 993px) {
+@media (min-width: 992px) {
     footer {
 
         .footer-main {
-            width: 1010px;
-            margin: 0 auto;
+            
 
             .footer-content {
+                //width: 1010px;
+                padding: 30px 0px;
                 
                 & > div {
-                    width: 25%;
+                    
+                    margin: 0 auto;
+                    width: 20%;
                 }
             }
         }
     }
 }
 
-@media (min-width: 1260px) {
-    footer {
-
-        .footer-main {
-            
-            padding-top: 30px;
-
-            & > .footer-content{
-                width: 1278px;
-                margin: 0 auto;
-                margin-left: -100px;
-            }
-            
-        }
-    } 
-}
 
 @-moz-document url-prefix(){
     .button-container{
@@ -460,14 +452,44 @@
     }
 }
 
-@media only screen and (min-width: 1260px){
-    .companies{
-        width: 1278px;
+//universal display queries
+
+//mobiles
+@media only screen and (max-width: 443px){
+    .header-top, .searchbar-mobile, .banner-text,
+    .nav-cards, .culture-back, .news-header-section,
+    .news-cards, .footer-content {
+        width: 425px;
         margin: 0 auto;
     }
+}
+//tablets
+@media only screen and (min-width: 786px){
+    .header-top, .searchbar-mobile, .banner-text,
+    .nav-cards, .culture-back, .news-header-section,
+    .news-cards, .footer-content {
+        width: 768px;
+        margin: 0 auto;
+    }
+}
+//small laptops
+@media only screen and (min-width: 1010px){
+    .header-top, .searchbar-mobile, .banner-text,
+    .xl-row-nav, .lg-row-nav, .nav-cards, .culture-back, .news-header-section,
+    .news-cards, .footer-content, .awards-1, .awards-2 {
+        width: 992px;
+        margin: 0 auto;
+    }
+    
+    
+}
 
-    .awards-1, .awards-2{
-        width: 1278px;
+@media only screen and (min-width: 1298px){
+    .header-top, .searchbar-mobile, .banner-text,
+    .xl-row-nav, .xxl-row-nav, .nav-cards,
+    .culture-back, .news-header-section,
+    .news-cards, .footer-content, .awards-1, .awards-2 {
+        width: 1280px;
         margin: 0 auto;
     }
 }
