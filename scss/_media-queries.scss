@@ -26,9 +26,12 @@
         }
     }
 
-    .searchbar-mobile{
-        visibility: hidden;
-    }    
+    .header{
+        & > .searchbar-mobile{
+            display: none;
+        }
+    }
+        
 }
 //show desktop/tablet search bar
 @media only screen and (min-width:768px){
@@ -178,6 +181,13 @@
         @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
             right:500px;
         }
+    }
+}
+
+//navbar query
+@media only screen and (max-width:992px){
+    .navbar{
+        display: none;
     }
 }
 

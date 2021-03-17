@@ -206,13 +206,13 @@ body {
 .header > .header-top .buttons > .hamburger:hover {
   background-color: #22242e;
 }
-.header > .header-bottom > .searchbar {
+.header > .searchbar {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
   margin-right: 45px;
 }
-.header > .header-bottom > .searchbar > form > input[type=text] {
+.header > .searchbar > form > input[type=text] {
   padding: 6px;
   margin-top: 8px;
   font-size: 17px;
@@ -228,13 +228,13 @@ body {
   width: 80vw;
   position: relative;
 }
-.header > .header-bottom > .searchbar > form > input[type=text]:focus {
+.header > .searchbar > form > input[type=text]:focus {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
 }
-.header > .header-bottom > .searchbar > form > input[type=text]:focus ~ #mobile-sbtn {
+.header > .searchbar > form > input[type=text]:focus ~ #mobile-sbtn {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
 }
-.header > .header-bottom > .searchbar > form > button {
+.header > .searchbar > form > button {
   padding: 12px 10px;
   margin-top: 8px;
   margin-right: 16px;
@@ -251,29 +251,148 @@ body {
   position: absolute;
   float: right;
 }
-.header > .header-bottom > .searchbar > form > button:hover {
+.header > .searchbar > form > button:hover {
   background: #ccc;
 }
-.header > .header-bottom > .navbar {
+
+.navbar {
   display: flex;
 }
-.header > .header-bottom > .navbar > .bar-child {
-  height: 100%;
+.navbar > .bar-child {
   width: 100%;
   background-color: #333645;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #fff;
-  border-right: #666 2px solid;
-  border-left: #000 2px solid;
-  border-bottom: #ccc 2px solid;
-  font-size: 32px;
+  border-right: #666 1px solid;
+  border-left: #000 1px solid;
+  border-bottom: #ccc 1px solid;
+  padding: 20px 35px;
+  line-height: 1;
 }
-.header > .header-bottom > .navbar > .bar-child > svg {
-  width: 10%;
-  height: 10%;
-  padding: 15px 15px;
+.navbar > .bar-child > .drop-down {
+  display: none;
+  flex-direction: column;
+}
+.navbar > .bar-child > .drop-down > ul {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+  list-style: none;
+  position: absolute;
+  top: 410px;
+  left: 0px;
+  margin: 0 0;
+  padding: 15px 90px;
+  align-items: left;
+}
+.navbar > .bar-child > .drop-down > ul > li {
+  display: inline-block;
+  margin: 0 auto;
+  width: auto;
+}
+.navbar > .bar-child > .icon-tab {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1.3rem;
+  line-height: 58px;
+  position: relative;
+}
+.navbar > .bar-child > .icon-tab > span > svg {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 0px 10px;
+}
+.navbar > .bar-child > .tab-s-text {
+  font-size: 0.7rem;
+}
+.navbar > .bar-child > .tab-lg-text {
+  font-size: 1.05rem;
+}
+.navbar > .web-tab:hover {
+  background-color: #926fb1;
+}
+.navbar > .web-tab:hover > .icon-tab > span > svg {
+  fill: #fff;
+}
+.navbar > .web-tab:hover > .dd-web {
+  display: flex;
+}
+.navbar > .web-tab:hover > .dd-web > ul {
+  background-color: #79539a;
+}
+.navbar > .IT-tab:hover {
+  background-color: #4183d7;
+}
+.navbar > .IT-tab:hover > .icon-tab > span > svg {
+  fill: #fff;
+}
+.navbar > .IT-tab:hover > .dd-IT {
+  display: flex;
+}
+.navbar > .IT-tab:hover > .dd-IT > ul {
+  background-color: #286abd;
+}
+.navbar > .telecoms-tab:hover {
+  background-color: #d64541;
+}
+.navbar > .telecoms-tab:hover > .icon-tab > span > svg {
+  fill: #fff;
+}
+.navbar > .telecoms-tab:hover > .dd-telecoms {
+  display: flex;
+}
+.navbar > .telecoms-tab:hover > .dd-telecoms > ul {
+  background-color: #bc2c28;
+}
+.navbar > .bespoke-tab:hover {
+  background-color: #67809f;
+}
+.navbar > .bespoke-tab:hover > .icon-tab > span > svg {
+  fill: #fff;
+}
+.navbar > .bespoke-tab:hover > .dd-bespoke {
+  display: flex;
+}
+.navbar > .bespoke-tab:hover > .dd-bespoke > ul {
+  background-color: #526781;
+}
+.navbar > .marketing-tab:hover {
+  background-color: #23cc71;
+}
+.navbar > .marketing-tab:hover > .icon-tab > span > svg {
+  fill: #fff;
+}
+.navbar > .marketing-tab:hover > .dd-marketing {
+  display: flex;
+}
+.navbar > .marketing-tab:hover > .dd-marketing > ul {
+  background-color: #25a25a;
+}
+.navbar > .security-tab:hover {
+  background-color: #f62459;
+}
+.navbar > .security-tab:hover > .icon-tab > span > svg {
+  fill: #fff;
+}
+.navbar > .security-tab:hover > .dd-security {
+  display: flex;
+}
+.navbar > .security-tab:hover > .dd-security > ul {
+  background-color: #de093f;
+}
+.navbar > .bar-start {
+  padding: 42px 5px;
+  width: 15%;
+}
+.navbar > .bar-end {
+  padding: 42px 5px;
+  width: 15%;
 }
 
 .banner {
@@ -964,8 +1083,8 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
     display: none;
   }
 
-  .searchbar-mobile {
-    visibility: hidden;
+  .header > .searchbar-mobile {
+    display: none;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -1100,6 +1219,11 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
 @media only screen and (min-width: 1280px) and (-ms-high-contrast: active), only screen and (min-width: 1280px) and (-ms-high-contrast: none) {
   .contact-xl {
     right: 500px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .navbar {
+    display: none;
   }
 }
 @media only screen and (min-width: 1280px) {
