@@ -184,31 +184,71 @@
     }
 }
 
-//navbar query
-@media only screen and (max-width:992px){
+//navbar queries
+@media only screen and (max-width:1010px){
     .navbar{
         display: none;
     }
+}
+
+@media only screen and (min-width:1010px){
+    .navbar{
+        & > .tab-wrapper{
+            width: 992px;
+            margin: 0 auto;
+            & > .bar-child{
+                & > .drop-down{
+                    & > ul{
+                        & > li{
+                            font-size: 0.805rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+@media only screen and (min-width:1280px){
+    .navbar{
+        .tab-wrapper{
+            width: 1298px;
+            //margin: 0 auto;
+            & > .bar-child{
+                & > .drop-down{
+                    & > ul{
+                        & > li{
+                            font-size: 1.0rem;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+    
 }
 
 //banner query
 @media only screen and (min-width:1280px)
 {
     .banner-text{
+        width: 1298px;
         
         & > h1{
             text-align: left;
-            margin: 0 auto;
+            
         }
         & > span{
             & > p{
                 text-align: left;
-                margin: 0 auto;
+                
             }
         }
         & > button{
             float: left;
-            margin: 0 auto;
+           
         }
         
     }
@@ -247,9 +287,7 @@
     .card-security,.card-schools,.card-web,.card-telecoms{
         width: 50%;
         display:block;
-        float:center;
         margin: 0 auto;
-        padding: 0 auto;
 
     }
 }
@@ -257,10 +295,8 @@
 @media only screen and (min-width: 992px){
     .xl-row-nav{
         display:flex;
-        width: 1010px;
         justify-content: space-between;
-        align-content: center;
-        margin: 25px auto;
+        //margin: 25px auto;
         & > .card-nav{
             @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
                 width: 33.3%;
@@ -273,7 +309,6 @@
         float:left;
         display:block;
         margin: 0 auto;
-        padding: 0 auto;
         
     }
     
@@ -312,7 +347,7 @@
         display:block;
         float:left;
         margin: 0 auto;
-        padding: 0 auto;
+        
         
     }
 
@@ -360,7 +395,7 @@
                 
         .img-overlay{
             & > img {
-                transform: scale(1.2);
+                transform: scale(1.1);
                 opacity: 0.5;
                 background-color: #fff;
             }
@@ -420,7 +455,7 @@
             
 
             .footer-content {
-                //width: 1010px;
+                width: 1010px;
                 padding: 30px 0px;
                 
                 & > div {
