@@ -21,7 +21,7 @@
 //hide call button and mobile search
 @media only screen and (min-width:768px){
     .support{
-        & > a{
+        & > i{
             display: none;
         }
     }
@@ -29,6 +29,9 @@
     .header{
         & > .searchbar-mobile{
             display: none;
+            & > i{
+                display: none;
+            }
         }
     }
         
