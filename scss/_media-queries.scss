@@ -45,17 +45,17 @@
 
         & > form{
             position:relative;
-            border: 1px solid #999aa2;
-            box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
-            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
             & > input{
-                height: 40px;
-                border:none;
+                width:200px;
+                height: 56px;
+                border: 1px solid #999aa2;
+                padding-left: 15px;
+                padding-right: 30px;
 
                 &:focus{
                     
                     border-color: #5bc0de;
-                    box-shadow: inset 0 0 8px rgb(91 192 222 / 60%);
+                    box-shadow: 0 0 8px rgb(91 192 222 / 60%);
                     
                 }
             }
@@ -63,22 +63,28 @@
                 position: absolute;
                 background-color: #999aa2;
                 border: inherit;
-                height: 42px;
-                width: 40px;
+                height: 56px;
+                width: 63px;
                 border-radius: 3px;
                 border-top-left-radius: 0px;
                 border-bottom-left-radius: 0px;
-                top:-1px;
+                top:0px;
                 right: -40px;
-                & svg{
-                    fill: #fff;
+                padding: 7px 20px 3px;
+                & > i {
+                    font-size: 20px;
+                    
                 }
+                &:hover{
+                    background-color: #84858f;
+                }
+                
             }
         }
         
     }
 }
-//show support and contact buttons
+//hide support and contact buttons
 @media only screen and (max-width:992px){
     .big-beautiful-button{
         display: none;
@@ -97,7 +103,8 @@
             }
             & > button{
                 border-radius: 3px;
-                right: 10px;
+                right: -20px;
+                top:0px;
             }
         }
         
@@ -110,11 +117,9 @@
         border:none;
         border-radius:3px;
         color:#fff;
-        height: 40px;
-        width:100px;
         position: absolute;
         top:15px;
-        right: 305px;
+        right: 350px;
         & > svg{
             display:block;
         }
@@ -128,14 +133,17 @@
         border:none;
         border-radius:3px;
         color:#fff;
-        height: 40px;
-        width:100px;
         position: absolute;
         top:15px;
         right: 200px;
         & > svg{
             display:block;
         }
+    }
+
+    .header-top{
+        width:1010px;
+        margin: 0 auto;
     }
 
 }
@@ -151,9 +159,10 @@
     
     .searchbar-lg{
         & > form{
-            border: 1px solid #999aa2;
+            
             & > input{
                 display:block;
+                border: 1px solid #999aa2;
                 
             }
             & > button{
@@ -166,7 +175,7 @@
     }
 
     .support-xl{
-        right: 505px;
+        right: 530px;
         @-moz-document url-prefix(){
             right:605px;
         }
@@ -177,7 +186,7 @@
     }
 
     .contact-xl{
-        right: 400px;
+        right: 380px;
         @-moz-document url-prefix(){
             right:500px;
         }
@@ -216,8 +225,8 @@
 @media only screen and (min-width:1280px){
     .navbar{
         .tab-wrapper{
-            width: 1298px;
-            //margin: 0 auto;
+            //width: 1298px;
+            margin: 0 auto;
             & > .bar-child{
                 & > .drop-down{
                     & > ul{
@@ -239,16 +248,11 @@
     .banner-text{
         width: 1298px;
         
-        & > h1{
+        & > h1, p{
             text-align: left;
             
         }
-        & > span{
-            & > p{
-                text-align: left;
-                
-            }
-        }
+        
         & > button{
             float: left;
            
@@ -522,7 +526,7 @@
 }
 //small laptops
 @media only screen and (min-width: 1010px){
-    .header-top, .searchbar-mobile, .banner-text,
+    .header-top, .searchbar-mobile, .banner-text, .tab-wrapper,
     .xl-row-nav, .lg-row-nav, .nav-cards, .culture-back, .news-header-section,
     .news-cards, .footer-content, .awards-1, .awards-2 {
         width: 992px;
@@ -532,12 +536,12 @@
     
 }
 
-@media only screen and (min-width: 1298px){
-    .header-top, .searchbar-mobile, .banner-text,
+@media only screen and (min-width: 1280px){
+    .header-top, .searchbar-mobile, .banner-text, .tab-wrapper,
     .xl-row-nav, .xxl-row-nav, .nav-cards,
     .culture-back, .news-header-section,
     .news-cards, .footer-content, .awards-1, .awards-2 {
-        width: 1280px;
+        width: 1298px;
         margin: 0 auto;
     }
 }
