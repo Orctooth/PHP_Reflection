@@ -309,10 +309,17 @@ $hamburger-types: (
             & > .dd-background{
                 display: none;
                 padding: 22px 0px;
-                z-index: 9;
+                z-index: 10;
                 position:absolute;
                 top: 100%;
                 width: 200vw;
+                @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+                    left:100%;
+                    right:0%;
+                    top:100%;
+                    bottom:0%;
+                    width: 400vw;
+                }
             }
 
             & > .drop-down{
@@ -593,68 +600,70 @@ $hamburger-types: (
             padding: 30px 30px;
             display: flex;
             flex-direction: column;
-            max-width: 100%;
-            height: auto;
+            height: 250px;
             position: relative;
             box-shadow: 0 3px 35px rgb(0 0 0 / 10%);
             text-align: center;
             border: 1px solid #ccc;
             border-radius: 3px;
-            margin: 1.5rem 1.5rem;
-            & > h3, p{
+            margin: 1.5rem .8rem;
+            
+            & >p{
+                font-size: .8125rem;
+            }
+            & > h2{
+                position: relative;
+                font-size: 1.125rem;
+                padding-bottom: 17px;
+                margin: 0 0 11px;
+                font-weight: 200;
                 color: #333645;
-                font-weight: 400;
+                text-align: center;
+                line-height: 1.1;
+                display: block;
+            }
+            & > h2::after{
+                position: absolute;
+                content: "";
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                width: 28px;
+                height: 3px;
+                display: block;
+                background-color: $navy-ish;
             }
             &:hover{
                 //color: #fff;
-                & > p, h3{
+                & > p, h2{
                     color: #fff;
+                }
+
+                & > h2::after{
+                    background-color: #fff;
                 }
             }
             
             & > .nav-icon-con{
                 border-radius: 50%;
-                width: 60px;
-                height: 60px;
+                width: 50px;
+                height: 100px;
                 margin:0 auto 17px;
                 position:relative;
                 text-align: center;
                 vertical-align: middle;
-                font-size: 1.3rem;
-                line-height: 58px;
+                font-weight: 600;
+                line-height: 1.42857143;
                 & > span{
                     & > i{
                         position: absolute;
                         top: 10px;
                         left: 9px;
-                        padding: 10px 10px;
-                        font-size: 1.438rem;
+                        
                     }
                 }
             
-            }
-
-            & > h3{
-                align-self: center;
-                display: block;
-                
-                padding-bottom: 20px;
-                position: relative;
-            }
-
-            & > hr{
-                width: 10%;
-                height: 3px;
-                border:none;
-                color: $navy-ish;
-                margin-bottom: 10px;
-                align-self: center;
-               
-            }
-    
-            &> button{
-                margin-top: 10px;
-                margin: 0 auto;
             }
     
             & > span{
@@ -663,10 +672,21 @@ $hamburger-types: (
             }
     
             & > .btn-nav{
+                height: auto;
+                width: 150px;
+                line-height: 35px;
+                font-size: 1.063rem;
+                white-space: normal;
                 border:none;
                 color: #fff;
                 border-radius: 3px;
-                padding: 15px 15px;
+                padding: 5px 15px;
+                display: block;
+                margin-bottom: 0;
+                font-weight: 400;
+                text-align: center;
+                cursor: pointer;
+                margin:0 auto;
             }
             
         }
