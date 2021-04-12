@@ -400,14 +400,19 @@
     
     .news-image:hover{
                 
-        .img-overlay{
+        & > .img-overlay{
+            
             & > img {
                 transform: scale(1.1);
-                opacity: 0.5;
                 background-color: #fff;
             }
 
-        }             
+        }  
+        
+        .cover{
+            z-index: 2;
+            background-color: #fff;
+        }
                 
     }
 }
@@ -510,7 +515,7 @@
 @media only screen and (max-width: 443px){
     .header-top, .searchbar-mobile, .banner-text,
     .nav-cards, .culture-back, .news-header-section,
-    .news-cards, .footer-content {
+    .news-cards, .companies, .footer-content {
         width: 425px;
         margin: 0 auto;
     }
@@ -519,7 +524,7 @@
 @media only screen and (min-width: 786px){
     .header-top, .searchbar-mobile, .banner-text,
     .nav-cards, .culture-back, .news-header-section,
-    .news-cards, .footer-content {
+    .news-cards, .companies, .footer-content {
         width: 768px;
         margin: 0 auto;
     }
@@ -528,7 +533,7 @@
 @media only screen and (min-width: 1010px){
     .header-top, .searchbar-mobile, .banner-text, .tab-wrapper,
     .xl-row-nav, .lg-row-nav, .nav-cards, .culture-back, .news-header-section,
-    .news-cards, .footer-content, .awards-1, .awards-2 {
+    .news-cards, .companies, .footer-content, .awards-1, .awards-2 {
         width: 992px;
         margin: 0 auto;
     }
@@ -539,7 +544,7 @@
 @media only screen and (min-width: 1280px){
     .header-top, .searchbar-mobile, .banner-text, .tab-wrapper,
     .xl-row-nav, .xxl-row-nav, .nav-cards,
-    .culture-back, .news-header-section,
+    .culture-back, .news-header-section, .companies,
     .news-cards, .footer-content, .awards-1, .awards-2 {
         width: 1298px;
         margin: 0 auto;

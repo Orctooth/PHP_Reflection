@@ -377,7 +377,7 @@
         <!-- very small section containing just the header for the following articles section -->
         <div class="news-header-con">
             <div class="news-header-section">
-                <h2 class="latest">LATEST</h2>
+                <h2 class="latest">LATEST<span class="bar-news"></span></h2>
             </div>
         </div>
         
@@ -391,23 +391,26 @@
                     <a class="minilink" href="">NEWS</a>
                     <div class="news-image">
                         <div class="img-overlay">
+                            <div class="cover"></div>
                             <img src="img/matt-IE.jpg" alt="Matt">
                         </div>
                     </div>
                     <div class="news-container">
-                      <h4 class="heading-link">Matt Chapman Achieves the Long Service Award</h4>
+                      <h4 class="heading-link">Matt Achieves the Long Service Award</h4>
                       <p>Netmatters would like to take this time to congratulate our Senior Technical Support, Matt...</p>
                       <button class="readmore-btn">READ MORE
                           
                       </button>
-                      <hr>
-                      <div class="card-foot">
-                        <div class="avatar">
-                            <img class="minilogo" src="img/netmatters-ltd-IE.jpg" alt="netmatters logo">
-                        </div>
-                        <div class="post-info">
-                            <h4><strong>Posted by Netmatters Ltd</strong></h4>
-                            <p>9th March 2021</p>
+                      <div class="foot-wrapper">
+                        <div class="card-foot">
+                            
+                            <div class="avatar">
+                                <img class="minilogo" src="img/netmatters-ltd-IE.jpg" alt="netmatters logo">
+                            </div>
+                            <div class="post-info">
+                                <h4><strong>Posted by Netmatters Ltd</strong></h4>
+                                <p>9th March 2021</p>
+                            </div>
                         </div>
                       </div>
                     </div>
@@ -417,6 +420,7 @@
                     <a class="minilink" href="">NEWS</a>
                     <div class="news-image">
                         <div class="img-overlay">
+                            <div class="cover"></div>
                             <img src="img/carbon-jpeg.jpg" alt="carbon-neutral">
                         </div>
                     </div>
@@ -424,14 +428,16 @@
                       <h4 class="heading-link">Netmatters is carbon neutral!</h4>
                       <p>As a business, Netmatters pledged that 2021 would be the year that we became carbon neutral....</p>
                       <button class="readmore-btn">READ MORE</button>
-                      <hr>
-                      <div class="card-foot">
-                        <div class="avatar">
-                            <img class="minilogo" src="img/netmatters-ltd-IE.jpg" alt="netmatters logo">
-                        </div>
-                        <div class="post-info">
-                            <h4><strong>Posted by Netmatters Ltd</strong></h4>
-                            <p>2nd March 2021</p>
+                      <div class="foot-wrapper">
+                        <div class="card-foot">
+                            
+                            <div class="avatar">
+                                <img class="minilogo" src="img/netmatters-ltd-IE.jpg" alt="netmatters logo">
+                            </div>
+                            <div class="post-info">
+                                <h4><strong>Posted by Netmatters Ltd</strong></h4>
+                                <p>2nd March 2021</p>
+                            </div>
                         </div>
                       </div>
                     </div>
@@ -441,6 +447,7 @@
                     <a class="minilink" href="">NEWS</a>
                     <div class="news-image">
                         <div class="img-overlay">
+                            <div class="cover"></div>
                             <img src="img/faizel-IE.jpg" alt="Faizel">
                         </div>
                     </div>
@@ -450,14 +457,15 @@
                       <button class="readmore-btn">READ MORE
                           
                       </button>
-                      <hr>
-                      <div class="card-foot">
-                        <div class="avatar">
-                            <img class="minilogo" src="img/netmatters-ltd-IE.jpg" alt="netmatters logo">
-                        </div>
-                        <div class="post-info">
-                            <h4><strong>Posted by Netmatters Ltd</strong></h4>
-                            <p>26th February 2021</p>
+                      <div class="foot-wrapper">
+                        <div class="card-foot">
+                            <div class="avatar">
+                                <img class="minilogo" src="img/netmatters-ltd-IE.jpg" alt="netmatters logo">
+                            </div>
+                            <div class="post-info">
+                                <h4><strong>Posted by Netmatters Ltd</strong></h4>
+                                <p>26th February 2021</p>
+                            </div>
                         </div>
                       </div>
                     </div>
@@ -519,9 +527,10 @@
                         </div>
                     </div>
                     <div class="checkbox">
+                        <input class ="check" type="checkbox" id="checkbox" placeholder=""><i class="fas fa-check" style="color: #fff;"></i>
                         <span><label for="marketing-info">Please tick this box if you wish to receive marketing information from us. 
                             Please see our <span class="policy">Privacy Policy</span> for more information on how we use your data.</label></span>
-                        <input class ="check" type="checkbox" id="marketing-info" value="opt-in" name="user-opt">
+                        
                     </div>
                     
                     <button type="submit">SUBSCRIBE</button>

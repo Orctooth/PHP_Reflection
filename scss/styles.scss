@@ -606,7 +606,7 @@ $hamburger-types: (
             text-align: center;
             border: 1px solid #ccc;
             border-radius: 3px;
-            margin: 1.5rem .8rem;
+            margin: 1rem 1rem;
             
             & >p{
                 font-size: .8125rem;
@@ -897,28 +897,38 @@ $hamburger-types: (
 
 //Articles styles
 .news-header-con{
-    box-shadow: 0px 10px 12px #ddd;
+    box-shadow: 0 5px 35px rgb(0 0 0 / 10%);
 }
 
 .news-header-section{
-    padding: 10px 30px;
+    padding: 40px 30px;
     margin-bottom: 30px;
-   
-    position: relative;
 
     & > .latest{
-        border-bottom: #333645 5px solid;
+        //border-bottom: #333645 5px solid;
         padding-left:0px;
-        padding-bottom: 30px;
+        padding-bottom: 0px;
         display: inline-block;
         margin-bottom: -10px;
         color: $navy-ish;
         font-size: 1.25rem;
+        position: relative;
+
+        & > .bar-news::after{
+            content: "";
+            position: absolute;
+            top: 64px;
+            left: 0;
+            right: 0;
+            background-color: #333645;
+            height: 5px;
+        }
+       
     }
 }
 
 .news-section{
-    box-shadow: 0px 10px 12px #ddd;
+    box-shadow: 0 5px 35px rgb(0 0 0 / 10%);
     .news-cards{
         padding: 10px 0px;
         margin: 0px auto;
@@ -936,6 +946,8 @@ $hamburger-types: (
                 z-index: 1;
                 padding: 5px 10px;
                 font-weight: 600;
+                font-size: 12px;
+                letter-spacing: .4px;
             
                 &:hover{
                     text-decoration: underline;
@@ -947,32 +959,45 @@ $hamburger-types: (
     
             & > .news-image{
                 width: 100%;
+                height: 235px;
                 border-radius: 3px;
                 border:none;
                 overflow: hidden;
+                position: relative;
+               
     
                 & > .img-overlay{
-                    opacity: 1;
-                    transition: opacity 0.3s;
-    
+                    & > .cover{
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        z-index: 1;
+                        transition: background-color .3s linear;
+                        opacity: 0.3;
+                    }
+                    
                     & > img{
                         width: 100%;
-                        transition: transform .3s;
+                        background-size: cover;
+                        height: auto;
+                        transition: transform .3s, background-color .3s;
+                        opacity: 1;
                     }
+                    
                 }
             }
     
             & > .news-container{
                 padding: 30px 30px;
-                z-index: 1;
-    
-                & > hr{
-                    color: #ddd;
-                }
                 
+                position: relative;
+                height: 330px;
                 & > p{
                     color: #666;
-                    margin-bottom: 20px;
+                    margin-bottom: 30px;
+                    font-size: .8125rem;
                 }
                 & > h4{
                     color: #000;
@@ -981,19 +1006,26 @@ $hamburger-types: (
                 & > .heading-link{
                     color: #926fb1;
                     text-decoration: none;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    padding-bottom: 10px;
                     &:hover{
                         text-decoration: underline;
                         cursor: pointer;
                     }
                 }
-    
+
                 & > .readmore-btn{
                     color: #fff;
                     background-color: #926fb1;
                     border-radius: 3px;
                     border: none;
+                    margin-top: 5px;
                     margin-bottom: 20px;
                     padding: 10px 15px;
+                    position: absolute;
+                    top: 150px;
+                    left: 30px;
                 
                     &:hover{
                         background-color: #7e57a0;
@@ -1001,39 +1033,66 @@ $hamburger-types: (
                     }
                 }
     
-                & > .card-foot{
-                    display:flex;
-                    flex-wrap: nowrap;
-                    justify-content: flex-start;
-                    vertical-align: middle;
-                    width:100%;
-    
-                    & > .avatar, .post-info{
-                        display: inline-block;
+                
+                & > .foot-wrapper{
+                    position: absolute;
+                    top: 220px;
+                    bottom: 0;
+                    left: 30px;
+                    right: 0;
+                    
+                    & > .card-foot{
+                        display:flex;
+                        flex-wrap: nowrap;
+                        justify-content: flex-start;
                         vertical-align: middle;
-    
-                        & > .minilogo{
-                            height: auto;
-                            width: 47px;
+                        width:100%;
+                        position: relative;
+                        margin-top: 10px;
+
+                        &::before{
+                            position: absolute;
+                            top: -5px;
+                            left: 0px;
+                            content: "";
+                            width:90%;
+                            height: 2px;
+                            background-color: #ddd;
                             
                         }
-                    }
-    
-                    & > .post-info{
-                        padding-left: 20px;
-                        padding-top: 20px;
-                        line-height: 20px;
-                        height:auto;
-                        font-size: .875rem;
-                        & > p{
-                            color: #666;
+                        
+        
+                        & > .avatar, .post-info{
+                            display: inline-block;
+                            vertical-align: middle;
+                            
+        
+                            & > .minilogo{
+                                height: auto;
+                                width: 47px;
+                                
+                            }
                         }
+        
+                        & > .post-info{
+                            padding-left: 20px;
+                            padding-top: 20px;
+                            line-height: 20px;
+                            height:auto;
+                            font-size: .875rem;
+                            & > p{
+                                color: #666;
+                            }
+                        }
+                        & > .avatar{
+                            margin-top: 15px;
+                            
+                        }
+                        
                     }
-                    & > .avatar{
-                        margin-top: 15px;
-                    }
-                    
                 }
+    
+                
             }
         }
     }
@@ -1051,8 +1110,8 @@ $hamburger-types: (
 
     & > .company{
         display: inline-block;
-        max-width: 25%;
-        transform:scale(0.8);
+        //max-width: 25%;
+        //transform:scale(0.8);
         & > img{
             vertical-align: middle;
             width: 100%;
@@ -1061,7 +1120,7 @@ $hamburger-types: (
 
         & > .tooltiptext {
             visibility: hidden;
-            max-width:280px;
+            width:260px;
             height: auto;
             background-color: #333645;
             color: #fff;
@@ -1069,12 +1128,11 @@ $hamburger-types: (
             padding: 5px 0;
             /* Position the tooltip */
             position: absolute;
-            z-index: 1;
-            bottom: 100%;
+            z-index: 5;
+            bottom: 70%;
             left: 25%;
             line-height: 30px;
             margin-left: -60px;
-            padding: 20px;
             margin-bottom: 70px;
             font-size: 1.0rem;
 
@@ -1084,6 +1142,8 @@ $hamburger-types: (
 
             & > p{
                 padding: 10px 10px;
+                font-size: .875rem;
+                line-height: 1.42857143;
             }
 
             
@@ -1092,9 +1152,9 @@ $hamburger-types: (
                 content: "";
                 position: absolute;
                 top: 100%;
-                left: 50%;
+                left: 41%;
                 margin-left: -20px;
-                border-width: 20px;
+                border-width: 40px;
                 border-style: solid;
                 border-color: #333645 transparent transparent transparent;
             }
@@ -1193,12 +1253,39 @@ $hamburger-types: (
         }
 
         & > .checkbox{
+            display: flex;
+            flex-direction: row;
+            vertical-align: middle;
+            position: relative;
+            & > i{
+                position: absolute;
+                top:12px;
+                left:8px;
+                display:none;
+            }
             & > span{
                 & > label{
                     
                     color: $navy-ish;
                     font-weight: 600;
+                    line-height: 32px;
                 }
+            }
+
+            & > input{
+                border: 3px solid $navy-ish;
+                height: 30px;
+                width: 30px;
+                margin-top: 5px;
+                margin-right: 15px;
+                border-radius: 3px;
+                &:checked{
+                    background: $navy-ish;
+                    & ~ i {
+                        display:inline;
+                    }
+                }
+                
             }
             
         }
