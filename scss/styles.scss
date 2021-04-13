@@ -63,7 +63,7 @@ body{
 // ==================================================
 $hamburger-padding-x           : 15px !default;
 $hamburger-padding-y           : 8px !default;
-$hamburger-layer-width         : 40px !default;
+$hamburger-layer-width         : 32px !default;
 $hamburger-layer-height        : 3px !default;
 $hamburger-layer-spacing       : 4px !default;
 $hamburger-layer-color         : #fff !default;
@@ -84,15 +84,16 @@ $hamburger-types: (
 
 //header
 .logo{
-    margin: 15px 0px;
     display:block;
-    width:300px;
+    max-width: 100%;
+    margin-top: 15px;
     
 }
 
 .header{
     padding-top: 5px;
     padding-bottom: 5px;
+    margin: 0 15px;
     
     //first line of header including logo,burger,etc.
     & > .header-top{
@@ -112,22 +113,32 @@ $hamburger-types: (
 
             & > .support, .hamburger{
                 position:absolute;
-                & > svg{
-                    vertical-align: middle;
-                }
-                & > .supportIcon{
-                    vertical-align: middle;
-                }
             }
     
             & > .support{
                 display: block;
-                top: 20px;
-                right: 100px;
-                
-    
+                top: 45px;
+                right: 50px;
+                & > i{
+                    height: 56px;
+                    width: 56px;
+                    transform: scale(1.75);
+                    
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 15px;
+                    left: -25px;
+                    width: 30px;
+                    height: 3px;
+                    background-color: #000;
+                    display: none;
+                }
                 &:hover{
-                    border-bottom: solid black 3px;
+                    &::after{
+                        display:block;
+                    }
                 }
             }
     
@@ -167,12 +178,12 @@ $hamburger-types: (
                 display: block;
                 top: 15px;
                 right: 0px;
-                padding: 10px 15px;
+                padding: 10px 12px;
 
                 & > .menutext{
-                    font-size: 0.825rem;
-                    line-height: 1;
-                    margin-top:5px;
+                    font-size: 0.75rem;
+                    line-height: 1.6rem;
+                    margin-top: 15px;
                 }
     
                 &:hover{
@@ -192,34 +203,34 @@ $hamburger-types: (
     & > .searchbar{
         display: flex;
         flex-wrap: nowrap;
-        justify-content: center;
-        margin-right: 45px;
-        
+        //justify-content: space-around;
+        margin: 0 auto;
+        width: 100vw;
         
 
         & > form{
-            //box-shadow: inset 0 0 8px rgb(91 192 222 / 60%);
             & > input[type=text]{
                 padding: 6px;
                 margin-top: 8px;
                 font-size: 17px;
-                border-top: 2px solid #ddd;
-                border-left: 2px solid #ddd;
-                border-bottom: 2px solid #ddd;
+                border-top: 2px solid #ccc;
+                border-left: 2px solid #ccc;
+                border-bottom: 2px solid #ccc;
                 border-right: none;
                 background-color: rgba(0,0,0,.1);
             
                 border-top-left-radius: 2px;
                 border-bottom-left-radius: 2px;
-                color: #555;
+                box-shadow: inset 0 1px 0px rgb(0 0 0 / 8%);
+                color: #666;
                 height: 47px;
                 width: 80vw;
                 position:relative;
     
                 &:focus{
-                    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+                    box-shadow: inset 0 0px 0px rgb(0 0 0 / 8%);
                     & ~ .mobile-sbtn{
-                        box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+                        box-shadow: inset 0 0px 0px rgb(0 0 0 / 8%);
                     }
                 }
             }
@@ -229,9 +240,9 @@ $hamburger-types: (
                 margin-top: 8px;
                 margin-right: 16px;
                 background-color: rgba(0,0,0,.1);
-                border-top: 2px solid #ddd;
-                border-right: 2px solid #ddd;
-                border-bottom: 2px solid #ddd;
+                border-top: 2px solid #ccc;
+                border-right: 2px solid #ccc;
+                border-bottom: 2px solid #ccc;
                 border-left: none;
                 border-top-right-radius: 2px;
                 border-bottom-right-radius: 2px;
@@ -239,11 +250,8 @@ $hamburger-types: (
                 cursor: pointer;
                 height: 47px;
                 position: absolute;
-                float: right;
-    
-                &:hover{
-                    background: #ccc;
-                }
+                //float: right;
+                box-shadow: inset 0 1px 0px rgb(0 0 0 / 8%);
             }
 
         }
@@ -260,6 +268,8 @@ $hamburger-types: (
     & > .tab-wrapper{
         display:flex;
         position: relative;
+        border-left: 1px solid hsla(0,0%,100%,.1);
+        border-right: 1px solid rgba(0,0,0,.25);
 
         
         & > .bar-child{
@@ -269,8 +279,8 @@ $hamburger-types: (
             flex-direction: column;
             align-items: center;
             color: #fff;
-            border-right:#555 1px solid;
-            border-left: #000 1px solid;
+            border-right: 1px solid hsla(0,0%,100%,.1);
+            border-left: 1px solid rgba(0,0,0,.25);
             padding-top: 19px;
             padding-bottom: 18px;
             line-height: 1;
@@ -1120,12 +1130,12 @@ $hamburger-types: (
 
         & > .tooltiptext {
             visibility: hidden;
-            width:260px;
+            min-width:260px;
             height: auto;
             background-color: #333645;
             color: #fff;
             text-align: center;
-            padding: 5px 0;
+            padding: 15px 15px;
             /* Position the tooltip */
             position: absolute;
             z-index: 5;
@@ -1152,7 +1162,7 @@ $hamburger-types: (
                 content: "";
                 position: absolute;
                 top: 100%;
-                left: 41%;
+                left: 43%;
                 margin-left: -20px;
                 border-width: 40px;
                 border-style: solid;
@@ -1169,8 +1179,8 @@ $hamburger-types: (
         }
 
         & > .tbeat{
-            left: 0%;
-            width: 200px;
+            left: -35%;
+            //width: 200px;
         }
         & > .tcrane{
             left: 20%;
@@ -1215,7 +1225,7 @@ $hamburger-types: (
     margin: 0 30px;
 
     & > .form{
-        padding: 0px 30px;
+        padding: 20px 30px;
         & > h2{
             font-size: 2rem;
             font-weight: 400;
@@ -1223,6 +1233,7 @@ $hamburger-types: (
         
         & > .form-box {
             & > .form-group{
+                margin-right: 30px;
                 & > label{
                     margin-bottom: 5px;
                     font-weight: 600;
@@ -1234,17 +1245,17 @@ $hamburger-types: (
                 & > .field{
                     margin-top: 15px;
                     margin-bottom: 15px;
-                    padding: 0px 0px;
+                    padding: 5px 15px;
                     border: 1px solid #ccc;
                     border-radius: 2px;
                     box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
-                    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+                    transition: border-color .3s ease-in-out, box-shadow .15s ease-in-out;
                     height: 45px;
-                    width:90%;
+                    width:100%;
         
                     &:focus{
                         border-color: #5bc0de;
-                        box-shadow: inset 0 0 8px rgb(91 192 222 / 60%);
+                        box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(91 192 222 / 60%);
                     }
                 
                 }
@@ -1257,11 +1268,13 @@ $hamburger-types: (
             flex-direction: row;
             vertical-align: middle;
             position: relative;
-            & > i{
+            justify-content: space-between;
+            & > label{
                 position: absolute;
-                top:12px;
+                top:8px;
                 left:8px;
                 display:none;
+                
             }
             & > span{
                 & > label{
@@ -1269,21 +1282,28 @@ $hamburger-types: (
                     color: $navy-ish;
                     font-weight: 600;
                     line-height: 32px;
+                    &:hover{
+                        cursor:pointer;
+                    }
                 }
             }
 
             & > input{
                 border: 3px solid $navy-ish;
                 height: 30px;
-                width: 30px;
+                min-width: 30px;
                 margin-top: 5px;
                 margin-right: 15px;
                 border-radius: 3px;
+                display: block;
                 &:checked{
                     background: $navy-ish;
-                    & ~ i {
+                    & ~ label {
                         display:inline;
                     }
+                }
+                &:hover{
+                    cursor:pointer;
                 }
                 
             }
@@ -1293,16 +1313,19 @@ $hamburger-types: (
         
         
         & > button{
-            color: #ddd;
+            color: #fff;
             background-color: #333645;
             border-radius: 3px;
             border: none;
             height:auto;
             margin-bottom: 10px;
-            margin-top: 10px;
+            margin-top: 20px;
             padding: 10px 15px;
+            font-size: 1.063rem;
+            font-weight: 400;
             &:hover{
-                background-color: #121419;
+                background-color: #22242e;
+                border-color: #121419;;
                 cursor: pointer;
             }
         }
@@ -1326,10 +1349,7 @@ footer {
     background-color: #333645;
 
     .footer-main{
-       
-
         
-    
         p {
             font-size: .8125rem;
             line-height: 1.375rem;
@@ -1351,10 +1371,14 @@ footer {
     
                 ul li {
                     list-style-type: none;
+                    font-size: .8125rem;
+                    line-height: 1.375rem; 
                 }
     
                 h4{
                     margin-bottom: 26px;
+                    font-weight: 400;
+                    font-size: 1rem;
                 }
     
                 a {
@@ -1374,13 +1398,14 @@ footer {
                     display: flex;
                     flex-direction: row;
                     flex-wrap: wrap;
-                    gap: 40px;
-                    justify-content: space-between;
+                    gap: 30px;
+                    column-gap: 30px;
+                    //justify-content: space-between;
     
                     a {
                         display: block;
                         text-align: center;
-                        width: 36%;
+                        min-width: 45%;
                         height: 50px;
                         padding: 10px;
                         background-color: rgba(0,0,0,.25);
@@ -1391,11 +1416,11 @@ footer {
                     }
     
                     .twitter:hover {
-                        background-color: #3b5998;
+                        background-color: #00aced;
                     }
     
                     .linked-in:hover {
-                        background-color: #3b5998;
+                        background-color: #0077b5;
                     }
                 }
             }

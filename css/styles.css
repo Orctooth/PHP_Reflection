@@ -78,7 +78,7 @@ body {
 }
 
 .hamburger-box {
-  width: 40px;
+  width: 32px;
   height: 17px;
   display: inline-block;
   position: relative;
@@ -90,7 +90,7 @@ body {
   margin-top: -1.5px;
 }
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-  width: 40px;
+  width: 32px;
   height: 3px;
   background-color: #fff;
   border-radius: 0px;
@@ -140,14 +140,15 @@ body {
 }
 
 .logo {
-  margin: 15px 0px;
   display: block;
-  width: 300px;
+  max-width: 100%;
+  margin-top: 15px;
 }
 
 .header {
   padding-top: 5px;
   padding-bottom: 5px;
+  margin: 0 15px;
 }
 .header > .header-top {
   display: flex;
@@ -165,19 +166,28 @@ body {
 .header > .header-top .buttons > .support, .header > .header-top .buttons .hamburger {
   position: absolute;
 }
-.header > .header-top .buttons > .support > svg, .header > .header-top .buttons .hamburger > svg {
-  vertical-align: middle;
-}
-.header > .header-top .buttons > .support > .supportIcon, .header > .header-top .buttons .hamburger > .supportIcon {
-  vertical-align: middle;
-}
 .header > .header-top .buttons > .support {
   display: block;
-  top: 20px;
-  right: 100px;
+  top: 45px;
+  right: 50px;
 }
-.header > .header-top .buttons > .support:hover {
-  border-bottom: solid black 3px;
+.header > .header-top .buttons > .support > i {
+  height: 56px;
+  width: 56px;
+  transform: scale(1.75);
+}
+.header > .header-top .buttons > .support::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: -25px;
+  width: 30px;
+  height: 3px;
+  background-color: #000;
+  display: none;
+}
+.header > .header-top .buttons > .support:hover::after {
+  display: block;
 }
 .header > .header-top .buttons > .big-beautiful-button {
   padding: 15px 30px;
@@ -210,12 +220,12 @@ body {
   display: block;
   top: 15px;
   right: 0px;
-  padding: 10px 15px;
+  padding: 10px 12px;
 }
 .header > .header-top .buttons > .hamburger > .menutext {
-  font-size: 0.825rem;
-  line-height: 1;
-  margin-top: 5px;
+  font-size: 0.75rem;
+  line-height: 1.6rem;
+  margin-top: 15px;
 }
 .header > .header-top .buttons > .hamburger:hover {
   background-color: #22242e;
@@ -223,39 +233,40 @@ body {
 .header > .searchbar {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: center;
-  margin-right: 45px;
+  margin: 0 auto;
+  width: 100vw;
 }
 .header > .searchbar > form > input[type=text] {
   padding: 6px;
   margin-top: 8px;
   font-size: 17px;
-  border-top: 2px solid #ddd;
-  border-left: 2px solid #ddd;
-  border-bottom: 2px solid #ddd;
+  border-top: 2px solid #ccc;
+  border-left: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
   border-right: none;
   background-color: rgba(0, 0, 0, 0.1);
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
-  color: #555;
+  box-shadow: inset 0 1px 0px rgba(0, 0, 0, 0.08);
+  color: #666;
   height: 47px;
   width: 80vw;
   position: relative;
 }
 .header > .searchbar > form > input[type=text]:focus {
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
+  box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.08);
 }
 .header > .searchbar > form > input[type=text]:focus ~ .mobile-sbtn {
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
+  box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.08);
 }
 .header > .searchbar > form > button {
   padding: 12px 10px;
   margin-top: 8px;
   margin-right: 16px;
   background-color: rgba(0, 0, 0, 0.1);
-  border-top: 2px solid #ddd;
-  border-right: 2px solid #ddd;
-  border-bottom: 2px solid #ddd;
+  border-top: 2px solid #ccc;
+  border-right: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
   border-left: none;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
@@ -263,10 +274,7 @@ body {
   cursor: pointer;
   height: 47px;
   position: absolute;
-  float: right;
-}
-.header > .searchbar > form > button:hover {
-  background: #ccc;
+  box-shadow: inset 0 1px 0px rgba(0, 0, 0, 0.08);
 }
 
 .navbar {
@@ -277,6 +285,8 @@ body {
 .navbar > .tab-wrapper {
   display: flex;
   position: relative;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.25);
 }
 .navbar > .tab-wrapper > .bar-child {
   width: 20%;
@@ -285,8 +295,8 @@ body {
   flex-direction: column;
   align-items: center;
   color: #fff;
-  border-right: #555 1px solid;
-  border-left: #000 1px solid;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(0, 0, 0, 0.25);
   padding-top: 19px;
   padding-bottom: 18px;
   line-height: 1;
@@ -968,12 +978,12 @@ body {
 }
 .companies > .company > .tooltiptext {
   visibility: hidden;
-  width: 260px;
+  min-width: 260px;
   height: auto;
   background-color: #333645;
   color: #fff;
   text-align: center;
-  padding: 5px 0;
+  padding: 15px 15px;
   /* Position the tooltip */
   position: absolute;
   z-index: 5;
@@ -996,7 +1006,7 @@ body {
   content: "";
   position: absolute;
   top: 100%;
-  left: 41%;
+  left: 43%;
   margin-left: -20px;
   border-width: 40px;
   border-style: solid;
@@ -1007,8 +1017,7 @@ body {
   margin: 0 45%;
 }
 .companies > .company > .tbeat {
-  left: 0%;
-  width: 200px;
+  left: -35%;
 }
 .companies > .company > .tcrane {
   left: 20%;
@@ -1044,11 +1053,14 @@ body {
   margin: 0 30px;
 }
 .sign-up-form > .form {
-  padding: 0px 30px;
+  padding: 20px 30px;
 }
 .sign-up-form > .form > h2 {
   font-size: 2rem;
   font-weight: 400;
+}
+.sign-up-form > .form > .form-box > .form-group {
+  margin-right: 30px;
 }
 .sign-up-form > .form > .form-box > .form-group > label {
   margin-bottom: 5px;
@@ -1060,27 +1072,28 @@ body {
 .sign-up-form > .form > .form-box > .form-group > .field {
   margin-top: 15px;
   margin-bottom: 15px;
-  padding: 0px 0px;
+  padding: 5px 15px;
   border: 1px solid #ccc;
   border-radius: 2px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.15s ease-in-out;
   height: 45px;
-  width: 90%;
+  width: 100%;
 }
 .sign-up-form > .form > .form-box > .form-group > .field:focus {
   border-color: #5bc0de;
-  box-shadow: inset 0 0 8px rgba(91, 192, 222, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), 0 0 8px rgba(91, 192, 222, 0.6);
 }
 .sign-up-form > .form > .checkbox {
   display: flex;
   flex-direction: row;
   vertical-align: middle;
   position: relative;
+  justify-content: space-between;
 }
-.sign-up-form > .form > .checkbox > i {
+.sign-up-form > .form > .checkbox > label {
   position: absolute;
-  top: 12px;
+  top: 8px;
   left: 8px;
   display: none;
 }
@@ -1089,32 +1102,42 @@ body {
   font-weight: 600;
   line-height: 32px;
 }
+.sign-up-form > .form > .checkbox > span > label:hover {
+  cursor: pointer;
+}
 .sign-up-form > .form > .checkbox > input {
   border: 3px solid #333645;
   height: 30px;
-  width: 30px;
+  min-width: 30px;
   margin-top: 5px;
   margin-right: 15px;
   border-radius: 3px;
+  display: block;
 }
 .sign-up-form > .form > .checkbox > input:checked {
   background: #333645;
 }
-.sign-up-form > .form > .checkbox > input:checked ~ i {
+.sign-up-form > .form > .checkbox > input:checked ~ label {
   display: inline;
 }
+.sign-up-form > .form > .checkbox > input:hover {
+  cursor: pointer;
+}
 .sign-up-form > .form > button {
-  color: #ddd;
+  color: #fff;
   background-color: #333645;
   border-radius: 3px;
   border: none;
   height: auto;
   margin-bottom: 10px;
-  margin-top: 10px;
+  margin-top: 20px;
   padding: 10px 15px;
+  font-size: 1.063rem;
+  font-weight: 400;
 }
 .sign-up-form > .form > button:hover {
-  background-color: #121419;
+  background-color: #22242e;
+  border-color: #121419;
   cursor: pointer;
 }
 
@@ -1148,9 +1171,13 @@ footer .footer-main .footer-content > div {
 }
 footer .footer-main .footer-content > div ul li {
   list-style-type: none;
+  font-size: 0.8125rem;
+  line-height: 1.375rem;
 }
 footer .footer-main .footer-content > div h4 {
   margin-bottom: 26px;
+  font-weight: 400;
+  font-size: 1rem;
 }
 footer .footer-main .footer-content > div a {
   text-decoration: none;
@@ -1163,13 +1190,13 @@ footer .footer-main .footer-content .social-con .button-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 40px;
-  justify-content: space-between;
+  gap: 30px;
+  column-gap: 30px;
 }
 footer .footer-main .footer-content .social-con .button-container a {
   display: block;
   text-align: center;
-  width: 36%;
+  min-width: 45%;
   height: 50px;
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.25);
@@ -1178,10 +1205,10 @@ footer .footer-main .footer-content .social-con .button-container .facebook:hove
   background-color: #3b5998;
 }
 footer .footer-main .footer-content .social-con .button-container .twitter:hover {
-  background-color: #3b5998;
+  background-color: #00aced;
 }
 footer .footer-main .footer-content .social-con .button-container .linked-in:hover {
-  background-color: #3b5998;
+  background-color: #0077b5;
 }
 
 .awards {
@@ -1233,14 +1260,24 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
   .searchbar-lg {
     display: none;
   }
+
+  .searchbar-mobile {
+    margin: 0 auto;
+  }
 }
 @media only screen and (max-width: 768px) and (-ms-high-contrast: active), only screen and (max-width: 768px) and (-ms-high-contrast: none) {
-  .searchbar-mobile {
-    margin-bottom: 30px;
-    padding-bottom: 10px;
-  }
   .searchbar-mobile > button {
     margin-right: 20px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .header {
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .logo {
+    max-width: 80%;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -1248,6 +1285,9 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
     display: none;
   }
 
+  .header {
+    margin-bottom: 30px;
+  }
   .header > .searchbar-mobile {
     display: none;
   }
@@ -1409,6 +1449,7 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
 }
 @media only screen and (min-width: 1280px) {
   .navbar .tab-wrapper {
+    min-width: 1298px;
     margin: 0 auto;
   }
   .navbar .tab-wrapper > .bar-child > .drop-down > ul > li {
@@ -1584,7 +1625,20 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
   }
   footer .footer-main .footer-content > div {
     margin: 0 auto;
+    width: 25%;
+  }
+}
+@media (min-width: 1080px) {
+  footer .footer-main .footer-content {
+    width: 1096px;
+    padding: 30px 0px;
+  }
+  footer .footer-main .footer-content > div {
+    margin: 0 auto;
     width: 20%;
+  }
+  footer .footer-main .footer-content > .social-con {
+    width: 30%;
   }
 }
 @-moz-document url-prefix() {
@@ -1606,7 +1660,7 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
 @media only screen and (max-width: 443px) {
   .header-top, .searchbar-mobile, .banner-text,
 .nav-cards, .culture-back, .news-header-section,
-.news-cards, .companies, .footer-content {
+.news-cards, .companies, .sign-up-form, .footer-content {
     width: 425px;
     margin: 0 auto;
   }
@@ -1614,7 +1668,7 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
 @media only screen and (min-width: 786px) {
   .header-top, .searchbar-mobile, .banner-text,
 .nav-cards, .culture-back, .news-header-section,
-.news-cards, .companies, .footer-content {
+.news-cards, .companies, .sign-up-form, .footer-content {
     width: 768px;
     margin: 0 auto;
   }
@@ -1622,7 +1676,7 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
 @media only screen and (min-width: 1010px) {
   .header-top, .searchbar-mobile, .banner-text, .tab-wrapper,
 .xl-row-nav, .lg-row-nav, .nav-cards, .culture-back, .news-header-section,
-.news-cards, .companies, .footer-content, .awards-1, .awards-2 {
+.news-cards, .companies, .sign-up-form, .footer-content, .awards-1, .awards-2 {
     width: 992px;
     margin: 0 auto;
   }
@@ -1631,7 +1685,7 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
   .header-top, .searchbar-mobile, .banner-text, .tab-wrapper,
 .xl-row-nav, .xxl-row-nav, .nav-cards,
 .culture-back, .news-header-section, .companies,
-.news-cards, .footer-content, .awards-1, .awards-2 {
+.news-cards, .footer-content, .sign-up-form, .awards-1, .awards-2 {
     width: 1298px;
     margin: 0 auto;
   }
