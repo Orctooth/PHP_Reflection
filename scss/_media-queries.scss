@@ -126,10 +126,17 @@
         position: absolute;
         top:15px;
         right: 350px;
-        & > svg{
-            display:block;
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            padding-right: -40px;
+            
+            & > i{
+                position: absolute;
+                top: 15px;
+                left: 15px;
+                
+            }
+            
         }
-        
     }
 
     .contact-xl{
@@ -182,23 +189,13 @@
 
     .support-xl{
         right: 530px;
-        @-moz-document url-prefix(){
-            right:605px;
-        }
-        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-            right:605px;
-        }
+        
         
     }
 
     .contact-xl{
         right: 380px;
-        @-moz-document url-prefix(){
-            right:500px;
-        }
-        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-            right:500px;
-        }
+       
     }
 }
 
@@ -267,6 +264,10 @@
         }
         
     }
+
+    .banner-overlay{
+        background: linear-gradient(270deg, transparent 0%, #000);
+    }
 }
 
 
@@ -310,12 +311,15 @@
 @media only screen and (min-width: 992px){
     .xl-row-nav{
         display:flex;
-        justify-content: space-between;
-        //margin: 25px auto;
+        width: 992px;
+        //justify-content: space-between;
+        margin: 25px auto;
+        
         & > .card-nav{
             @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
                 width: 33.3%;
             }
+            
         }
     }
 
@@ -343,10 +347,10 @@
         margin: 45px auto;
     }
 
-    .xl-row-nav{
-        margin: 0 auto;
-        width: 1298px;
-    }
+    // .xl-row-nav{
+    //     margin: 0 auto;
+    //     width: 1298px;
+    // }
 
     .lg-row-nav{
         display:flex;
@@ -381,6 +385,7 @@
 }
 
 //news queries
+
 
 @media only screen and (min-width: 768px){
     .news-cards{
@@ -511,6 +516,29 @@
     }
 }
 
+@media (min-width: 1280px) {
+    footer {
+
+        .footer-main {
+            
+
+            .footer-content {
+                width: 1296px;
+                padding: 30px 0px;
+                
+                & > div {
+                    
+                    margin: 0 auto;
+                    width: 20%;
+                }
+                & > .social-con{
+                    width: 30%;
+                }
+            }
+        }
+    }
+}
+
 
 @-moz-document url-prefix(){
     .button-container{
@@ -540,6 +568,26 @@
     }
 }
 
+@media only screen and (max-width: 992px){
+    .companies{
+        & > .company{
+            & >img{
+                transform: scale(0.8);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1280px){
+    .companies{
+        & > .company{
+            & >img{
+                transform: scale(0.9);
+            }
+        }
+    }
+}
+
 //universal display queries
 
 //mobiles
@@ -563,7 +611,7 @@
 //small laptops
 @media only screen and (min-width: 1010px){
     .header-top, .searchbar-mobile, .banner-text, .tab-wrapper,
-    .xl-row-nav, .lg-row-nav, .nav-cards, .culture-back, .news-header-section,
+    .lg-row-nav, .nav-cards, .culture-back, .news-header-section,
     .news-cards, .companies, .sign-up-form, .footer-content, .awards-1, .awards-2 {
         width: 992px;
         margin: 0 auto;
@@ -579,5 +627,37 @@
     .news-cards, .footer-content, .sign-up-form, .awards-1, .awards-2 {
         width: 1298px;
         margin: 0 auto;
+    }
+}
+
+//cross browser fixes
+//header
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .menutext{
+        margin: 0 0;
+        padding: 0 0;
+        
+        position: absolute;
+        top: 25px;
+        right: 12px;
+    }
+    .hamburger-inner{
+        margin-bottom: 20px;
+        margin-top: -8px;
+    }
+}
+
+@-moz-document url-prefix(){
+    .menutext{
+        margin: 0 0;
+        padding: 0 0;
+        
+        position: absolute;
+        top: 25px;
+        right: 12px;
+    }
+    .hamburger-inner{
+        margin-bottom: 20px;
+        margin-top: -8px;
     }
 }
