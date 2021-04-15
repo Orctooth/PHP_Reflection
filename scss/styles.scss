@@ -29,9 +29,24 @@ $navy-ish: #333645;
     a{
         text-decoration: none;
     }
-    input::-ms-check{
-        display:none
+    
+    input[type="text"]::-ms-clear{
+        display:none;
+        width:0;
+        height:0;
     }
+    input[type="email"]::-ms-clear{
+        display:none;
+        width:0;
+        height:0;
+    }
+    input[type="checkbox"]::-ms-check{
+        display:none;
+        width:0;
+        height:0;
+    }
+    
+   
 
     box-sizing: border-box;
 
@@ -150,9 +165,17 @@ $hamburger-types: (
                 height: 56px;
                 width: 130px;
                 & > i{
-                    padding: 5px 5px;
+                    padding: 5px 15px;
+                    padding-right: 5px;
+                    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+                        padding-right: 0;
+                    }
                     font-size: 18px;
                 }
+                @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+                    padding: 15px 10px 15px 0;
+                }
+
                 
             }
             
@@ -204,14 +227,11 @@ $hamburger-types: (
     
     //searchbar that appears in xs displays
     & > .searchbar{
-        display: flex;
-        flex-wrap: nowrap;
-        //justify-content: space-around;
-        margin: 0 auto;
-        width: 100vw;
-        
-
+        //margin: 0 auto;
+      
         & > form{
+            display: flex;
+            flex-wrap: nowrap;
             & > input[type=text]{
                 padding: 6px;
                 margin-top: 8px;
@@ -227,7 +247,7 @@ $hamburger-types: (
                 box-shadow: inset 0 1px 0px rgb(0 0 0 / 8%);
                 color: #666;
                 height: 47px;
-                width: 80vw;
+                width: 1200px;
                 position:relative;
     
                 &:focus{
@@ -241,7 +261,8 @@ $hamburger-types: (
             & > button{
                 padding: 12px 10px;
                 margin-top: 8px;
-                margin-right: 16px;
+                margin-right: 0px;
+                min-width: 50px;
                 background-color: rgba(0,0,0,.1);
                 border-top: 2px solid #ccc;
                 border-right: 2px solid #ccc;
@@ -252,9 +273,8 @@ $hamburger-types: (
                 font-size: 17px;
                 cursor: pointer;
                 height: 47px;
-                position: absolute;
-                //float: right;
                 box-shadow: inset 0 1px 0px rgb(0 0 0 / 8%);
+                
             }
 
         }
@@ -691,7 +711,8 @@ $hamburger-types: (
             }
     
             & > .btn-nav{
-                height: auto;
+                min-height: 45px;
+                max-height: 45px;
                 width: 150px;
                 line-height: 35px;
                 font-size: 1.063rem;
@@ -1232,6 +1253,8 @@ $hamburger-types: (
     flex-direction: column;
     padding: 30px 30px;
     margin: 0 30px;
+    position:relative;
+    z-index:1;
 
     & > .form{
         padding: 20px 30px;
@@ -1278,6 +1301,23 @@ $hamburger-types: (
             vertical-align: middle;
             position: relative;
             justify-content: space-between;
+            & > .fakebox-IE{
+                position: absolute;
+                top:5px;
+                left:0px;
+                z-index: -1;
+                border: 3px solid $navy-ish;
+                height: 30px;
+                width: 30px;
+                border-radius: 3px;
+                display: none;
+                @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+                    display: block;
+                }
+
+
+            }
+            
             & > label{
                 position: absolute;
                 top:8px;
@@ -1285,6 +1325,7 @@ $hamburger-types: (
                 display:none;
                 
             }
+            
             & > span{
                 & > label{
                     
@@ -1298,6 +1339,8 @@ $hamburger-types: (
             }
 
             & > input{
+                
+                
                 border: 3px solid $navy-ish;
                 height: 30px;
                 min-width: 30px;
@@ -1305,11 +1348,23 @@ $hamburger-types: (
                 margin-right: 15px;
                 border-radius: 3px;
                 display: block;
+                
+                
+                
                 &:checked{
                     background: $navy-ish;
                     & ~ label {
                         display:inline;
                     }
+                }
+                &:not(:checked){
+                    border: 3px solid $navy-ish;
+                    height: 30px;
+                    min-width: 30px;
+                    margin-top: 5px;
+                    margin-right: 15px;
+                    border-radius: 3px;
+                    display: block;
                 }
                 &:hover{
                     cursor:pointer;
@@ -1506,4 +1561,3 @@ footer {
 //browser support
 
 @import "media-queries";
-

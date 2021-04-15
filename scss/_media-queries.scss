@@ -126,17 +126,7 @@
         position: absolute;
         top:15px;
         right: 350px;
-        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-            padding-right: -40px;
-            
-            & > i{
-                position: absolute;
-                top: 15px;
-                left: 15px;
-                
-            }
-            
-        }
+        
     }
 
     .contact-xl{
@@ -149,9 +139,7 @@
         position: absolute;
         top:15px;
         right: 200px;
-        & > svg{
-            display:block;
-        }
+        
     }
 
     .header-top{
@@ -265,9 +253,13 @@
         
     }
 
-    .banner-overlay{
-        background: linear-gradient(270deg, transparent 0%, #000);
+    .banner{
+        & >.banner-overlay{
+            background: linear-gradient(270deg, transparent 0%, #000);
+        }
     }
+
+    
 }
 
 
@@ -293,18 +285,33 @@
 }
 
 //nav queries
+@media only screen and (max-width: 992px){
+    .bespoke,.marketing,.IT,.telecoms,.security,.web-design,.schools{
+        width: 100%;
+        display:block;
+        margin: 0 auto;
+    }
+}
 
 @media only screen and (min-width: 768px) and (max-width:1280px){
     .lg-row-nav{
-        display:flex;
+        display: flex;
+        width: 768px;
         justify-content: space-around;
+        margin: 0 auto;
     }
 
+    .security,.schools,.web-design,.telecoms{
+        width: 50%;
+        display:block;
+        margin: 0 auto;
+        
+        
+    }
     .card-security,.card-schools,.card-web,.card-telecoms{
         width: 50%;
         display:block;
         margin: 0 auto;
-
     }
 }
 
@@ -361,6 +368,15 @@
     }
 
     .card-security,.card-schools,.card-web,.card-telecoms{
+        width: 45%;
+        height: 100%;
+        display:block;
+        float:left;
+        margin: 0 auto;
+        
+        
+    }
+    .security,.schools,.web-design,.telecoms{
         width: 45%;
         height: 100%;
         display:block;

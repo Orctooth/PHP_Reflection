@@ -25,8 +25,20 @@
 * a {
   text-decoration: none;
 }
-* input::-ms-check {
+* input[type=text]::-ms-clear {
   display: none;
+  width: 0;
+  height: 0;
+}
+* input[type=email]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+* input[type=checkbox]::-ms-check {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 .card, .card-nav {
@@ -198,8 +210,19 @@ body {
   width: 130px;
 }
 .header > .header-top .buttons > .big-beautiful-button > i {
-  padding: 5px 5px;
+  padding: 5px 15px;
+  padding-right: 5px;
   font-size: 18px;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .header > .header-top .buttons > .big-beautiful-button > i {
+    padding-right: 0;
+  }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .header > .header-top .buttons > .big-beautiful-button {
+    padding: 15px 10px 15px 0;
+  }
 }
 .header > .header-top .buttons > .support-xl {
   background-color: #4183d7;
@@ -233,11 +256,9 @@ body {
 .header > .header-top .buttons > .hamburger:hover {
   background-color: #22242e;
 }
-.header > .searchbar {
+.header > .searchbar > form {
   display: flex;
   flex-wrap: nowrap;
-  margin: 0 auto;
-  width: 100vw;
 }
 .header > .searchbar > form > input[type=text] {
   padding: 6px;
@@ -253,7 +274,7 @@ body {
   box-shadow: inset 0 1px 0px rgba(0, 0, 0, 0.08);
   color: #666;
   height: 47px;
-  width: 80vw;
+  width: 1200px;
   position: relative;
 }
 .header > .searchbar > form > input[type=text]:focus {
@@ -265,7 +286,8 @@ body {
 .header > .searchbar > form > button {
   padding: 12px 10px;
   margin-top: 8px;
-  margin-right: 16px;
+  margin-right: 0px;
+  min-width: 50px;
   background-color: rgba(0, 0, 0, 0.1);
   border-top: 2px solid #ccc;
   border-right: 2px solid #ccc;
@@ -276,7 +298,6 @@ body {
   font-size: 17px;
   cursor: pointer;
   height: 47px;
-  position: absolute;
   box-shadow: inset 0 1px 0px rgba(0, 0, 0, 0.08);
 }
 
@@ -586,7 +607,8 @@ body {
   text-align: center;
 }
 .nav-cards > .xl-row-nav > .card-nav > .btn-nav, .nav-cards .xxl-row-nav .lg-row-nav > .card-nav > .btn-nav {
-  height: auto;
+  min-height: 45px;
+  max-height: 45px;
   width: 150px;
   line-height: 35px;
   font-size: 1.063rem;
@@ -1045,6 +1067,8 @@ body {
   flex-direction: column;
   padding: 30px 30px;
   margin: 0 30px;
+  position: relative;
+  z-index: 1;
 }
 .sign-up-form > .form {
   padding: 20px 30px;
@@ -1085,6 +1109,22 @@ body {
   position: relative;
   justify-content: space-between;
 }
+.sign-up-form > .form > .checkbox > .fakebox-IE {
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  z-index: -1;
+  border: 3px solid #333645;
+  height: 30px;
+  width: 30px;
+  border-radius: 3px;
+  display: none;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .sign-up-form > .form > .checkbox > .fakebox-IE {
+    display: block;
+  }
+}
 .sign-up-form > .form > .checkbox > label {
   position: absolute;
   top: 8px;
@@ -1113,6 +1153,15 @@ body {
 }
 .sign-up-form > .form > .checkbox > input:checked ~ label {
   display: inline;
+}
+.sign-up-form > .form > .checkbox > input:not(:checked) {
+  border: 3px solid #333645;
+  height: 30px;
+  min-width: 30px;
+  margin-top: 5px;
+  margin-right: 15px;
+  border-radius: 3px;
+  display: block;
 }
 .sign-up-form > .form > .checkbox > input:hover {
   cursor: pointer;
@@ -1366,18 +1415,7 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
     top: 15px;
     right: 350px;
   }
-}
-@media only screen and (min-width: 992px) and (-ms-high-contrast: active), only screen and (min-width: 992px) and (-ms-high-contrast: none) {
-  .support-xl {
-    padding-right: -40px;
-  }
-  .support-xl > i {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-  }
-}
-@media only screen and (min-width: 992px) {
+
   .contact-xl {
     display: flex;
     justify-content: space-around;
@@ -1389,11 +1427,7 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
     top: 15px;
     right: 200px;
   }
-  .contact-xl > svg {
-    display: block;
-  }
-}
-@media only screen and (min-width: 992px) {
+
   .header-top {
     width: 1010px;
     margin: 0 auto;
@@ -1457,7 +1491,7 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
     float: left;
   }
 
-  .banner-overlay {
+  .banner > .banner-overlay {
     background: linear-gradient(270deg, transparent 0%, #000);
   }
 }
@@ -1478,10 +1512,25 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
     width: 50%;
   }
 }
+@media only screen and (max-width: 992px) {
+  .bespoke, .marketing, .IT, .telecoms, .security, .web-design, .schools {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 1280px) {
   .lg-row-nav {
     display: flex;
+    width: 768px;
     justify-content: space-around;
+    margin: 0 auto;
+  }
+
+  .security, .schools, .web-design, .telecoms {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
   }
 
   .card-security, .card-schools, .card-web, .card-telecoms {
@@ -1530,6 +1579,14 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
   }
 
   .card-security, .card-schools, .card-web, .card-telecoms {
+    width: 45%;
+    height: 100%;
+    display: block;
+    float: left;
+    margin: 0 auto;
+  }
+
+  .security, .schools, .web-design, .telecoms {
     width: 45%;
     height: 100%;
     display: block;
