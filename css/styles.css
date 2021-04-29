@@ -204,25 +204,13 @@ body {
 .header > .header-top .buttons > .support:hover::after {
   display: block;
 }
-.header > .header-top .buttons > .big-beautiful-button {
-  padding: 15px 30px;
-  height: 56px;
-  width: 130px;
-}
-.header > .header-top .buttons > .big-beautiful-button > i {
-  padding: 5px 15px;
-  padding-right: 5px;
-  font-size: 18px;
-}
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  .header > .header-top .buttons > .big-beautiful-button > i {
-    padding-right: 0;
-  }
-}
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  .header > .header-top .buttons > .big-beautiful-button {
-    padding: 15px 10px 15px 0;
-  }
+.header > .header-top .buttons > .btn-banner {
+  background-color: #4183d7;
+  border-radius: 3px;
+  border: none;
+  padding: 15px 15px;
+  margin: 30px 0;
+  color: #fff;
 }
 .header > .header-top .buttons > .support-xl {
   background-color: #4183d7;
@@ -295,9 +283,11 @@ body {
   border-left: none;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
-  font-size: 17px;
+  font-size: 20px;
   cursor: pointer;
   height: 47px;
+  color: #333645;
+  line-height: 1;
   box-shadow: inset 0 1px 0px rgba(0, 0, 0, 0.08);
 }
 
@@ -384,6 +374,9 @@ body {
   float: left;
   padding: 10px 15px;
 }
+.navbar > .tab-wrapper > .web-tab > .icon-tab > span {
+  color: #926fb1;
+}
 .navbar > .tab-wrapper > .web-tab:hover {
   background-color: #926fb1;
 }
@@ -400,6 +393,9 @@ body {
 .navbar > .tab-wrapper > .web-tab:hover > .dd-background {
   display: flex;
   background-color: #79539a;
+}
+.navbar > .tab-wrapper > .IT-tab > .icon-tab > span {
+  color: #4183d7;
 }
 .navbar > .tab-wrapper > .IT-tab:hover {
   background-color: #4183d7;
@@ -418,6 +414,9 @@ body {
   display: flex;
   background-color: #286abd;
 }
+.navbar > .tab-wrapper > .telecoms-tab > .icon-tab > span {
+  color: #d64541;
+}
 .navbar > .tab-wrapper > .telecoms-tab:hover {
   background-color: #d64541;
 }
@@ -434,6 +433,9 @@ body {
 .navbar > .tab-wrapper > .telecoms-tab:hover > .dd-background {
   display: flex;
   background-color: #bc2c28;
+}
+.navbar > .tab-wrapper > .bespoke-tab > .icon-tab > span {
+  color: #67809f;
 }
 .navbar > .tab-wrapper > .bespoke-tab:hover {
   background-color: #67809f;
@@ -452,6 +454,9 @@ body {
   display: flex;
   background-color: #526781;
 }
+.navbar > .tab-wrapper > .marketing-tab > .icon-tab > span {
+  color: #23cc71;
+}
 .navbar > .tab-wrapper > .marketing-tab:hover {
   background-color: #23cc71;
 }
@@ -468,6 +473,9 @@ body {
 .navbar > .tab-wrapper > .marketing-tab:hover > .dd-background {
   display: flex;
   background-color: #25a25a;
+}
+.navbar > .tab-wrapper > .security-tab > .icon-tab > span {
+  color: #f62459;
 }
 .navbar > .tab-wrapper > .security-tab:hover {
   background-color: #f62459;
@@ -598,6 +606,9 @@ body {
   position: relative;
   font-weight: 600;
 }
+.nav-cards > .xl-row-nav > .card-nav > .nav-icon-con > span > span, .nav-cards .xxl-row-nav .lg-row-nav > .card-nav > .nav-icon-con > span > span {
+  color: #fff;
+}
 .nav-cards > .xl-row-nav > .card-nav > .nav-icon-con > span > span > i, .nav-cards .xxl-row-nav .lg-row-nav > .card-nav > .nav-icon-con > span > span > i {
   position: absolute;
   top: 14px;
@@ -634,7 +645,7 @@ body {
 }
 
 .marketing, #btn-marketing {
-  background-color: #2ecc71;
+  background-color: #23cc71;
 }
 
 .telecoms, #btn-telecoms {
@@ -686,19 +697,19 @@ body {
 }
 
 .card-marketing:hover {
-  background-color: #2ecc71;
+  background-color: #23cc71;
   color: #fff;
   cursor: pointer;
 }
 .card-marketing:hover .nav-icon-con, .card-marketing:hover #btn-marketing {
   background-color: #fff;
-  color: #2ecc71;
+  color: #23cc71;
 }
 .card-marketing:hover .spacer-rule {
   background-color: #fff;
 }
 .card-marketing:hover i {
-  color: #2ecc71;
+  color: #23cc71;
 }
 
 .card-telecoms:hover {
@@ -1131,6 +1142,9 @@ body {
   left: 8px;
   display: none;
 }
+.sign-up-form > .form > .checkbox > label > i {
+  color: #fff;
+}
 .sign-up-form > .form > .checkbox > span > label {
   color: #333645;
   font-weight: 600;
@@ -1244,6 +1258,9 @@ footer .footer-main .footer-content .social-con .button-container a {
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.25);
 }
+footer .footer-main .footer-content .social-con .button-container a > i {
+  font-size: 1.75rem;
+}
 footer .footer-main .footer-content .social-con .button-container .facebook:hover {
   background-color: #3b5998;
 }
@@ -1331,6 +1348,20 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
     max-width: 80%;
   }
 }
+@media only screen and (max-width: 768px) {
+  .lg-row-nav {
+    display: block;
+    justify-content: space-around;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .security, .schools, .web-design, .telecoms {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+}
 @media only screen and (min-width: 768px) {
   .support > i {
     display: none;
@@ -1369,6 +1400,7 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
   .searchbar-lg > form > button {
     position: absolute;
     background-color: #999aa2;
+    color: #fff;
     border: inherit;
     height: 56px;
     width: 63px;
@@ -1519,7 +1551,7 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
     margin: 0 auto;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 1280px) {
+@media only screen and (min-width: 768px) {
   .lg-row-nav {
     display: flex;
     width: 768px;
@@ -1727,7 +1759,14 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
     transform: scale(0.9);
   }
 }
-@media only screen and (max-width: 443px) {
+@media only screen and (max-width: 425px) {
+  .header-top, .searchbar-mobile, .banner-text,
+.nav-cards, .culture-back, .news-header-section,
+.news-cards, .companies, .sign-up-form, .footer-content {
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 425px) {
   .header-top, .searchbar-mobile, .banner-text,
 .nav-cards, .culture-back, .news-header-section,
 .news-cards, .companies, .sign-up-form, .footer-content {

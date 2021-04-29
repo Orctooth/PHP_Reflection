@@ -1,6 +1,19 @@
-//DECLARATIONS
+//VARIABLES
 $text-culture: #fff;
 $navy-ish: #333645;
+$gray-ish: #999aa2;
+$web-tab-bg: #926fb1;
+$web-drop-bg: #79539a;
+$IT-tab-bg: #4183d7;
+$IT-drop-bg: #286abd;
+$telecoms-tab-bg: #d64541;
+$telecoms-drop-bg: #bc2c28;
+$bespoke-tab-bg: #67809f;
+$bespoke-drop-bg: #526781;
+$marketing-tab-bg: #23cc71;
+$marketing-drop-bg: #25a25a;
+$security-tab-bg:#f62459;
+$security-drop-bg: #de093f;
 
 //FONTAWESOME SVG Reformatting
 .supportIcon{
@@ -160,42 +173,51 @@ $hamburger-types: (
                 }
             }
     
-            & > .big-beautiful-button{
-                padding: 15px 30px;
-                height: 56px;
-                width: 130px;
-                & > i{
-                    padding: 5px 15px;
-                    padding-right: 5px;
-                    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-                        padding-right: 0;
-                    }
-                    font-size: 18px;
-                }
-                @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-                    padding: 15px 10px 15px 0;
-                }
+            // & > .big-beautiful-button{
+            //     padding: 15px 30px;
+            //     height: 56px;
+            //     width: 130px;
+            //     & > i{
+            //         padding: 5px 15px;
+            //         padding-right: 5px;
+            //         @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            //             padding-right: 0;
+            //         }
+            //         font-size: 18px;
+            //     }
+            //     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            //         padding: 15px 10px 15px 0;
+            //     }
 
                 
+            // }
+
+            & > .btn-banner{
+                background-color: $IT-tab-bg;
+                border-radius: 3px;
+                border: none;
+                padding: 15px 15px;
+                margin: 30px 0;
+                color:#fff;
             }
             
             
             & > .support-xl{
-                background-color: #4183d7;
+                background-color: $IT-tab-bg;
                 &:hover{
                     background-color: #2a6ec6;
                 }
             }
             
             & > .contact-xl{
-                background-color: #999aa2;
+                background-color: $gray-ish;
                 &:hover{
                     background-color: #84858f;
                 }
             }
     
             & > .hamburger{
-                background-color: #333645;
+                background-color: $navy-ish;
                 color: #fff;
                 margin-bottom: 10px;
                 border-radius: 3px;
@@ -270,9 +292,11 @@ $hamburger-types: (
                 border-left: none;
                 border-top-right-radius: 2px;
                 border-bottom-right-radius: 2px;
-                font-size: 17px;
+                font-size: 20px;
                 cursor: pointer;
                 height: 47px;
+                color: $navy-ish;
+                line-height: 1;
                 box-shadow: inset 0 1px 0px rgb(0 0 0 / 8%);
                 
             }
@@ -388,8 +412,13 @@ $hamburger-types: (
         }
     
         & > .web-tab{
+            & > .icon-tab{
+                & > span{
+                    color: $web-tab-bg;
+                }
+            }
             &:hover{
-                background-color: #926fb1;
+                background-color: $web-tab-bg;
                 & > .icon-tab{
                     & > span{
                         & > i{
@@ -400,21 +429,26 @@ $hamburger-types: (
                 }
                 & > .dd-web{
                     display:flex;
-                    background-color:  #79539a;
+                    background-color: $web-drop-bg;
                     & > ul{
-                        background-color:  #79539a;
+                        background-color: $web-drop-bg;
                     }
                 }
                 & > .dd-background{
                     display: flex;
-                    background-color:  #79539a;
+                    background-color: $web-drop-bg;
                 }
             }
         }
     
         & > .IT-tab{
+            & > .icon-tab{
+                & > span{
+                    color: $IT-tab-bg;
+                }
+            }
             &:hover{
-                background-color: #4183d7;
+                background-color: $IT-tab-bg;
                 & > .icon-tab{
                     & > span{
                         & > i{
@@ -424,21 +458,26 @@ $hamburger-types: (
                 }
                 & > .dd-IT{
                     display: flex;
-                    background-color: #286abd;
+                    background-color: $IT-drop-bg;
                     & > ul {
-                        background-color: #286abd;
+                        background-color: $IT-drop-bg;
                     }
                 }
                 & > .dd-background{
                     display: flex;
-                    background-color:  #286abd;
+                    background-color: $IT-drop-bg;
                 }
             }
         }
     
         & > .telecoms-tab{
+            & > .icon-tab{
+                & > span{
+                    color: $telecoms-tab-bg;
+                }
+            }
             &:hover{
-                background-color: #d64541;
+                background-color: $telecoms-tab-bg;
                 & > .icon-tab{
                     & > span{
                         & > i{
@@ -448,21 +487,26 @@ $hamburger-types: (
                 }
                 & > .dd-telecoms{
                     display: flex;
-                    background-color: #bc2c28;
+                    background-color: $telecoms-drop-bg;
                     & > ul {
-                        background-color: #bc2c28;
+                        background-color: $telecoms-drop-bg;
                     }
                 }
                 & > .dd-background{
                     display: flex;
-                    background-color:  #bc2c28;
+                    background-color: $telecoms-drop-bg;
                 }
             }
         }
     
         & > .bespoke-tab{
+            & > .icon-tab{
+                & > span{
+                    color: $bespoke-tab-bg;
+                }
+            }
             &:hover{
-                background-color: #67809f;
+                background-color: $bespoke-tab-bg;
                 & > .icon-tab{
                     & > span{
                         & > i{
@@ -472,21 +516,26 @@ $hamburger-types: (
                 }
                 & > .dd-bespoke{
                     display: flex;
-                    background-color: #526781;
+                    background-color: $bespoke-drop-bg;
                     & > ul {
-                        background-color: #526781;
+                        background-color: $bespoke-drop-bg;
                     }
                 }
                 & > .dd-background{
                     display: flex;
-                    background-color:  #526781;
+                    background-color: $bespoke-drop-bg;
                 }
             }
         }
     
         & > .marketing-tab{
+            & > .icon-tab{
+                & > span{
+                    color: $marketing-tab-bg;
+                }
+            }
             &:hover{
-                background-color: #23cc71;
+                background-color: $marketing-tab-bg;
                 & > .icon-tab{
                     & > span{
                         & > i{
@@ -497,21 +546,26 @@ $hamburger-types: (
     
                 & > .dd-marketing{
                     display: flex;
-                    background-color: #25a25a;
+                    background-color: $marketing-drop-bg;
                     & > ul {
-                        background-color: #25a25a;
+                        background-color: $marketing-drop-bg;
                     }
                 }
                 & > .dd-background{
                     display: flex;
-                    background-color:  #25a25a;
+                    background-color: $marketing-drop-bg;
                 }
             }
         }
     
         & > .security-tab{
+            & > .icon-tab{
+                & > span{
+                    color: $security-tab-bg;
+                }
+            }
             &:hover{
-                background-color: #f62459;
+                background-color: $security-tab-bg;
                 & > .icon-tab{
                     & > span{
                         & > i{
@@ -521,14 +575,14 @@ $hamburger-types: (
                 }
                 & > .dd-security{
                     display: flex;
-                    background-color: #de093f;
+                    background-color: $security-drop-bg;
                     & > ul {
-                        background-color: #de093f;
+                        background-color: $security-drop-bg;
                     }
                 }
                 & > .dd-background{
                     display: flex;
-                    background-color:  #de093f;
+                    background-color: $security-drop-bg;
                 }
             }
         }
@@ -542,20 +596,6 @@ $hamburger-types: (
         }
         
     }
-
-    // & > .start-tab{
-    //     padding: 42px 0px;
-    //     width:0px;
-    //     border-left: none;
-    // }
-    // & > .end-tab{
-    //     padding: 42px 0px;
-    //     width:0px;
-    //     border-right:none;
-    // }
-    
-
-    
 
    
 }
@@ -598,7 +638,7 @@ $hamburger-types: (
             }
 
             & > .btn-banner{
-                background-color: #4183d7;
+                background-color: $IT-tab-bg;
                 border-radius: 3px;
                 border: none;
                 padding: 15px 15px;
@@ -650,7 +690,7 @@ $hamburger-types: (
                 padding-bottom: 17px;
                 margin: 0 0 11px;
                 font-weight: 200;
-                color: #333645;
+                color: $navy-ish;
                 text-align: center;
                 line-height: 1.1;
                 display: block;
@@ -692,6 +732,7 @@ $hamburger-types: (
                 //line-height: 1.42857143;
                 & > span{
                     & > span{
+                        color: #fff;
                         & > i{
                             position: absolute;
                             top: 14px;
@@ -734,44 +775,44 @@ $hamburger-types: (
 }
 
 .bespoke, #btn-bespoke{
-    background-color: #67809f;
+    background-color: $bespoke-tab-bg;
     
 }
 .IT, #btn-IT{
-    background-color: #4183d7;
+    background-color: $IT-tab-bg;
 }
 
 .marketing, #btn-marketing{
-    background-color: #2ecc71;
+    background-color: $marketing-tab-bg;
    
 }
 .telecoms, #btn-telecoms{
-    background-color: #d64541;
+    background-color: $telecoms-tab-bg;
     
 }
 .security, #btn-security{
-    background-color: #f62459;
+    background-color: $security-tab-bg;
 }
 .web-design, #btn-web{
-    background-color: #926fb1;
+    background-color: $web-tab-bg;
 }
 .schools, #btn-school{
-    background-color: #926fb1;
+    background-color: $web-tab-bg;
 }
 
 .card-bespoke:hover{
     .nav-icon-con, #btn-bespoke{
         background-color: #fff;
-        color: #67809f;
+        color: $bespoke-tab-bg;
     }
     .spacer-rule{
         background-color: #fff;
     }
 
     i{
-        color: #67809f;
+        color: $bespoke-tab-bg;
     }
-    background-color: #67809f;
+    background-color: $bespoke-tab-bg;
     color: #fff;
     cursor: pointer;
 }
@@ -779,16 +820,16 @@ $hamburger-types: (
 .card-IT:hover{
     .nav-icon-con, #btn-IT{
         background-color: #fff;
-        color: #4183d7;
+        color: $IT-tab-bg;
     }
     .spacer-rule{
         background-color: #fff;
     }
 
     i{
-        color: #4183d7;
+        color: $IT-tab-bg;
     }
-    background-color: #4183d7;
+    background-color: $IT-tab-bg;
     color: #fff;
     cursor: pointer;
 }
@@ -796,16 +837,16 @@ $hamburger-types: (
 .card-marketing:hover{
     .nav-icon-con, #btn-marketing{
         background-color: #fff;
-        color: #2ecc71;
+        color: $marketing-tab-bg;
     }
     .spacer-rule{
         background-color: #fff;
     }
 
     i{
-        color: #2ecc71;
+        color: $marketing-tab-bg;
     }
-    background-color: #2ecc71;
+    background-color: $marketing-tab-bg;
     color: #fff;
     cursor: pointer;
 }
@@ -813,15 +854,15 @@ $hamburger-types: (
 .card-telecoms:hover{
     .nav-icon-con, #btn-telecoms{
         background-color: #fff;
-        color: #d64541;
+        color: $telecoms-tab-bg;
     }
     .spacer-rule{
         background-color: #fff;
     }
     i{
-        color: #d64541;
+        color: $telecoms-tab-bg;
     }
-    background-color: #d64541;
+    background-color: $telecoms-tab-bg;
     color: #fff;
     cursor: pointer;
 }
@@ -829,16 +870,16 @@ $hamburger-types: (
 .card-web:hover{
     .nav-icon-con, #btn-web{
         background-color: #fff;
-        color: #926fb1;
+        color: $web-tab-bg;
     }
     .spacer-rule{
         background-color: #fff;
     }
 
     i{
-        color: #926fb1;
+        color: $web-tab-bg;
     }
-    background-color: #926fb1;
+    background-color: $web-tab-bg;
     color: #fff;
     cursor: pointer;
 }
@@ -846,13 +887,13 @@ $hamburger-types: (
 .card-security:hover{
     .nav-icon-con, #btn-security{
         background-color: #fff;
-        color: #f62459;
+        color: $security-tab-bg;
     }
 
     i{
-        color: #f62459;
+        color: $security-tab-bg;
     }
-    background-color: #f62459;
+    background-color: $security-tab-bg;
     color: #fff;
     cursor: pointer;
 }
@@ -860,20 +901,19 @@ $hamburger-types: (
 .card-schools:hover{
     .nav-icon-con, #btn-school{
         background-color: #fff;
-        color: #926fb1;
+        color: $web-tab-bg;
     }
 
     i{
-        color: #926fb1;
+        color: $web-tab-bg;
     }
-    background-color: #926fb1;
+    background-color: $web-tab-bg;
     color: #fff;
     cursor: pointer;
 }
 
 //Culture styles
 .culture-back{
-    //background-color: #333645;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 15px 15px;
@@ -894,7 +934,7 @@ $hamburger-types: (
    
 
     & > .btn-culture{
-        color: #333645;
+        color: $navy-ish;
         background-color: #fff;
         border-radius: 3px;
         height: 50px;
@@ -925,7 +965,7 @@ $hamburger-types: (
 }
 
 .culture{
-    background-color: #333645;
+    background-color: $navy-ish;
 }
 
 //Articles styles
@@ -938,7 +978,6 @@ $hamburger-types: (
     margin-bottom: 30px;
 
     & > .latest{
-        //border-bottom: #333645 5px solid;
         padding-left:0px;
         padding-bottom: 0px;
         display: inline-block;
@@ -953,7 +992,7 @@ $hamburger-types: (
             top: 64px;
             left: 0;
             right: 0;
-            background-color: #333645;
+            background-color: $navy-ish;
             height: 5px;
         }
        
@@ -980,7 +1019,7 @@ $hamburger-types: (
                 position: absolute;
                 top: 10px;
                 right: 0%;
-                background-color: #926fb1;
+                background-color: $web-tab-bg;
                 color: #fff;
                 text-decoration: none;
                 z-index: 3;
@@ -1044,7 +1083,7 @@ $hamburger-types: (
                 }
     
                 & > .heading-link{
-                    color: #926fb1;
+                    color: $web-tab-bg;
                     text-decoration: none;
                     font-size: 1rem;
                     font-weight: 600;
@@ -1057,7 +1096,7 @@ $hamburger-types: (
 
                 & > .readmore-btn{
                     color: #fff;
-                    background-color: #926fb1;
+                    background-color: $web-tab-bg;
                     border-radius: 3px;
                     border: none;
                     margin-top: 5px;
@@ -1162,7 +1201,7 @@ $hamburger-types: (
             visibility: hidden;
             min-width:260px;
             height: auto;
-            background-color: #333645;
+            background-color: $navy-ish;
             color: #fff;
             text-align: center;
             padding: 15px 15px;
@@ -1196,7 +1235,7 @@ $hamburger-types: (
                 margin-left: -20px;
                 border-width: 40px;
                 border-style: solid;
-                border-color: #333645 transparent transparent transparent;
+                border-color: $navy-ish transparent transparent transparent;
             }
         
             & > .spacer-rule{
@@ -1248,7 +1287,7 @@ $hamburger-types: (
 .sign-up-form{
     height:100%;
     background-color: #ddd;
-    color: #333645;
+    color: $navy-ish;
     display: flex;
     flex-direction: column;
     padding: 30px 30px;
@@ -1323,7 +1362,9 @@ $hamburger-types: (
                 top:8px;
                 left:8px;
                 display:none;
-                
+                & > i{
+                    color: #fff;
+                }
             }
             
             & > span{
@@ -1378,7 +1419,7 @@ $hamburger-types: (
         
         & > button{
             color: #fff;
-            background-color: #333645;
+            background-color: $navy-ish;
             border-radius: 3px;
             border: none;
             height:auto;
@@ -1399,7 +1440,7 @@ $hamburger-types: (
 }
 
 .policy{
-    color: #333645;
+    color: $navy-ish;
     text-decoration: underline;
     &:hover{
         color: #121419;
@@ -1410,7 +1451,7 @@ $hamburger-types: (
 
 //FOOTER STYLES
 footer {
-    background-color: #333645;
+    background-color: $navy-ish;
 
     .footer-main{
         
@@ -1474,6 +1515,9 @@ footer {
                         height: 50px;
                         padding: 10px;
                         background-color: rgba(0,0,0,.25);
+                        & > i{
+                            font-size: 1.75rem;
+                        }
                     }
     
                     .facebook:hover {
@@ -1551,7 +1595,7 @@ footer {
 .spacer-rule{
     width: 10%;
     height: 3px;
-    background-color: #333645;
+    background-color: $navy-ish;
     border: none;
 }
 

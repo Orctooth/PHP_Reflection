@@ -21,6 +21,20 @@
     .logo{
         max-width: 80%;
     }
+
+    .lg-row-nav{
+        display: block;
+        justify-content: space-around;
+        margin: 0 auto;
+    }
+
+    .security,.schools,.web-design,.telecoms{
+        width: 100%;
+        display:block;
+        margin: 0 auto;
+        
+        
+    }
     
 }
 //hide call button and mobile search
@@ -54,7 +68,7 @@
             & > input{
                 width:200px;
                 height: 56px;
-                border: 1px solid #999aa2;
+                border: 1px solid $gray-ish;
                 padding-left: 15px;
                 padding-right: 30px;
 
@@ -67,7 +81,8 @@
             }
             & > button{
                 position: absolute;
-                background-color: #999aa2;
+                background-color: $gray-ish;
+                color: #fff;
                 border: inherit;
                 height: 56px;
                 width: 63px;
@@ -163,7 +178,7 @@
             
             & > input{
                 display:block;
-                border: 1px solid #999aa2;
+                border: 1px solid $gray-ish;
                 
             }
             & > button{
@@ -293,7 +308,7 @@
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width:1280px){
+@media only screen and (min-width: 768px){
     .lg-row-nav{
         display: flex;
         width: 768px;
@@ -607,7 +622,15 @@
 //universal display queries
 
 //mobiles
-@media only screen and (max-width: 443px){
+@media only screen and (max-width: 425px){
+    .header-top, .searchbar-mobile, .banner-text,
+    .nav-cards, .culture-back, .news-header-section,
+    .news-cards, .companies, .sign-up-form, .footer-content {
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 425px){
     .header-top, .searchbar-mobile, .banner-text,
     .nav-cards, .culture-back, .news-header-section,
     .news-cards, .companies, .sign-up-form, .footer-content {
