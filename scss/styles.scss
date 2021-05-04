@@ -117,8 +117,6 @@ $hamburger-types: (
 .logo{
     display:block;
     max-width: 100%;
-    margin-top: 15px;
-    
 }
 
 .header{
@@ -126,30 +124,37 @@ $hamburger-types: (
     padding-bottom: 5px;
     margin: 0 15px;
     
+    
     //first line of header including logo,burger,etc.
     & > .header-top{
         display: flex;
+        flex-direction: row;
         height:56px;
         vertical-align: middle;
         //padding: 20px 40px;
         flex-direction: row;
         margin: 30px auto;
         position: relative;
+        
+       
 
         .buttons{
             display:flex;
-            //float:right;
-            justify-content: space-around;
-            margin-left: auto;
+            justify-content: flex-end;
+            
+            & > *{
+               margin-left: 10px;
+               margin-right: 10px;
 
-            & > .support, .hamburger{
-                position:absolute;
             }
+
+            
     
             & > .support{
                 display: block;
-                top: 45px;
-                right: 50px;
+                position: relative;
+                margin-top: 35px;
+                margin-left: 45px;
                 & > i{
                     height: 56px;
                     width: 56px;
@@ -197,8 +202,11 @@ $hamburger-types: (
                 border-radius: 3px;
                 border: none;
                 padding: 15px 15px;
-                margin: 30px 0;
                 color:#fff;
+                & > i{
+                    line-height: 1.5;
+                    margin: 0 5px;
+                }
             }
             
             
@@ -224,9 +232,9 @@ $hamburger-types: (
                 font-size: 0.1rem;
                 height: 56px;
                 display: block;
-                top: 15px;
-                right: 0px;
                 padding: 10px 12px;
+                //margin-left: 50px;
+                margin-right: 0px;
 
                 & > .menutext{
                     font-size: 0.75rem;
@@ -250,6 +258,7 @@ $hamburger-types: (
     //searchbar that appears in xs displays
     & > .searchbar{
         //margin: 0 auto;
+        
       
         & > form{
             display: flex;
@@ -312,15 +321,18 @@ $hamburger-types: (
     background-color: $navy-ish;
     position: relative;
     
+    
+    
     & > .tab-wrapper{
         display:flex;
+        margin: 0 auto;
         position: relative;
         border-left: 1px solid hsla(0,0%,100%,.1);
         border-right: 1px solid rgba(0,0,0,.25);
-
+        max-width: 100%;
         
         & > .bar-child{
-            width: 20%;
+            width: 16.7%;
             background-color: $navy-ish;
             display: flex;
             flex-direction: column;
@@ -354,6 +366,7 @@ $hamburger-types: (
                 font-size: 1.3rem;
                 line-height: 1px;
                 position:relative;
+                
                 & > span{
                     & > i{
                         font-size: 1.438rem;
@@ -605,7 +618,7 @@ $hamburger-types: (
 //Banner styles
 
 .banner{
-   height: 100%;
+   height: 500px;
    min-width: 100%;
    background-image: url("../img/home-57sJ.jpg");
    background-size: cover;
@@ -616,7 +629,7 @@ $hamburger-types: (
 
     & > .banner-overlay{
         width: 100%;
-        height: 100%;
+        height: 500px;
         background: linear-gradient(270deg, transparent 0%, #000),
         rgba(0,0,0,0.15);
         
@@ -628,9 +641,9 @@ $hamburger-types: (
                 font-weight: 400;
             }
             margin: 0 auto;
+            padding-top: 150px;
             text-align: center;
             display: block;
-            padding: 20% 0%;
             justify-content: center;
             color:#fff;
             & > a{
@@ -1004,14 +1017,8 @@ $hamburger-types: (
     .news-cards{
         padding: 10px 0px;
         margin: 0px auto;
-        & > .card-news:first-of-type{
-            & > .news-container{
-                margin-top: 16px;
-            }
-        }
-
-       
-        //justify-content: stretch;
+        
+        
         & > .card-news{
             margin: 20px 20px;
     
@@ -1039,13 +1046,18 @@ $hamburger-types: (
             & > .news-image{
                 width: 100%;
                 height: auto;
-                border-radius: 3px;
-                border:none;
-                overflow: hidden;
+                border-top-left-radius: 3px;
+                border-top-right-radius: 3px;
+                border-bottom: 1px solid #ccc;
+                
                 position: relative;
                
     
                 & > .img-overlay{
+                   width: 100%;
+                   height: auto;
+                   
+                   overflow: hidden;
                     & > .cover{
                         position: absolute;
                         top: 0;
@@ -1059,6 +1071,7 @@ $hamburger-types: (
                     
                     & > img{
                         width: 100%;
+                        height: auto;
                         background-size: cover;
                         height: auto;
                         transition: transform .3s, background-color .3s;

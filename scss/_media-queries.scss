@@ -1,7 +1,7 @@
 //header queries
 
 //show large searchbar
-@media only screen and (max-width:768px){
+@media only screen and (max-width:786px){
     .searchbar-lg{
         display: none;
     }
@@ -16,10 +16,6 @@
     }
     .header{
         margin-bottom: 30px;
-    }
-
-    .logo{
-        max-width: 80%;
     }
 
     .lg-row-nav{
@@ -38,7 +34,7 @@
     
 }
 //hide call button and mobile search
-@media only screen and (min-width:768px){
+@media only screen and (min-width:786px){
     .support{
         & > i{
             display: none;
@@ -53,24 +49,28 @@
             }
         }
         margin-bottom: 30px;
+       
+        
     }
         
 }
 //show desktop/tablet search bar
-@media only screen and (min-width:768px){
+@media only screen and (min-width:786px){
     .searchbar-lg{
-        position:absolute;
-        top:15px;
-        right: 140px;
+        display: block;
 
         & > form{
             position:relative;
+            display: flex;
+            flex-direction: row;
             & > input{
-                width:200px;
+                width:150px;
                 height: 56px;
                 border: 1px solid $gray-ish;
                 padding-left: 15px;
                 padding-right: 30px;
+                display: block;
+
 
                 &:focus{
                     
@@ -80,7 +80,7 @@
                 }
             }
             & > button{
-                position: absolute;
+                
                 background-color: $gray-ish;
                 color: #fff;
                 border: inherit;
@@ -89,8 +89,7 @@
                 border-radius: 3px;
                 border-top-left-radius: 0px;
                 border-bottom-left-radius: 0px;
-                top:0px;
-                right: -40px;
+                display: block;
                 padding: 7px 20px 3px;
                 & > i {
                     font-size: 20px;
@@ -107,8 +106,11 @@
 }
 //hide support and contact buttons
 @media only screen and (max-width:992px){
-    .big-beautiful-button{
-        display: none;
+    .buttons{
+        & > .btn-banner{
+            display: none;
+        }
+        
     }
 }
 
@@ -120,48 +122,52 @@
             border:none;
             & > input{
                 display:none;
+               
                 
             }
             & > button{
                 border-radius: 3px;
-                right: -20px;
+                left: 0px;
                 top:0px;
+                
             }
         }
         
     }
 
-    .support-xl{
-        display:flex;
-        justify-content: space-around;
-        flex-direction: row;
-        border:none;
-        border-radius:3px;
-        color:#fff;
-        position: absolute;
-        top:15px;
-        right: 350px;
+    // .support-xl{
+    //     display:flex;
+    //     justify-content: space-around;
+    //     flex-direction: row;
+    //     border:none;
+    //     border-radius:3px;
+    //     color:#fff;
+    //     position: absolute;
+    //     top:15px;
+    //     right: 350px;
         
-    }
+    // }
 
-    .contact-xl{
-        display:flex;
-        justify-content: space-around;
-        flex-direction: row;
-        border:none;
-        border-radius:3px;
-        color:#fff;
-        position: absolute;
-        top:15px;
-        right: 200px;
+    // .contact-xl{
+    //     display:flex;
+    //     justify-content: space-around;
+    //     flex-direction: row;
+    //     border:none;
+    //     border-radius:3px;
+    //     color:#fff;
+    //     position: absolute;
+    //     top:15px;
+    //     right: 200px;
         
-    }
+    // }
 
     .header-top{
         width:1010px;
         margin: 0 auto;
+        
     }
 
+    
 }
 
 
@@ -251,14 +257,12 @@
 }
 
 //banner query
-@media only screen and (min-width:1280px)
+@media only screen and (min-width:768px)
 {
     .banner-text{
-        width: 1298px;
-        
+        padding-left: 15px;
         & > h1, p{
             text-align: left;
-            
         }
         
         & > button{
@@ -279,15 +283,16 @@
 
 
 //culture query
-@media only screen and (min-width:992px){
+@media only screen and (min-width:1024px){
     .culture{
         background-image: url("../img/netmatters-transp.png");
         background-repeat: no-repeat;
+        background-size: cover;
         background-color: $navy-ish;
         background-position: right;
     }
     .culture-back{
-        width: 1298px;
+        width: 768px;
         margin: 0 auto;
         background-color: rgba(0,0,0,0);
         
@@ -300,9 +305,9 @@
 }
 
 //nav queries
-@media only screen and (max-width: 992px){
+@media only screen and (max-width: 1024px){
     .bespoke,.marketing,.IT,.telecoms,.security,.web-design,.schools{
-        width: 100%;
+        min-width: 100%;
         display:block;
         margin: 0 auto;
     }
@@ -330,28 +335,25 @@
     }
 }
 
-@media only screen and (min-width: 992px){
+@media only screen and (min-width: 1024px){
     .xl-row-nav{
         display:flex;
-        width: 992px;
+        width: 1024px;
         //justify-content: space-between;
-        margin: 25px auto;
-        
+        margin: 0px auto;
         & > .card-nav{
-            @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-                width: 33.3%;
-            }
-            
+            min-width: 30%;
         }
     }
 
     .bespoke,.IT,.marketing{
-        width: 33.3%;
+        
         float:left;
         display:block;
         margin: 0 auto;
         
     }
+    
     
 
 }
@@ -416,34 +418,64 @@
 }
 
 //news queries
+// @media only screen and (max-width: 786px){
+//     .news-image{
+//         max-height: 200px;
+//         & > .img-overlay{
+//             height: auto;
+//             & > img{
+//                 //min-height: 100px;
+//                 height: 200px;
+//             }
+//         }
+//     }
+// }
 
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 786px){
     .news-cards{
         display: flex;
         justify-content: space-between;
         & > .card:last-of-type{
             display: none;
         }
+        & > .card{
+            .news-image{
+                min-height: 200px;
+                & > .img-overlay{
+                    & > img{
+                        min-height: 220px;
+                    }
+                }
+            }
+        }
+        
     }
 
-    .card-news{
-        padding: 0 0px; 
-    }
+    
 
 }
 
-@media only screen and (min-width: 1280px){
+
+@media only screen and (min-width: 1024px){
     .news-cards{
-        width: 1298px;
+        width: 1024px;
         margin: 0 auto;
         & > .card:last-of-type{
             display: block;
         }
+        & > .card{
+           & > .news-image{
+               height: 185px;
+           }
+        }
+        
+        
     }
+   
     
     .news-image:hover{
-                
+              
         & > .img-overlay{
             
             & > img {
@@ -460,6 +492,39 @@
                 
     }
 }
+
+@media only screen and (min-width: 1280px){
+    .news-cards{
+        width: 1280px;
+        margin: 0 auto;
+        
+        
+        
+        
+    }
+   
+    
+    .news-image:hover{
+              
+        & > .img-overlay{
+            
+            & > img {
+                transform: scale(1.1);
+                background-color: #fff;
+            }
+
+        }  
+        
+        .cover{
+            z-index: 2;
+            background-color: #fff;
+        }
+                
+    }
+}
+
+
+
 
 //sign-up query
 @media only screen and (min-width: 992px){
@@ -504,34 +569,34 @@
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
     footer {
 
         .footer-main {
             
 
             .footer-content {
-                width: 1010px;
-                padding: 30px 0px;
+                width: 1024px;
+                padding: 30px 30px;
                 
                 & > div {
                     
                     margin: 0 auto;
-                    width: 25%;
+                    width: 40%;
                 }
             }
         }
     }
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 1280px) {
     footer {
 
         .footer-main {
             
 
             .footer-content {
-                width: 1096px;
+                width: 1280px;
                 padding: 30px 0px;
                 
                 & > div {
@@ -540,7 +605,7 @@
                     width: 20%;
                 }
                 & > .social-con{
-                    width: 30%;
+                    width: 40%;
                 }
             }
         }
@@ -626,6 +691,7 @@
     .header-top, .searchbar-mobile, .banner-text,
     .nav-cards, .culture-back, .news-header-section,
     .news-cards, .companies, .sign-up-form, .footer-content {
+        max-width: 425px;
         margin: 0 auto;
     }
 }
@@ -634,7 +700,7 @@
     .header-top, .searchbar-mobile, .banner-text,
     .nav-cards, .culture-back, .news-header-section,
     .news-cards, .companies, .sign-up-form, .footer-content {
-        width: 425px;
+        min-width: 425px;
         margin: 0 auto;
     }
 }
@@ -643,16 +709,16 @@
     .header-top, .searchbar-mobile, .banner-text,
     .nav-cards, .culture-back, .news-header-section,
     .news-cards, .companies, .sign-up-form, .footer-content {
-        width: 768px;
+        width: 786px;
         margin: 0 auto;
     }
 }
 //small laptops
-@media only screen and (min-width: 1010px){
+@media only screen and (min-width: 1024px){
     .header-top, .searchbar-mobile, .banner-text, .tab-wrapper,
     .lg-row-nav, .nav-cards, .culture-back, .news-header-section,
     .news-cards, .companies, .sign-up-form, .footer-content, .awards-1, .awards-2 {
-        width: 992px;
+        width: 1024px;
         margin: 0 auto;
     }
     
@@ -664,7 +730,7 @@
     .xl-row-nav, .xxl-row-nav, .nav-cards,
     .culture-back, .news-header-section, .companies,
     .news-cards, .footer-content, .sign-up-form, .awards-1, .awards-2 {
-        width: 1298px;
+        width: 1280px;
         margin: 0 auto;
     }
 }
