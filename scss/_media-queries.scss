@@ -18,13 +18,14 @@
         margin-bottom: 30px;
     }
 
+
     .lg-row-nav{
         display: block;
         justify-content: space-around;
         margin: 0 auto;
     }
 
-    .security,.schools,.web-design,.telecoms{
+    .security,.schools,.web-design,.telecoms, .marketing, .bespoke, .IT{
         width: 100%;
         display:block;
         margin: 0 auto;
@@ -85,7 +86,7 @@
                 color: #fff;
                 border: inherit;
                 height: 56px;
-                width: 63px;
+                width: 68px;
                 border-radius: 3px;
                 border-top-left-radius: 0px;
                 border-bottom-left-radius: 0px;
@@ -105,7 +106,7 @@
     }
 }
 //hide support and contact buttons
-@media only screen and (max-width:992px){
+@media only screen and (max-width:1024px){
     .buttons{
         & > .btn-banner{
             display: none;
@@ -115,7 +116,7 @@
 }
 
 //show contact buttons
-@media only screen and (min-width:992px){
+@media only screen and (min-width:1024px){
     //hide tablet/desktop searchbar
     .searchbar-lg{
         & > form{
@@ -127,42 +128,16 @@
             }
             & > button{
                 border-radius: 3px;
-                left: 0px;
-                top:0px;
                 
             }
         }
         
     }
 
-    // .support-xl{
-    //     display:flex;
-    //     justify-content: space-around;
-    //     flex-direction: row;
-    //     border:none;
-    //     border-radius:3px;
-    //     color:#fff;
-    //     position: absolute;
-    //     top:15px;
-    //     right: 350px;
-        
-    // }
-
-    // .contact-xl{
-    //     display:flex;
-    //     justify-content: space-around;
-    //     flex-direction: row;
-    //     border:none;
-    //     border-radius:3px;
-    //     color:#fff;
-    //     position: absolute;
-    //     top:15px;
-    //     right: 200px;
-        
-    // }
+    
 
     .header-top{
-        width:1010px;
+        width:1024px;
         margin: 0 auto;
         
     }
@@ -175,7 +150,7 @@
 @media only screen and (min-width:1280px){
     
     .header-top{
-        width:1298px;
+        width:1280px;
         margin: 0 auto;
     }
     
@@ -196,29 +171,19 @@
         
     }
 
-    .support-xl{
-        right: 530px;
-        
-        
-    }
-
-    .contact-xl{
-        right: 380px;
-       
-    }
 }
 
 //navbar queries
-@media only screen and (max-width:1010px){
+@media only screen and (max-width:1024px){
     .navbar{
         display: none;
     }
 }
 
-@media only screen and (min-width:1010px){
+@media only screen and (min-width:1024px){
     .navbar{
         & > .tab-wrapper{
-            width: 992px;
+            width: 1024px;
             margin: 0 auto;
             & > .bar-child{
                 & > .drop-down{
@@ -239,7 +204,7 @@
 @media only screen and (min-width:1280px){
     .navbar{
         .tab-wrapper{
-            min-width: 1298px;
+            min-width: 1280px;
             margin: 0 auto;
             & > .bar-child{
                 & > .drop-down{
@@ -257,7 +222,7 @@
 }
 
 //banner query
-@media only screen and (min-width:768px)
+@media only screen and (min-width:786px)
 {
     .banner-text{
         padding-left: 15px;
@@ -292,7 +257,7 @@
         background-position: right;
     }
     .culture-back{
-        width: 768px;
+        width: 1024px;
         margin: 0 auto;
         background-color: rgba(0,0,0,0);
         
@@ -313,15 +278,15 @@
     }
 }
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 786px){
     .lg-row-nav{
         display: flex;
-        width: 768px;
+        width: 786px;
         justify-content: space-around;
         margin: 0 auto;
     }
 
-    .security,.schools,.web-design,.telecoms{
+    .security,.schools,.web-design,.telecoms, .marketing, .IT, .bespoke{
         width: 50%;
         display:block;
         margin: 0 auto;
@@ -347,7 +312,7 @@
     }
 
     .bespoke,.IT,.marketing{
-        
+        width: 100%;
         float:left;
         display:block;
         margin: 0 auto;
@@ -360,7 +325,7 @@
 
 @media only screen and (min-width: 1280px){
     .nav-cards{
-        width: 1298px;
+        width: 1280px;
         margin: 0 auto;
     }
     
@@ -370,11 +335,6 @@
         //justify-content: stretch;
         margin: 45px auto;
     }
-
-    // .xl-row-nav{
-    //     margin: 0 auto;
-    //     width: 1298px;
-    // }
 
     .lg-row-nav{
         display:flex;
@@ -401,6 +361,14 @@
         margin: 0 auto;
         
         
+    }
+
+    .bespoke, .IT, .marketing{
+        width: 45%;
+        height: 100%;
+        display:block;
+        float:left;
+        margin: 0 auto;
     }
 
     
@@ -441,10 +409,11 @@
         }
         & > .card{
             .news-image{
-                min-height: 200px;
+                height: 200px;
                 & > .img-overlay{
+                    height: 200px;
                     & > img{
-                        min-height: 220px;
+                        min-height: 210px;
                     }
                 }
             }
@@ -466,7 +435,13 @@
         }
         & > .card{
            & > .news-image{
-               height: 185px;
+               height: 220px;
+               & > .img-overlay{
+                height: 220px;
+                & > img{
+                    min-height: 230px;
+                }
+            }
            }
         }
         
@@ -527,7 +502,7 @@
 
 
 //sign-up query
-@media only screen and (min-width: 992px){
+@media only screen and (min-width: 1024px){
     .form-box{
         display: flex;
         flex-direction: row;
@@ -540,19 +515,19 @@
         height: 47px;
     }
     .sign-up-form{
-        width: 1010px;
+        width: 1024px;
         margin: 0 auto;
     }
 }
 
 @media only screen and (min-width: 1280px){
     .sign-up-form{
-        width: 1298px;
+        width: 1280px;
         margin: 0 auto;
     }
 }
 //footer queries
-@media (min-width: 768px) {
+@media (min-width: 786px) {
     footer {
         .footer-main {
     
@@ -619,7 +594,7 @@
             
 
             .footer-content {
-                width: 1296px;
+                width: 1280px;
                 padding: 30px 0px;
                 
                 & > div {
@@ -658,13 +633,13 @@
 
 //company queries
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 786px){
     .companies, .awards-1, .awards-2, .awards{
         display:none;
     }
 }
 
-@media only screen and (max-width: 992px){
+@media only screen and (max-width: 1024px){
     .companies{
         & > .company{
             & >img{
@@ -739,17 +714,15 @@
 //header
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     .menutext{
-        margin: 0 0;
-        padding: 0 0;
+        line-height: 0.7rem;
+        margin-bottom: 5px;
         
-        position: absolute;
-        top: 25px;
-        right: 12px;
     }
-    .hamburger-inner{
-        margin-bottom: 20px;
-        margin-top: -8px;
+    .hamburger{
+        padding-bottom: 5px;
+        
     }
+    
 }
 
 @-moz-document url-prefix(){
@@ -757,12 +730,6 @@
         margin: 0 0;
         padding: 0 0;
         
-        position: absolute;
-        top: 25px;
-        right: 12px;
     }
-    .hamburger-inner{
-        margin-bottom: 20px;
-        margin-top: -8px;
-    }
+    
 }

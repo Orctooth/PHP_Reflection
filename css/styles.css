@@ -169,13 +169,13 @@ body {
   flex-direction: row;
   height: 56px;
   vertical-align: middle;
-  flex-direction: row;
   margin: 30px auto;
   position: relative;
+  justify-content: flex-start;
 }
 .header > .header-top .buttons {
   display: flex;
-  justify-content: flex-end;
+  margin-left: auto;
 }
 .header > .header-top .buttons > * {
   margin-left: 10px;
@@ -235,6 +235,7 @@ body {
   border-radius: 3px;
   font-size: 0.1rem;
   height: 56px;
+  width: 60px;
   display: block;
   padding: 10px 12px;
   margin-right: 0px;
@@ -507,7 +508,7 @@ body {
 }
 
 .banner {
-  height: 500px;
+  height: 600px;
   min-width: 100%;
   background-image: url("../img/home-57sJ.jpg");
   background-size: cover;
@@ -517,12 +518,12 @@ body {
 }
 .banner > .banner-overlay {
   width: 100%;
-  height: 500px;
+  height: 600px;
   background: linear-gradient(270deg, transparent 0%, #000), rgba(0, 0, 0, 0.15);
 }
 .banner > .banner-overlay > .banner-text {
   margin: 0 auto;
-  padding-top: 150px;
+  padding-top: 200px;
   text-align: center;
   display: block;
   justify-content: center;
@@ -603,6 +604,8 @@ body {
 }
 .nav-cards > .xl-row-nav > .card-nav > .nav-icon-con, .nav-cards .xxl-row-nav .lg-row-nav > .card-nav > .nav-icon-con {
   border-radius: 50%;
+  display: block;
+  margin: 0 auto;
   min-width: 50px;
   min-height: 50px;
   max-width: 51px;
@@ -883,13 +886,14 @@ body {
   height: auto;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
-  border-bottom: 1px solid #ccc;
   position: relative;
 }
 .news-section .news-cards > .card-news > .news-image > .img-overlay {
   width: 100%;
   height: auto;
+  border-bottom: 1px solid #ccc;
   overflow: hidden;
+  display: flex;
 }
 .news-section .news-cards > .card-news > .news-image > .img-overlay > .cover {
   position: absolute;
@@ -903,6 +907,7 @@ body {
 }
 .news-section .news-cards > .card-news > .news-image > .img-overlay > img {
   width: 100%;
+  flex: 1.73;
   height: auto;
   background-size: cover;
   height: auto;
@@ -1359,7 +1364,7 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
   }
 }
 @media only screen and (max-width: 786px) {
-  .security, .schools, .web-design, .telecoms {
+  .security, .schools, .web-design, .telecoms, .marketing, .bespoke, .IT {
     width: 100%;
     display: block;
     margin: 0 auto;
@@ -1406,7 +1411,7 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
     color: #fff;
     border: inherit;
     height: 56px;
-    width: 63px;
+    width: 68px;
     border-radius: 3px;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
@@ -1420,12 +1425,12 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
     background-color: #84858f;
   }
 }
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1024px) {
   .buttons > .btn-banner {
     display: none;
   }
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1024px) {
   .searchbar-lg > form {
     border: none;
   }
@@ -1434,18 +1439,16 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
   }
   .searchbar-lg > form > button {
     border-radius: 3px;
-    left: 0px;
-    top: 0px;
   }
 
   .header-top {
-    width: 1010px;
+    width: 1024px;
     margin: 0 auto;
   }
 }
 @media only screen and (min-width: 1280px) {
   .header-top {
-    width: 1298px;
+    width: 1280px;
     margin: 0 auto;
   }
 
@@ -1458,23 +1461,15 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
     border-bottom-left-radius: 0px;
     right: -40px;
   }
-
-  .support-xl {
-    right: 530px;
-  }
-
-  .contact-xl {
-    right: 380px;
-  }
 }
-@media only screen and (max-width: 1010px) {
+@media only screen and (max-width: 1024px) {
   .navbar {
     display: none;
   }
 }
-@media only screen and (min-width: 1010px) {
+@media only screen and (min-width: 1024px) {
   .navbar > .tab-wrapper {
-    width: 992px;
+    width: 1024px;
     margin: 0 auto;
   }
   .navbar > .tab-wrapper > .bar-child > .drop-down > ul > li {
@@ -1483,14 +1478,14 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
 }
 @media only screen and (min-width: 1280px) {
   .navbar .tab-wrapper {
-    min-width: 1298px;
+    min-width: 1280px;
     margin: 0 auto;
   }
   .navbar .tab-wrapper > .bar-child > .drop-down > ul > li {
     font-size: 1rem;
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 786px) {
   .banner-text {
     padding-left: 15px;
   }
@@ -1515,7 +1510,7 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
   }
 
   .culture-back {
-    width: 768px;
+    width: 1024px;
     margin: 0 auto;
     background-color: rgba(0, 0, 0, 0);
   }
@@ -1530,15 +1525,15 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
     margin: 0 auto;
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 786px) {
   .lg-row-nav {
     display: flex;
-    width: 768px;
+    width: 786px;
     justify-content: space-around;
     margin: 0 auto;
   }
 
-  .security, .schools, .web-design, .telecoms {
+  .security, .schools, .web-design, .telecoms, .marketing, .IT, .bespoke {
     width: 50%;
     display: block;
     margin: 0 auto;
@@ -1561,6 +1556,7 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
   }
 
   .bespoke, .IT, .marketing {
+    width: 100%;
     float: left;
     display: block;
     margin: 0 auto;
@@ -1568,7 +1564,7 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
 }
 @media only screen and (min-width: 1280px) {
   .nav-cards {
-    width: 1298px;
+    width: 1280px;
     margin: 0 auto;
   }
 
@@ -1600,6 +1596,14 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
     float: left;
     margin: 0 auto;
   }
+
+  .bespoke, .IT, .marketing {
+    width: 45%;
+    height: 100%;
+    display: block;
+    float: left;
+    margin: 0 auto;
+  }
 }
 @-moz-document url-prefix() {
   .card-nav > p {
@@ -1615,10 +1619,13 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
     display: none;
   }
   .news-cards > .card .news-image {
-    min-height: 200px;
+    height: 200px;
+  }
+  .news-cards > .card .news-image > .img-overlay {
+    height: 200px;
   }
   .news-cards > .card .news-image > .img-overlay > img {
-    min-height: 220px;
+    min-height: 210px;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -1630,7 +1637,13 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
     display: block;
   }
   .news-cards > .card > .news-image {
-    height: 185px;
+    height: 220px;
+  }
+  .news-cards > .card > .news-image > .img-overlay {
+    height: 220px;
+  }
+  .news-cards > .card > .news-image > .img-overlay > img {
+    min-height: 230px;
   }
 
   .news-image:hover > .img-overlay > img {
@@ -1657,7 +1670,7 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
     background-color: #fff;
   }
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1024px) {
   .form-box {
     display: flex;
     flex-direction: row;
@@ -1672,17 +1685,17 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
   }
 
   .sign-up-form {
-    width: 1010px;
+    width: 1024px;
     margin: 0 auto;
   }
 }
 @media only screen and (min-width: 1280px) {
   .sign-up-form {
-    width: 1298px;
+    width: 1280px;
     margin: 0 auto;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 786px) {
   footer .footer-main .footer-content {
     flex-direction: row;
     flex-wrap: wrap;
@@ -1717,7 +1730,7 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
 }
 @media (min-width: 1280px) {
   footer .footer-main .footer-content {
-    width: 1296px;
+    width: 1280px;
     padding: 30px 0px;
   }
   footer .footer-main .footer-content > div {
@@ -1739,12 +1752,12 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
     margin-bottom: 15px;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 786px) {
   .companies, .awards-1, .awards-2, .awards {
     display: none;
   }
 }
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1024px) {
   .companies > .company > img {
     transform: scale(0.8);
   }
@@ -1797,30 +1810,18 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .menutext {
-    margin: 0 0;
-    padding: 0 0;
-    position: absolute;
-    top: 25px;
-    right: 12px;
+    line-height: 0.7rem;
+    margin-bottom: 5px;
   }
 
-  .hamburger-inner {
-    margin-bottom: 20px;
-    margin-top: -8px;
+  .hamburger {
+    padding-bottom: 5px;
   }
 }
 @-moz-document url-prefix() {
   .menutext {
     margin: 0 0;
     padding: 0 0;
-    position: absolute;
-    top: 25px;
-    right: 12px;
-  }
-
-  .hamburger-inner {
-    margin-bottom: 20px;
-    margin-top: -8px;
   }
 }
 

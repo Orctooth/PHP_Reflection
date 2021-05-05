@@ -131,16 +131,16 @@ $hamburger-types: (
         flex-direction: row;
         height:56px;
         vertical-align: middle;
-        //padding: 20px 40px;
-        flex-direction: row;
         margin: 30px auto;
         position: relative;
+        justify-content: flex-start;
+        
         
        
 
         .buttons{
             display:flex;
-            justify-content: flex-end;
+            margin-left: auto;
             
             & > *{
                margin-left: 10px;
@@ -231,6 +231,7 @@ $hamburger-types: (
                 border-radius: 3px;
                 font-size: 0.1rem;
                 height: 56px;
+                width: 60px;
                 display: block;
                 padding: 10px 12px;
                 //margin-left: 50px;
@@ -618,7 +619,7 @@ $hamburger-types: (
 //Banner styles
 
 .banner{
-   height: 500px;
+   height: 600px;
    min-width: 100%;
    background-image: url("../img/home-57sJ.jpg");
    background-size: cover;
@@ -629,7 +630,7 @@ $hamburger-types: (
 
     & > .banner-overlay{
         width: 100%;
-        height: 500px;
+        height: 600px;
         background: linear-gradient(270deg, transparent 0%, #000),
         rgba(0,0,0,0.15);
         
@@ -641,7 +642,7 @@ $hamburger-types: (
                 font-weight: 400;
             }
             margin: 0 auto;
-            padding-top: 150px;
+            padding-top: 200px;
             text-align: center;
             display: block;
             justify-content: center;
@@ -733,6 +734,8 @@ $hamburger-types: (
             
             & > .nav-icon-con{
                 border-radius: 50%;
+                display: block;
+                margin: 0 auto;
                 min-width: 50px;
                 min-height: 50px;
                 max-width: 51px;
@@ -1048,7 +1051,7 @@ $hamburger-types: (
                 height: auto;
                 border-top-left-radius: 3px;
                 border-top-right-radius: 3px;
-                border-bottom: 1px solid #ccc;
+                
                 
                 position: relative;
                
@@ -1056,8 +1059,9 @@ $hamburger-types: (
                 & > .img-overlay{
                    width: 100%;
                    height: auto;
-                   
+                   border-bottom: 1px solid #ccc;
                    overflow: hidden;
+                   display: flex;
                     & > .cover{
                         position: absolute;
                         top: 0;
@@ -1071,6 +1075,7 @@ $hamburger-types: (
                     
                     & > img{
                         width: 100%;
+                        flex: 1.73;
                         height: auto;
                         background-size: cover;
                         height: auto;
