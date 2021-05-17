@@ -3,12 +3,16 @@
     <head>
         <title>Netmatters | Full Service Digital Agency | Norwich, Norfolk | Netmatters</title>
         <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/slick.css">
+        <link rel="stylesheet" href="css/slick-theme.css">
+        <link rel="stylesheet" href="css/mmenu.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
         <link rel="icon" href="img/netmatters-ltd.webp">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
         <script src="https://kit.fontawesome.com/886eae3fd6.js" crossorigin="anonymous"></script>
+        <script src ="js/jquery.js"></script>
 
     </head>
 
@@ -35,12 +39,106 @@
                             
                         </form>
                     </div>
-                    <button class="hamburger hamburger--elastic" type="button">
+                    <button id="my-open-button" class="hamburger hamburger--elastic" type="button">
                         <span class="hamburger-box">
                         <span class="hamburger-inner"></span>
                         </span>
                         <span class="menutext">MENU</span>
                     </button>
+                    <nav id ="my-menu">
+                        <ul>
+                            <ul id="mobile-burger">
+                                <li><a href="">CONTACT US</a></li>
+                                <li><a href=""><i class="fas fa-code"></i><span>WEB</span><span>DESIGN</span></a></li>
+                                <ul class="sub-list">
+                                    <li>STYLISH WEBSITES</li>
+                                    <li>ECOMMERCE STORES</li>
+                                    <li>BRANDING</li>
+                                    <li>APPS</li>
+                                    <li>WEB HOSTING</li>
+                                    <li>PAY MONTHLY WEBSITES</li>
+                                </ul>
+                                <li><a href=""><i class="fas fa-desktop"></i><span>IT</span><span>SUPPORT</span></a></li>
+                                <ul class="sub-list">
+                                    <li>MANAGED IT</li>
+                                    <li>BUSINESS IT</li>
+                                    <li>OFFICE 365</li>
+                                    <li>CONSULTANCY</li>
+                                    <li>CLOUD PROVIDER</li>
+                                    <li>DATA BACKUP</li>
+                                </ul>
+                                <li><a href=""><i class="fas fa-phone-alt"></i><span>TELECOMS</span><span>SERVICES</span></a></li>
+                                <ul class="sub-list">
+                                    <li>GIGABIT VOUCHER</li>
+                                    <li>HOSTED VOIP</li>
+                                    <li>BUSINESS VOIP</li>
+                                    <li>BUSINESS BROADBAND</li>
+                                    <li>LEASED LINE</li>
+                                    <li>3CX SYSTEMS</li>
+                                </ul>
+                                <li><a href=""><i class="fas fa-th"></i><span>BESPOKE</span><span>SOFTWARE</span></a></li>
+                                <ul class="sub-list">
+                                    <li>WORKFLOW</li>
+                                    <li>AUTOMATION</li>
+                                    <li>INTEGRATION</li>
+                                    <li>DATABASE</li>
+                                    <li>SHAREPOINT</li>
+                                    <li>BUSINESS MANAGEMENT</li>
+                                </ul>
+                                <li><a href=""><i class="fas fa-signal"></i><span>DIGITAL</span><span>MARKETING</span></a></li>
+                                <ul class="sub-list">
+                                    <li>SEARCH (SEO)</li>
+                                    <li>PAID(PPC)</li>
+                                    <li>CONVERSION(CRO)</li>
+                                    <li>EMAIL</li>
+                                    <li>SOCIAL MEDIA</li>
+                                    <li>CONTENT</li>
+                                </ul>
+                                <li><a href=""><i class="fas fa-shield-alt"></i><span>CYBER</span><span>SECURITY</span></a></li>
+                                <ul class="sub-list">
+                                    <li>ASSESSMENT</li>
+                                    <li>MANAGEMENT</li>
+                                    <li>PENETRATION TESTING</li>
+                                    <li>CYBER ESSENTIALS</li>
+                                    <li>PCI/DSS</li>
+                                    <li>HACKER PREVENTION</li>
+                                </ul>
+                            </ul>
+                            
+                            <li class="lower-list-head"><a href="">TRAINING</a></li>
+                            <ul class="lower-list">
+                                <li><i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>WEB DEVELOPER COURSE</li>
+                                <li><i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>SCS FREQUENTLY ASKED QUESTIONS</li>
+                                <li><i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>SCION COLLABORATORS</li>
+                            </ul>
+                            <li class="lower-list-head"><a href="">EVENTS</a></li>
+                            <ul class="lower-list">
+                                <li><i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>BUSINESS AUTOMATION SEMINAR</li>
+                            </ul>
+                            <li class="lower-list-head"><a href="">OUR COMPANY</a></li>
+                            <ul class="lower-list">
+                                <li><i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>OUR CULTURE</li>
+                                <li><i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>OUR TEAM</li>
+                                <li><i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>OUR CAREERS</li>
+                                <li><i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>OUR BENEFITS</li>
+                                <li><i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>OUR GREAT YAROUTH OFFICE</li>
+                            </ul>
+                            <li class="lower-list-head"><a href="">OUR WORK</a></li>
+                            <ul class="lower-list">
+                                <li><i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>CASE STUDIES</li>
+                            </ul>
+                            <li class="lower-list-head"><a href="">OUR KNOWLEDGE</a></li>
+                            <ul class="lower-list">
+                                <li><i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>GUIDES</li>
+                                <li><i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>NEWS</li>
+                                <li><i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>INSIGHTS</li>
+                            </ul>
+                            <li class="lower-list-head"><a href="">COVID RISK ASSESSMENTS</a></li>
+                            <li class="lower-list-head"><a href="">CONTACT US</a></li>
+                            <li class="lower-list-head support-burger"><a href="">SUPPORT</a></li>
+                            
+                        </ul>
+                    </nav>
                 </div>
                 
             </div>
@@ -51,180 +149,236 @@
                     <button type="submit" class="mobile-sbtn"><i class="fa fa-search"></i></button>
                 </form>
             </div>
+
+            <!-- navigation bar -->
+            <div class="navbar">
+                <div class="start-tab bar-child"></div>
+                <div class="tab-wrapper">
+                    
+                    <div class="bar-child tab web-tab">
+                        <div class="icon-tab">
+                            <span>
+                                <i class="fas fa-code"></i>
+                            </span>
+                        </div>
+                        <span class="tab-s-text">WEB</span>
+                        <span class="tab-lg-text">DESIGN</span>
+                        <div class="dd-background"></div>
+                        <div class="drop-down dd-web">
+                            <ul>
+                                <li>STYLISH WEBSITES</li>
+                                <li>-</li>
+                                <li>ECOMMERCE STORES</li>
+                                <li>-</li>
+                                <li>BRANDING</li>
+                                <li>-</li>
+                                <li>APPS</li>
+                                <li>-</li>
+                                <li>WEB HOSTING</li>
+                                <li>-</li>
+                                <li>PAY MONTHLY WEBSITES</li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                    <div class="bar-child tab IT-tab">
+                        <div class="icon-tab">    
+                            <span>
+                                <i class="fas fa-desktop"></i>
+                            </span>
+                        </div>
+                        <span class="tab-s-text">IT</span>
+                        <span class="tab-lg-text">SUPPORT</span>
+                        <div class="dd-background"></div>
+                        <div class="drop-down dd-IT">
+                            <ul>
+                                <li>MANAGED IT</li>
+                                <li>-</li>
+                                <li>BUSINESS IT</li>
+                                <li>-</li>
+                                <li>OFFICE 365</li>
+                                <li>-</li>
+                                <li>CONSULTANCY</li>
+                                <li>-</li>
+                                <li>CLOUD PROVIDER</li>
+                                <li>-</li>
+                                <li>DATA BACKUP</li>
+                            </ul>
+                        
+                        </div>
+                    </div>
+                    <div class="bar-child tab telecoms-tab">
+                        <div class="icon-tab">
+                            <span>
+                                <i class="fas fa-phone-alt"></i>
+                            </span>
+                        </div>
+                        <span class="tab-s-text">TELECOMS</span>
+                        <span class="tab-lg-text">SERVICES</span>
+                        <div class="dd-background"></div>
+                        <div class="drop-down dd-telecoms">
+                            <ul>
+                                <li>GIGABIT VOUCHER</li>
+                                <li>-</li>
+                                <li>HOSTED VOIP</li>
+                                <li>-</li>
+                                <li>BUSINESS VOIP</li>
+                                <li>-</li>
+                                <li>BUSINESS BROADBAND</li>
+                                <li>-</li>
+                                <li>LEASED LINE</li>
+                                <li>-</li>
+                                <li>3CX SYSTEMS</li>
+                            </ul>
+                                
+                        
+                        </div>
+                    </div>
+                    <div class="bar-child tab bespoke-tab">
+                        <div class="icon-tab">
+                            <span>
+                                <i class="fas fa-th"></i>
+                            </span>  
+                        </div>
+                        <span class="tab-s-text">BESPOKE</span>
+                        <span class="tab-lg-text">SOFTWARE</span>
+                        <div class="dd-background"></div>
+                        <div class="drop-down dd-bespoke">
+                            <ul>
+                                <li>WORKFLOW SOLUTIONS</li>
+                                <li>-</li>
+                                <li>AUTOMATION</li>
+                                <li>-</li>
+                                <li>SYSTEM INTEGRATION</li>
+                                <li>-</li>
+                                <li>DATABASE MANAGEMENT</li>
+                                <li>-</li>
+                                <li>SHAREPOINT</li>
+                                <li>-</li>
+                                <li>ERP</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bar-child tab marketing-tab">
+                        <div class="icon-tab">
+                            <span>
+                                <i class="fas fa-signal"></i>
+                            </span>
+                        </div>
+                        <span class="tab-s-text">DIGITAL</span>
+                        <span class="tab-lg-text">MARKETING</span>
+                        <div class="dd-background"></div>
+                        <div class="drop-down dd-marketing">
+                            <ul>
+                                <li>SEARCH (SEO)</li>
+                                <li>-</li>
+                                <li>PAID(PPC)</li>
+                                <li>-</li>
+                                <li>CONVERSION(CRO)</li>
+                                <li>-</li>
+                                <li>EMAIL</li>
+                                <li>-</li>
+                                <li>SOCIAL MEDIA</li>
+                                <li>-</li>
+                                <li>CONTENT</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bar-child tab security-tab">
+                        <div class="icon-tab">
+                            <span>
+                                <i class="fas fa-shield-alt"></i>
+                            </span>
+                        </div>
+                        <span class="tab-s-text">CYBER</span>
+                        <span class="tab-lg-text">SECURITY</span>
+                        <div class="dd-background"></div>
+                        <div class="drop-down dd-security">
+                            <ul>
+                                <li>ASSESSMENT</li>
+                                <li>-</li>
+                                <li>MANAGEMENT</li>
+                                <li>-</li>
+                                <li>PENETRATION TESTING</li>
+                                <li>-</li>
+                                <li>CYBER ESSENTIALS</li>
+                                <li>-</li>
+                                <li>PCI/DSS</li>
+                                <li>-</li>
+                                <li>HACKER PREVENTION</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="end-tab bar-child"></div> -->
+                
+            </div>
+
         </header>
 
-        <!-- navigation bar -->
-        <div class="navbar">
-            <div class="start-tab bar-child"></div>
-            <div class="tab-wrapper">
-                
-                <div class="bar-child tab web-tab">
-                    <div class="icon-tab">
-                        <span>
-                            <i class="fas fa-code"></i>
-                        </span>
-                    </div>
-                    <span class="tab-s-text">WEB</span>
-                    <span class="tab-lg-text">DESIGN</span>
-                    <div class="dd-background"></div>
-                    <div class="drop-down dd-web">
-                        <ul>
-                            <li>STYLISH WEBSITES</li>
-                            <li>-</li>
-                            <li>ECOMMERCE STORES</li>
-                            <li>-</li>
-                            <li>BRANDING</li>
-                            <li>-</li>
-                            <li>APPS</li>
-                            <li>-</li>
-                            <li>WEB HOSTING</li>
-                            <li>-</li>
-                            <li>PAY MONTHLY WEBSITES</li>
-                        </ul>
-                    </div>
-                    
-                </div>
-                <div class="bar-child tab IT-tab">
-                    <div class="icon-tab">    
-                        <span>
-                            <i class="fas fa-desktop"></i>
-                        </span>
-                    </div>
-                    <span class="tab-s-text">IT</span>
-                    <span class="tab-lg-text">SUPPORT</span>
-                    <div class="dd-background"></div>
-                    <div class="drop-down dd-IT">
-                        <ul>
-                            <li>MANAGED IT</li>
-                            <li>-</li>
-                            <li>BUSINESS IT</li>
-                            <li>-</li>
-                            <li>OFFICE 365</li>
-                            <li>-</li>
-                            <li>CONSULTANCY</li>
-                            <li>-</li>
-                            <li>CLOUD PROVIDER</li>
-                            <li>-</li>
-                            <li>DATA BACKUP</li>
-                        </ul>
-                    
-                    </div>
-                </div>
-                <div class="bar-child tab telecoms-tab">
-                    <div class="icon-tab">
-                        <span>
-                            <i class="fas fa-phone-alt"></i>
-                        </span>
-                    </div>
-                    <span class="tab-s-text">TELECOMS</span>
-                    <span class="tab-lg-text">SERVICES</span>
-                    <div class="dd-background"></div>
-                    <div class="drop-down dd-telecoms">
-                        <ul>
-                            <li>GIGABIT VOUCHER</li>
-                            <li>-</li>
-                            <li>HOSTED VOIP</li>
-                            <li>-</li>
-                            <li>BUSINESS VOIP</li>
-                            <li>-</li>
-                            <li>BUSINESS BROADBAND</li>
-                            <li>-</li>
-                            <li>LEASED LINE</li>
-                            <li>-</li>
-                            <li>3CX SYSTEMS</li>
-                        </ul>
-                            
-                    
-                    </div>
-                </div>
-                <div class="bar-child tab bespoke-tab">
-                    <div class="icon-tab">
-                        <span>
-                            <i class="fas fa-th"></i>
-                        </span>  
-                    </div>
-                    <span class="tab-s-text">BESPOKE</span>
-                    <span class="tab-lg-text">SOFTWARE</span>
-                    <div class="dd-background"></div>
-                    <div class="drop-down dd-bespoke">
-                        <ul>
-                            <li>WORKFLOW SOLUTIONS</li>
-                            <li>-</li>
-                            <li>AUTOMATION</li>
-                            <li>-</li>
-                            <li>SYSTEM INTEGRATION</li>
-                            <li>-</li>
-                            <li>DATABASE MANAGEMENT</li>
-                            <li>-</li>
-                            <li>SHAREPOINT</li>
-                            <li>-</li>
-                            <li>ERP</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="bar-child tab marketing-tab">
-                    <div class="icon-tab">
-                        <span>
-                            <i class="fas fa-signal"></i>
-                        </span>
-                    </div>
-                    <span class="tab-s-text">DIGITAL</span>
-                    <span class="tab-lg-text">MARKETING</span>
-                    <div class="dd-background"></div>
-                    <div class="drop-down dd-marketing">
-                        <ul>
-                            <li>SEARCH (SEO)</li>
-                            <li>-</li>
-                            <li>PAID(PPC)</li>
-                            <li>-</li>
-                            <li>CONVERSION(CRO)</li>
-                            <li>-</li>
-                            <li>EMAIL</li>
-                            <li>-</li>
-                            <li>SOCIAL MEDIA</li>
-                            <li>-</li>
-                            <li>CONTENT</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="bar-child tab security-tab">
-                    <div class="icon-tab">
-                        <span>
-                            <i class="fas fa-shield-alt"></i>
-                        </span>
-                    </div>
-                    <span class="tab-s-text">CYBER</span>
-                    <span class="tab-lg-text">SECURITY</span>
-                    <div class="dd-background"></div>
-                    <div class="drop-down dd-security">
-                        <ul>
-                            <li>ASSESSMENT</li>
-                            <li>-</li>
-                            <li>MANAGEMENT</li>
-                            <li>-</li>
-                            <li>PENETRATION TESTING</li>
-                            <li>-</li>
-                            <li>CYBER ESSENTIALS</li>
-                            <li>-</li>
-                            <li>PCI/DSS</li>
-                            <li>-</li>
-                            <li>HACKER PREVENTION</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="end-tab bar-child"></div> -->
-            
-        </div>
+        
 
         <!-- banner that will eventually contain slides. for now it hosts a static image under text -->
         <div class="banner">
             <div class="banner-overlay">
-                <div class="banner-text">
-                    <h1>IT SUPPORT</h1>
-                    <p>Fast and cost-effective IT support<br> services for your business</p>
-                    <button class="btn-banner">FIND OUT MORE <i class="fas fa-arrow-right"></i></button>
-                </div>
+                <div class="slides">
+                    <div class ="slide-web">
+                        <div class="s-overlay">
+                            <div class="banner-text">
+                                <h1>WEB DESIGN</h1>
+                                <p>For businesses looking to make a strong<br> and effective first inmpression.</p>
+                                <button class="btn-banner btn-web">FIND OUT MORE <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="slide-it">
+                        <div class="s-overlay">
+                            <div class="banner-text">
+                                <h1>IT SUPPORT</h1>
+                                <p>Fast and cost-effective IT support<br> services for your business</p>
+                                <button class="btn-banner btn-it">FIND OUT MORE <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide-tel">
+                        <div class="s-overlay">
+                            <div class="banner-text">
+                                <h1>TELECOMS SERVICES</h1>
+                                <p>A new approach to connectivity, see how<br> we can help your business</p>
+                                <button class="btn-banner btn-tel">FIND OUT MORE <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide-bes">
+                        <div class="s-overlay">
+                            <div class="banner-text">
+                                <h1>BESPOKE SOFTWARE</h1>
+                                <p>Bring your business together<br> with solutions that grow with you.</p>
+                                <button class="btn-banner btn-bes">FIND OUT MORE <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide-dig">
+                        <div class="s-overlay">
+                            <div class="banner-text">
+                                <h1>DIGITAL MARKETING</h1>
+                                <p>Generating your new business through<br> results-driven marketing activities.</p>
+                                <button class="btn-banner btn-dig">FIND OUT MORE <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide-sec">
+                        <div class="s-overlay">
+                            <div class="banner-text">
+                                <h1>CYBER SECURITY</h1>
+                                <p>Keeping your business and their customers<br> sensitive information protected.</p>
+                                <button class="btn-banner btn-sec">FIND OUT MORE <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                
             </div>
 
         </div>
@@ -632,6 +786,11 @@
             </div>
             
         </footer>
-
+        
+        <script src="js/mmenu.js"></script>
+        <script src="js/slick.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/app.js"></script>
+        
     </body>
 </html>

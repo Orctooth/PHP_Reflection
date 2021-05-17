@@ -14,9 +14,7 @@
         }
         margin: 0 auto;
     }
-    .header{
-        margin-bottom: 30px;
-    }
+    
 
 
     .lg-row-nav{
@@ -182,6 +180,8 @@
 
 @media only screen and (min-width:1024px){
     .navbar{
+        min-width: 1024px;
+       
         & > .tab-wrapper{
             width: 1024px;
             margin: 0 auto;
@@ -203,6 +203,8 @@
 
 @media only screen and (min-width:1280px){
     .navbar{
+        min-width: 1280px;
+      
         .tab-wrapper{
             min-width: 1280px;
             margin: 0 auto;
@@ -663,7 +665,7 @@
 
 //mobiles
 @media only screen and (max-width: 425px){
-    .header-top, .searchbar-mobile, .banner-text,
+    .header, .searchbar-mobile, .banner-text,
     .nav-cards, .culture-back, .news-header-section,
     .news-cards, .companies, .sign-up-form, .footer-content {
         max-width: 425px;
@@ -672,7 +674,7 @@
 }
 
 @media only screen and (min-width: 425px){
-    .header-top, .searchbar-mobile, .banner-text,
+    .header, .searchbar-mobile, .banner-text,
     .nav-cards, .culture-back, .news-header-section,
     .news-cards, .companies, .sign-up-form, .footer-content {
         min-width: 425px;
@@ -681,7 +683,7 @@
 }
 //tablets
 @media only screen and (min-width: 786px){
-    .header-top, .searchbar-mobile, .banner-text,
+    .header, .searchbar-mobile, .banner-text,
     .nav-cards, .culture-back, .news-header-section,
     .news-cards, .companies, .sign-up-form, .footer-content {
         width: 786px;
@@ -690,7 +692,7 @@
 }
 //small laptops
 @media only screen and (min-width: 1024px){
-    .header-top, .searchbar-mobile, .banner-text, .tab-wrapper,
+    .header, .searchbar-mobile, .banner-text, .tab-wrapper,
     .lg-row-nav, .nav-cards, .culture-back, .news-header-section,
     .news-cards, .companies, .sign-up-form, .footer-content, .awards-1, .awards-2 {
         width: 1024px;
@@ -701,7 +703,7 @@
 }
 
 @media only screen and (min-width: 1280px){
-    .header-top, .searchbar-mobile, .banner-text, .tab-wrapper,
+    .header, .searchbar-mobile, .banner-text, .tab-wrapper,
     .xl-row-nav, .xxl-row-nav, .nav-cards,
     .culture-back, .news-header-section, .companies,
     .news-cards, .footer-content, .sign-up-form, .awards-1, .awards-2 {
