@@ -1,30 +1,30 @@
+//Assigns sticky plugin behaviour to the header
 $('.header').sticky({
     zIndex: 40,
     topSpacing: 0
-  });
-
-
-let lastScrollTop = 0;
-$(window).scroll(function(event){
-   let st = $(this).scrollTop();
-   if (st > lastScrollTop){
-       // downscroll code
-       $('.header').sticky({
-        zIndex: 40,
-        topSpacing: -300
-      });
-       
-   } else {
-      // upscroll code
-      //$('.header').animate({topSpacing: '0'});
-      $('.header').sticky({
-        zIndex: 40,
-        topSpacing: 0
-      });
-   }
-   lastScrollTop = st;
 });
 
+//Detects scroll direction. 
+//Need to find working solution for header popping in and out.
+// slideDown() doesn't work.
+let lastScrollTop = 0, delta = 5;
+$(window).scroll(function(){
+    let nowScrollTop = $(this).scrollTop();
+    if(Math.abs(lastScrollTop - nowScrollTop) >= delta){
+        if (nowScrollTop > lastScrollTop){
+            // ACTION ON
+            // SCROLLING DOWN
+            
+        } else {
+            // ACTION ON
+            // SCROLLING UP
+            
+       }
+    lastScrollTop = nowScrollTop;
+    }
+});
+
+//carousel
 $('.slides').slick({
     
     autoplay: true,
@@ -35,6 +35,9 @@ $('.slides').slick({
     infinite: true,
 });
 
+//assigns mmenu plugin behaviour to the menu
+//also contains the event listener assigned to
+//the burger button
 document.addEventListener(
     "DOMContentLoaded", () => {
         const menu = new Mmenu( "#my-menu", {
@@ -49,31 +52,32 @@ document.addEventListener(
         });
         const api = menu.API;
         
-        document.querySelector( "#my-open-button" )
-                .addEventListener(
-                    "click", ( evnt ) => {
-                        evnt.preventDefault();
-                        console.log('burger opened')
-                        api.open();
-                    }
-                );
+        document.querySelector( "#my-open-button" ).addEventListener("click", ( evnt ) => {
+            evnt.preventDefault();
+            console.log('burger opened')
+            api.open();
+            document.querySelector('.hamburger').classList.toggle("is-active");
+        });
+
+       
+
+        
     }
 );
 
-let myStorage = window.localStorage;
-let cookiesetting = mystorage.getItem('cookiesetting');
-
-
+//cookie function that fires on loading the page
 window.onload = function(){
-    if(myStorage.getItem('cookiesetting') !== true){
+    if(localStorage.getItem('cookiesetting') !== 'true'){
         document.getElementById("cookie").style.display = "block";
+        document.getElementsByTagName('body').className ="noscroll";
     }
     
 }
-
+//accept cookies event listener
 document.getElementById('accept').addEventListener('click', (e) =>{
-    myStorage.setItem('cookiesetting', 'true');
+    localStorage.setItem('cookiesetting', 'true');
     document.getElementById("cookie").style.display = "none";
+    document.getElementsByTagName('body').className ="";
 
 });
 

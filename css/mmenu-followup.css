@@ -1,5 +1,7 @@
 .nav {
   max-width: 50%;
+  position: relative;
+  z-index: 1003;
 }
 
 .inset-block {
@@ -72,26 +74,27 @@
   border-bottom: none;
 }
 
-.Divider {
+.divider {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
   background-color: #333645;
-}
-.Divider > a {
-  font-size: 222px;
+  padding-left: 0px;
 }
 
 .item-non-mobile {
   background-color: rgba(0, 0, 0, 0.25);
+  padding-left: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 }
 
 @media screen and (min-width: 786px) {
-  .burger-item, .inset-block {
+  .burger-item, .inset-block, .support-burger {
     display: none;
   }
 }
 @media screen and (max-width: 786px) {
-  .burger-item, .inset-block {
+  .burger-item, .inset-block, .support-burger {
     display: block;
   }
 }

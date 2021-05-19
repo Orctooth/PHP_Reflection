@@ -1,4 +1,12 @@
 //header queries
+@media only screen and (min-width:786px){
+    .cookie-bottom{
+        display: flex;
+        & > button{
+            width: 60%;
+        }
+    }
+}
 
 //show large searchbar
 @media only screen and (max-width:786px){
