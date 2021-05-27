@@ -9,7 +9,7 @@
 @font-face
 {
     font-family: 'slick';
-    font-weight: normal;
+    font-weight: 100;
     font-style: normal;
 
     src: url('./fonts/slick.eot');
@@ -205,18 +205,18 @@
 }
 .slick-dots li.slick-active button::after
 {
-    font-size: 80px;
-    font-family: 'slick';
+    font-size: 85px;
+    font-family: '';
+    font-weight: 100;
     font-style: normal;
-    font-weight: 200;
     line-height: 20px;
 
     position: absolute;
     top: 15px;
-    left: -1px;
+    left: -2px;
 
-    width: 30px;
-    height: 30px;
+    width: 10px;
+    height: 10px;
 
     content: '°';
     text-align: center;

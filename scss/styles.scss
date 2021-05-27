@@ -124,6 +124,7 @@ $hamburger-types: (
     z-index: 1000;
     //position: fixed;
     display: none;
+    overflow-y: auto !important;
     
     & > #cookie-overlay{
         position:fixed;
@@ -132,7 +133,7 @@ $hamburger-types: (
         left:0;
         right:0;
         background-color:#000;
-        opacity:0.25;
+        opacity:0.75;
         z-index:1001;
         
     }
@@ -142,9 +143,10 @@ $hamburger-types: (
         left: 50%;
         z-index: 1001;
         
-        margin-left: -250px;
-        width: 500px;
-        margin-top: -300px;
+        margin-left: -300px;
+        max-height: 750px;
+        max-width: 600px;
+        margin-top: -225px;
         border-radius: 3px;
         background-color: #fff;
         justify-content: center;
@@ -153,25 +155,29 @@ $hamburger-types: (
         
         & > .cookie-header{
             padding: 15px 15px;
-            border-bottom: 1px solid #ccc;
+            border-bottom: 1px solid #ddd;
             & > h3{
                font-size: 1.625rem;
+               font-weight: 400;
+               color: #333645;
             }
         }
         & > .cookie-body{
            color: #888;
            padding: 15px 15px;
-           border-bottom: 1px solid #ccc;
+           border-bottom: 1px solid #ddd;
            
         }
         & > .cookie-bottom{
-            padding: 15px 15px;
+            padding: 10px 15px;
             //display: flex;
             justify-content: space-around;  
             & > button{
                 display: block;
-                width: 100%;
-                margin: 30px auto;
+                width: 90%;
+                margin: 15px auto;
+                margin-left: 15px;
+                margin-right: 15px;
                 height: 50px;
                 border:none;
                 color: white;
@@ -208,7 +214,6 @@ $hamburger-types: (
     margin: 0 15px;
     z-index: 40;
     background-color: #fff;
-    overflow: hidden;
     
     //first line of header including logo,burger,etc.
     & > .header-top{
@@ -710,7 +715,7 @@ $hamburger-types: (
 //Banner styles
 
 .banner{
-   height: 600px;
+   min-height: 600px;
    min-width: 100%;
    margin-bottom: 80px;
    
@@ -1768,6 +1773,7 @@ footer {
     background-color: $navy-ish;
     border: none;
 }
+
 
 
 //FONT STYLES

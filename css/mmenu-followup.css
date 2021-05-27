@@ -1,11 +1,10 @@
 .nav {
-  max-width: 50%;
-  position: relative;
-  z-index: 1003;
+  width: 300px;
 }
 
 .inset-block {
   width: 80%;
+  padding: 15px 15px;
   display: block;
   border-radius: 5px;
   background-color: #333645;
@@ -43,7 +42,7 @@
   line-height: 1;
 }
 .inset-block:hover {
-  background-color: #344945;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 #my-list > ul > li {
@@ -72,20 +71,30 @@
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
   border-bottom: none;
+  margin-bottom: 20px;
 }
 
 .divider {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
   background-color: #333645;
+  padding: 8px 0;
   padding-left: 0px;
 }
 
 .item-non-mobile {
   background-color: rgba(0, 0, 0, 0.25);
-  padding-left: 30px;
+  padding: 15px 0;
+  padding-left: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+.item-non-mobile > i {
+  font-size: 0.35rem;
+  vertical-align: middle;
+}
+.item-non-mobile > i:last-of-type {
+  margin-right: 10px;
 }
 
 @media screen and (min-width: 786px) {

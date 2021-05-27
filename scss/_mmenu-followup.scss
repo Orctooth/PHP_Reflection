@@ -1,9 +1,10 @@
 .nav{
-    max-width: 50%;
+    width: 300px;
 }
 
 .inset-block{
     width: 80%; 
+    padding: 15px 15px;
     display: block;
     border-radius: 5px; 
     background-color: #333645; 
@@ -45,11 +46,12 @@
     }
 
     &:hover{
-        background-color: #344945;
+        background-color: hsla(0,0%,100%,.05);
     }
 }
 
 #my-list{
+
     & > ul{
         & > li{
             background-color: rgba(0,0,0,.25);
@@ -68,6 +70,7 @@
         display: none;
     }
     
+    
 
 }
 .first{
@@ -79,21 +82,31 @@
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
     border-bottom: none;
+    margin-bottom: 20px;
 }
 
 .divider{
     border-top: 1px solid hsla(0,0%,100%,.1);
     border-bottom: 1px solid rgba(0,0,0,.25);
     background-color: #333645;
-    
+    padding: 8px 0;
     padding-left: 0px;
 }
 
 .item-non-mobile{
     background-color: rgba(0,0,0,.25);
-    padding-left: 30px;
+    padding: 15px 0;
+    padding-left: 20px;
     border-top: 1px solid hsla(0,0%,100%,.1);
     border-bottom: 1px solid rgba(0,0,0,.25);
+    & > i{
+        font-size: 0.35rem;
+        vertical-align: middle;
+        
+        &:last-of-type{
+            margin-right: 10px;
+        }
+    }
 }
 
 //burger queries

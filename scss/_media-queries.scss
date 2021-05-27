@@ -1,5 +1,5 @@
 //header queries
-@media only screen and (min-width:786px){
+@media only screen and (min-width:768px){
     .cookie-bottom{
         display: flex;
         & > button{
@@ -9,7 +9,7 @@
 }
 
 //show large searchbar
-@media only screen and (max-width:786px){
+@media only screen and (max-width:768px){
     .searchbar-lg{
         display: none;
     }
@@ -41,7 +41,7 @@
     
 }
 //hide call button and mobile search
-@media only screen and (min-width:786px){
+@media only screen and (min-width:768px){
     .support{
         & > i{
             display: none;
@@ -62,7 +62,7 @@
         
 }
 //show desktop/tablet search bar
-@media only screen and (min-width:786px){
+@media only screen and (min-width:768px){
     .searchbar-lg{
         display: block;
 
@@ -112,7 +112,7 @@
     }
 }
 //hide support and contact buttons
-@media only screen and (max-width:1024px){
+@media only screen and (max-width:992px){
     .buttons{
         & > .btn-banner{
             display: none;
@@ -122,7 +122,7 @@
 }
 
 //show contact buttons
-@media only screen and (min-width:1024px){
+@media only screen and (min-width:992px){
     //hide tablet/desktop searchbar
     .searchbar-lg{
         & > form{
@@ -143,7 +143,7 @@
     
 
     .header-top{
-        width:1024px;
+        width:992px;
         margin: 0 auto;
         
     }
@@ -153,10 +153,10 @@
 
 
 
-@media only screen and (min-width:1280px){
+@media only screen and (min-width:1260px){
     
     .header-top{
-        width:1280px;
+        width:1260px;
         margin: 0 auto;
     }
     
@@ -180,18 +180,18 @@
 }
 
 //navbar queries
-@media only screen and (max-width:1024px){
+@media only screen and (max-width:992px){
     .navbar{
         display: none;
     }
 }
 
-@media only screen and (min-width:1024px){
+@media only screen and (min-width:992px){
     .navbar{
-        min-width: 1024px;
+        min-width: 992px;
        
         & > .tab-wrapper{
-            width: 1024px;
+            width: 992px;
             margin: 0 auto;
             & > .bar-child{
                 & > .drop-down{
@@ -209,12 +209,12 @@
 
 
 
-@media only screen and (min-width:1280px){
+@media only screen and (min-width:1260px){
     .navbar{
-        min-width: 1280px;
+        min-width: 1260px;
       
         .tab-wrapper{
-            min-width: 1280px;
+            min-width: 1260px;
             margin: 0 auto;
             & > .bar-child{
                 & > .drop-down{
@@ -232,7 +232,7 @@
 }
 
 //banner query
-@media only screen and (min-width:786px)
+@media only screen and (min-width:768px)
 {
     .banner-text{
         padding-left: 15px;
@@ -258,7 +258,7 @@
 
 
 //culture query
-@media only screen and (min-width:1024px){
+@media only screen and (min-width:992px){
     .culture{
         background-image: url("../img/netmatters-transp.png");
         background-repeat: no-repeat;
@@ -267,7 +267,7 @@
         background-position: right;
     }
     .culture-back{
-        width: 1024px;
+        width: 992px;
         margin: 0 auto;
         background-color: rgba(0,0,0,0);
         
@@ -280,7 +280,7 @@
 }
 
 //nav queries
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width: 992px){
     .bespoke,.marketing,.IT,.telecoms,.security,.web-design,.schools{
         min-width: 100%;
         display:block;
@@ -288,10 +288,10 @@
     }
 }
 
-@media only screen and (min-width: 786px){
+@media only screen and (min-width: 768px){
     .lg-row-nav{
         display: flex;
-        width: 786px;
+        width: 768px;
         justify-content: space-around;
         margin: 0 auto;
     }
@@ -310,10 +310,10 @@
     }
 }
 
-@media only screen and (min-width: 1024px){
+@media only screen and (min-width: 992px){
     .xl-row-nav{
         display:flex;
-        width: 1024px;
+        width: 992px;
         //justify-content: space-between;
         margin: 0px auto;
         & > .card-nav{
@@ -333,9 +333,9 @@
 
 }
 
-@media only screen and (min-width: 1280px){
+@media only screen and (min-width: 1260px){
     .nav-cards{
-        width: 1280px;
+        width: 1260px;
         margin: 0 auto;
     }
     
@@ -396,7 +396,7 @@
 }
 
 //news queries
-// @media only screen and (max-width: 786px){
+// @media only screen and (max-width: 768px){
 //     .news-image{
 //         max-height: 200px;
 //         & > .img-overlay{
@@ -410,7 +410,7 @@
 // }
 
 
-@media only screen and (min-width: 786px){
+@media only screen and (min-width: 768px){
     .news-cards{
         display: flex;
         justify-content: space-between;
@@ -436,9 +436,9 @@
 }
 
 
-@media only screen and (min-width: 1024px){
+@media only screen and (min-width: 992px){
     .news-cards{
-        width: 1024px;
+        width: 992px;
         margin: 0 auto;
         & > .card:last-of-type{
             display: block;
@@ -478,9 +478,9 @@
     }
 }
 
-@media only screen and (min-width: 1280px){
+@media only screen and (min-width: 1260px){
     .news-cards{
-        width: 1280px;
+        width: 1260px;
         margin: 0 auto;
         
         
@@ -512,7 +512,7 @@
 
 
 //sign-up query
-@media only screen and (min-width: 1024px){
+@media only screen and (min-width: 992px){
     .form-box{
         display: flex;
         flex-direction: row;
@@ -525,19 +525,19 @@
         height: 47px;
     }
     .sign-up-form{
-        width: 1024px;
+        width: 992px;
         margin: 0 auto;
     }
 }
 
-@media only screen and (min-width: 1280px){
+@media only screen and (min-width: 1260px){
     .sign-up-form{
-        width: 1280px;
+        width: 1260px;
         margin: 0 auto;
     }
 }
 //footer queries
-@media (min-width: 786px) {
+@media (min-width: 768px) {
     footer {
         .footer-main {
     
@@ -554,14 +554,14 @@
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
     footer {
 
         .footer-main {
             
 
             .footer-content {
-                width: 1024px;
+                width: 992px;
                 padding: 30px 30px;
                 
                 & > div {
@@ -574,14 +574,14 @@
     }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1260px) {
     footer {
 
         .footer-main {
             
 
             .footer-content {
-                width: 1280px;
+                width: 1260px;
                 padding: 30px 0px;
                 
                 & > div {
@@ -597,14 +597,14 @@
     }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1260px) {
     footer {
 
         .footer-main {
             
 
             .footer-content {
-                width: 1280px;
+                width: 1260px;
                 padding: 30px 0px;
                 
                 & > div {
@@ -643,13 +643,13 @@
 
 //company queries
 
-@media only screen and (max-width: 786px){
+@media only screen and (max-width: 768px){
     .companies, .awards-1, .awards-2, .awards{
         display:none;
     }
 }
 
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width: 992px){
     .companies{
         & > .company{
             & >img{
@@ -659,7 +659,7 @@
     }
 }
 
-@media only screen and (max-width: 1280px){
+@media only screen and (max-width: 1260px){
     .companies{
         & > .company{
             & >img{
@@ -690,32 +690,32 @@
     }
 }
 //tablets
-@media only screen and (min-width: 786px){
+@media only screen and (min-width: 768px){
     .header, .searchbar-mobile, .banner-text,
     .nav-cards, .culture-back, .news-header-section,
     .news-cards, .companies, .sign-up-form, .footer-content {
-        width: 786px;
+        width: 768px;
         margin: 0 auto;
     }
 }
 //small laptops
-@media only screen and (min-width: 1024px){
+@media only screen and (min-width: 992px){
     .header, .searchbar-mobile, .banner-text, .tab-wrapper,
     .lg-row-nav, .nav-cards, .culture-back, .news-header-section,
     .news-cards, .companies, .sign-up-form, .footer-content, .awards-1, .awards-2 {
-        width: 1024px;
+        width: 992px;
         margin: 0 auto;
     }
     
     
 }
 
-@media only screen and (min-width: 1280px){
+@media only screen and (min-width: 1260px){
     .header, .searchbar-mobile, .banner-text, .tab-wrapper,
     .xl-row-nav, .xxl-row-nav, .nav-cards,
     .culture-back, .news-header-section, .companies,
     .news-cards, .footer-content, .sign-up-form, .awards-1, .awards-2 {
-        width: 1280px;
+        width: 1260px;
         margin: 0 auto;
     }
 }

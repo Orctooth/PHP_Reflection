@@ -1,3 +1,5 @@
+var $html = $(document.documentElement);
+
 //Assigns sticky plugin behaviour to the header
 $('.header').sticky({
     zIndex: 40,
@@ -28,7 +30,8 @@ $(window).scroll(function(){
 $('.slides').slick({
     
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 4000,
+    speed: 300,
     arrows: false,
     dots: true,
     touchMove: true,
@@ -69,7 +72,10 @@ document.addEventListener(
 window.onload = function(){
     if(localStorage.getItem('cookiesetting') !== 'true'){
         document.getElementById("cookie").style.display = "block";
-        document.getElementsByTagName('body').className ="noscroll";
+        //$('body').css('overflow','hidden');
+
+        $html.css('overflow', 'hidden');
+        document.getElementById("cookie").css('overflow', 'auto');
     }
     
 }
@@ -77,7 +83,8 @@ window.onload = function(){
 document.getElementById('accept').addEventListener('click', (e) =>{
     localStorage.setItem('cookiesetting', 'true');
     document.getElementById("cookie").style.display = "none";
-    document.getElementsByTagName('body').className ="";
+    //$('body').css('overflow','auto');
+    $html.css('overflow', 'auto');
 
 });
 
