@@ -1,30 +1,40 @@
 var $html = $(document.documentElement);
 
-//Assigns sticky plugin behaviour to the header
-$('.header').sticky({
-    zIndex: 40,
-    topSpacing: 0
-});
+//Assigns sticky plugin behaviour to the header COMMENTING OUT IN FAVOR OF ANOTHER PLUGIN
+// $('.header').sticky({
+//     zIndex: 40,
+//     topSpacing: 0
+// });
 
 //Detects scroll direction. 
 //Need to find working solution for header popping in and out.
 // slideDown() doesn't work.
-let lastScrollTop = 0, delta = 5;
-$(window).scroll(function(){
-    let nowScrollTop = $(this).scrollTop();
-    if(Math.abs(lastScrollTop - nowScrollTop) >= delta){
-        if (nowScrollTop > lastScrollTop){
-            // ACTION ON
-            // SCROLLING DOWN
+// let lastScrollTop = 0, delta = 5;
+// $(window).scroll(function(){
+//     let nowScrollTop = $(this).scrollTop();
+//     if(Math.abs(lastScrollTop - nowScrollTop) >= delta){
+//         if (nowScrollTop > lastScrollTop){
+//             // ACTION ON
+//             // SCROLLING DOWN
             
-        } else {
-            // ACTION ON
-            // SCROLLING UP
+//         } else {
+//             // ACTION ON
+//             // SCROLLING UP
             
-       }
-    lastScrollTop = nowScrollTop;
+//        }
+//     lastScrollTop = nowScrollTop;
+//     }
+// });
+
+
+//Trying out a different (hopefully easier) header
+document.addEventListener(
+    "DOMContentLoaded", () => {
+        new Mhead( ".header", {
+            // options
+        });
     }
-});
+);
 
 //carousel
 $('.slides').slick({

@@ -1,16 +1,16 @@
 .nav{
     width: 300px;
 }
-
 .inset-block{
     width: 80%; 
     padding: 15px 15px;
     display: block;
     border-radius: 5px; 
     background-color: #333645; 
-    border: 1px solid #555;
-    outline: 1px solid #111;
+    border: 1px solid #484a58;
+    outline: 1px solid #262834;
     margin: 20px auto;
+    color: #fff;
     &::after{
         display: none;
     }
@@ -47,8 +47,33 @@
 
     &:hover{
         background-color: hsla(0,0%,100%,.05);
+        cursor: pointer;
+    }
+
+    
+}
+
+.menu-list-link{
+    margin: 0 auto;
+    padding: 0 0;
+    width: 100%;
+    & > li{
+        width: 100%;
+    }
+    & > .divider{
+        padding-left: 20px;
+    }
+    
+    &:hover{
+        & > .inset-block, .divider{
+            background-color: hsla(0,0%,100%,.05);
+        }
+        cursor: pointer;
     }
 }
+  
+
+
 
 #my-list{
 
@@ -59,11 +84,16 @@
     }
 }
 
+
+
 .burger-item{
     background-color: rgba(0,0,0,.25);
     margin: 0 auto;
     width: 80%;
+    height: 40px;
+    padding-top: 10px;
     text-align: center;
+    vertical-align: middle;
     border-top: 1px solid hsla(0,0%,100%,.1);
     border-bottom: 1px solid rgba(0,0,0,.25);
     &::after{
@@ -90,7 +120,7 @@
     border-bottom: 1px solid rgba(0,0,0,.25);
     background-color: #333645;
     padding: 8px 0;
-    padding-left: 0px;
+    // padding-left: 15px;
 }
 
 .item-non-mobile{
@@ -109,15 +139,21 @@
     }
 }
 
+.mob-menu{
+    & > li{
+        width: 80%;
+    }
+}
+
 //burger queries
 @media screen and (min-width:786px){
-    .burger-item, .inset-block, .support-burger{
+    .burger-item, .inset-block, .support-burger, .mob-menu{
         display: none;
     }
 }
 
 @media screen and (max-width:786px){
-    .burger-item, .inset-block, .support-burger{
+    .burger-item, .inset-block, .support-burger, .mob-menu{
         display: block;
     }
 }

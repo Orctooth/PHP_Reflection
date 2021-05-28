@@ -1,10 +1,5 @@
 {
   "dependencies": {
-    "@babel/polyfill": "^7.12.1"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.14.3",
-    "@babel/core": "^7.14.3",
-    "@babel/preset-env": "^7.14.2"
+    "mhead-js": "^2.1.0"
   }
 }

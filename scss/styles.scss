@@ -209,8 +209,9 @@ $hamburger-types: (
     max-width: 100%;
 }
 
-.header, .non-stick-header{
-    padding-top: 5px;
+.header{
+    padding: 15px 0;
+    position: sticky;
     margin: 0 15px;
     z-index: 40;
     background-color: #fff;
