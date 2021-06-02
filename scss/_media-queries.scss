@@ -14,6 +14,7 @@
         display: none;
     }
     
+    
     .searchbar-mobile{
         @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
             & > button{
@@ -56,7 +57,7 @@
             }
         }
         margin-bottom: 30px;
-       
+        
         
     }
         
@@ -118,6 +119,9 @@
             display: none;
         }
         
+    }
+    .header{
+        padding-bottom: 15px;
     }
 }
 
@@ -538,7 +542,7 @@
 }
 //footer queries
 @media (min-width: 768px) {
-    footer {
+    #footer {
         .footer-main {
     
             .footer-content {
@@ -555,7 +559,7 @@
 }
 
 @media (min-width: 992px) {
-    footer {
+    #footer {
 
         .footer-main {
             
@@ -575,7 +579,7 @@
 }
 
 @media (min-width: 1260px) {
-    footer {
+    #footer {
 
         .footer-main {
             
@@ -598,7 +602,7 @@
 }
 
 @media (min-width: 1260px) {
-    footer {
+    #footer {
 
         .footer-main {
             
@@ -673,7 +677,7 @@
 
 //mobiles
 @media only screen and (max-width: 425px){
-    .header, .searchbar-mobile, .banner-text,
+    .header-top, .searchbar-mobile, .banner-text,
     .nav-cards, .culture-back, .news-header-section,
     .news-cards, .companies, .sign-up-form, .footer-content {
         max-width: 425px;
@@ -682,7 +686,7 @@
 }
 
 @media only screen and (min-width: 425px){
-    .header, .searchbar-mobile, .banner-text,
+    .header-top, .searchbar-mobile, .banner-text,
     .nav-cards, .culture-back, .news-header-section,
     .news-cards, .companies, .sign-up-form, .footer-content {
         min-width: 425px;
@@ -691,7 +695,7 @@
 }
 //tablets
 @media only screen and (min-width: 768px){
-    .header, .searchbar-mobile, .banner-text,
+    .header-top, .searchbar-mobile, .banner-text,
     .nav-cards, .culture-back, .news-header-section,
     .news-cards, .companies, .sign-up-form, .footer-content {
         width: 768px;
@@ -700,7 +704,7 @@
 }
 //small laptops
 @media only screen and (min-width: 992px){
-    .header, .searchbar-mobile, .banner-text, .tab-wrapper,
+    .header-top, .searchbar-mobile, .banner-text, .tab-wrapper,
     .lg-row-nav, .nav-cards, .culture-back, .news-header-section,
     .news-cards, .companies, .sign-up-form, .footer-content, .awards-1, .awards-2 {
         width: 992px;
@@ -711,7 +715,7 @@
 }
 
 @media only screen and (min-width: 1260px){
-    .header, .searchbar-mobile, .banner-text, .tab-wrapper,
+    .header-top, .searchbar-mobile, .banner-text, .tab-wrapper,
     .xl-row-nav, .xxl-row-nav, .nav-cards,
     .culture-back, .news-header-section, .companies,
     .news-cards, .footer-content, .sign-up-form, .awards-1, .awards-2 {

@@ -1,31 +1,21 @@
 /******/ (function() { // webpackBootstrap
 var __webpack_exports__ = {};
 var $html = $(document.documentElement); //Assigns sticky plugin behaviour to the header COMMENTING OUT IN FAVOR OF ANOTHER PLUGIN
-// $('.header').sticky({
-//     zIndex: 40,
-//     topSpacing: 0
+
+// document.getElementById('headerSTICK').addEventListener('onmouseover', function (e){
+//   $('body').css('overflow', 'hidden');
 // });
-//Detects scroll direction. 
-//Need to find working solution for header popping in and out.
-// slideDown() doesn't work.
-// let lastScrollTop = 0, delta = 5;
-// $(window).scroll(function(){
-//     let nowScrollTop = $(this).scrollTop();
-//     if(Math.abs(lastScrollTop - nowScrollTop) >= delta){
-//         if (nowScrollTop > lastScrollTop){
-//             // ACTION ON
-//             // SCROLLING DOWN
-//         } else {
-//             // ACTION ON
-//             // SCROLLING UP
-//        }
-//     lastScrollTop = nowScrollTop;
-//     }
+
+// document.getElementById('headerSTICK').addEventListener('onmouseleave', function (e){
+//   $('body').css('overflow', 'auto');
 // });
-//Trying out a different (hopefully easier) header
+
 
 document.addEventListener("DOMContentLoaded", function () {
-  new Mhead(".header", {// options
+  new Mhead("#headerSTICK", {// options
+    scroll:{
+      tolerance: 8
+    }
   });
 }); //carousel
 
@@ -47,6 +37,12 @@ document.addEventListener("DOMContentLoaded", function () {
     "extensions": ["position-right", "pagedim-black"],
     navbar: {
       add: false
+    },
+    //config
+    offCanvas: {
+      page: {
+          selector: "#my-page"
+      }
     }
   });
   var api = menu.API;
@@ -62,8 +58,8 @@ window.onload = function () {
   if (localStorage.getItem('cookiesetting') !== 'true') {
     document.getElementById("cookie").style.display = "block"; //$('body').css('overflow','hidden');
 
-    $html.css('overflow', 'hidden');
-    document.getElementById("cookie").css('overflow', 'auto');
+    $('body').css('overflow', 'hidden');
+    // document.getElementById("cookie").css('overflow-y', 'auto !important');
   }
 }; //accept cookies event listener
 
@@ -72,7 +68,8 @@ document.getElementById('accept').addEventListener('click', function (e) {
   localStorage.setItem('cookiesetting', 'true');
   document.getElementById("cookie").style.display = "none"; //$('body').css('overflow','auto');
 
-  $html.css('overflow', 'auto');
+  $('body').css('overflow', 'auto');
 });
 /******/ })()
 ;
+

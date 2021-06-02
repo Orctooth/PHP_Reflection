@@ -1,5 +1,10 @@
 .nav {
   width: 300px;
+  padding-bottom: 0;
+}
+.nav > ul {
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 .inset-block {
@@ -53,9 +58,12 @@
   width: 100%;
 }
 .menu-list-link > li {
+  padding: 18px 0;
   width: 100%;
+  padding-left: 20px;
 }
 .menu-list-link > .divider {
+  padding: 18px 0;
   padding-left: 20px;
 }
 .menu-list-link:hover {
@@ -121,6 +129,7 @@
 
 .mob-menu > li {
   width: 80%;
+  vertical-align: middle;
 }
 
 @media screen and (min-width: 786px) {
@@ -132,6 +141,9 @@
   .burger-item, .inset-block, .support-burger, .mob-menu {
     display: block;
   }
+}
+.mm-panel::after {
+  display: none;
 }
 
 /*# sourceMappingURL=mmenu-followup.css.map */

@@ -121,84 +121,91 @@ $hamburger-types: (
 
 //cookie
 #cookie{
-    z-index: 1000;
+    z-index: 1080;
     //position: fixed;
+    min-height: 100vh;
     display: none;
     overflow-y: auto !important;
-    
-    & > #cookie-overlay{
-        position:fixed;
-        top:0;
-        bottom:0;
-        left:0;
-        right:0;
-        background-color:#000;
-        opacity:0.75;
-        z-index:1001;
-        
-    }
-    & > #cookie-con{
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        z-index: 1001;
-        
-        margin-left: -300px;
-        max-height: 750px;
-        max-width: 600px;
-        margin-top: -225px;
-        border-radius: 3px;
-        background-color: #fff;
-        justify-content: center;
-        opacity: 1;
+    & > #cookie-wrapper{
+        height: 100%;
 
-        
-        & > .cookie-header{
-            padding: 15px 15px;
-            border-bottom: 1px solid #ddd;
-            & > h3{
-               font-size: 1.625rem;
-               font-weight: 400;
-               color: #333645;
-            }
-        }
-        & > .cookie-body{
-           color: #888;
-           padding: 15px 15px;
-           border-bottom: 1px solid #ddd;
+        & > #cookie-overlay{
+            position:fixed;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            background-color:#000;
+            opacity:0.75;
+            z-index:1001;
+            height: 100%;
            
+            
         }
-        & > .cookie-bottom{
-            padding: 10px 15px;
-            //display: flex;
-            justify-content: space-around;  
-            & > button{
-                display: block;
-                width: 90%;
-                margin: 15px auto;
-                margin-left: 15px;
-                margin-right: 15px;
-                height: 50px;
-                border:none;
-                color: white;
-                border-radius: 3px;
-                &:first-of-type{
-                    background: #888;
-                    &:hover{
-                        cursor: pointer;
-                        background: #444;
-                    }
+        & > #cookie-con{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            z-index: 1001;
+            width:auto;
+            height: auto;
+            
+            margin-left: -300px;
+            margin-top: -225px;
+            border-radius: 3px;
+            background-color: #fff;
+            justify-content: center;
+            opacity: 1;
+            
+            & > .cookie-header{
+                padding: 15px 15px;
+                border-bottom: 1px solid #ddd;
+                & > h3{
+                   font-size: 1.625rem;
+                   font-weight: 400;
+                   color: #333645;
                 }
-                &:last-of-type{
-                    background: $web-tab-bg;
-                    &:hover{
-                        cursor: pointer;
-                        background: $web-drop-bg;
+            }
+            & > .cookie-body{
+               color: #888;
+               padding: 15px 15px;
+               border-bottom: 1px solid #ddd;
+               
+            }
+            & > .cookie-bottom{
+                padding: 10px 15px;
+                //display: flex;
+                justify-content: space-around;  
+                & > button{
+                    display: block;
+                    width: 90%;
+                    margin: 15px auto;
+                    margin-left: 15px;
+                    margin-right: 15px;
+                    height: 50px;
+                    border:none;
+                    color: white;
+                    border-radius: 3px;
+                    &:first-of-type{
+                        background: #888;
+                        &:hover{
+                            cursor: pointer;
+                            background: #444;
+                        }
+                    }
+                    &:last-of-type{
+                        background: $web-tab-bg;
+                        &:hover{
+                            cursor: pointer;
+                            background: $web-drop-bg;
+                        }
                     }
                 }
             }
         }
     }
+    
+    
     
 
 }
@@ -209,12 +216,16 @@ $hamburger-types: (
     max-width: 100%;
 }
 
+
+
 .header{
-    padding: 15px 0;
+    padding: 0 0px;
+    padding-top: 15px;
     position: sticky;
-    margin: 0 15px;
+    //margin: 15px 0px;
     z-index: 40;
     background-color: #fff;
+    
     
     //first line of header including logo,burger,etc.
     & > .header-top{
@@ -225,7 +236,7 @@ $hamburger-types: (
         margin: 30px auto;
         position: relative;
         justify-content: flex-start;
-        
+       
         
        
 
@@ -413,12 +424,12 @@ $hamburger-types: (
         border-bottom: #ebebeb 1px solid;
         background-color: $navy-ish;
         position: relative;
-        
+        padding: 0 0;
         
         
         & > .tab-wrapper{
             display:flex;
-            margin: 0 auto;
+            //margin: 0 auto;
             position: relative;
             border-left: 1px solid hsla(0,0%,100%,.1);
             border-right: 1px solid rgba(0,0,0,.25);
@@ -1626,7 +1637,7 @@ $hamburger-types: (
 }
 
 //FOOTER STYLES
-footer {
+#footer {
     background-color: $navy-ish;
 
     .footer-main{
