@@ -1,6 +1,16 @@
 /******/ (function() { // webpackBootstrap
 var __webpack_exports__ = {};
 var $html = $(document.documentElement); //Assigns sticky plugin behaviour to the header COMMENTING OUT IN FAVOR OF ANOTHER PLUGIN
+var $scrollTop; 
+document.addEventListener('scroll', function(e){
+  $scrollTop= $(window).scrollTop();
+  //console.log($scrollTop);
+  if($scrollTop > 230){
+    document.getElementById('headerSTICK').style.display="block";
+  } else{
+    document.getElementById('headerSTICK').style.display ="none";
+  }
+});
 
 // document.getElementById('headerSTICK').addEventListener('onmouseover', function (e){
 //   $('body').css('overflow', 'hidden');
@@ -48,7 +58,11 @@ document.addEventListener("DOMContentLoaded", function () {
   var api = menu.API;
   document.querySelector("#my-open-button").addEventListener("click", function (evnt) {
     evnt.preventDefault();
-    console.log('burger opened');
+    api.open();
+    document.querySelector('.hamburger').classList.toggle("is-active");
+  });
+  document.querySelector("#my-open-button2").addEventListener("click", function (evnt) {
+    evnt.preventDefault();
     api.open();
     document.querySelector('.hamburger').classList.toggle("is-active");
   });

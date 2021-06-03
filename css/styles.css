@@ -160,57 +160,54 @@ body {
 
 #cookie {
   z-index: 1080;
-  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
   display: none;
   overflow-y: auto !important;
+  overflow-x: hidden !important;
+  padding: 0 0;
+  margin: 0 0;
 }
 #cookie > #cookie-wrapper {
   height: 100%;
+  padding: inherit;
+  margin: inherit;
 }
 #cookie > #cookie-wrapper > #cookie-overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #000;
-  opacity: 0.75;
-  z-index: 1001;
-  height: 100%;
+  padding: 120px 100px;
+  background-color: rgba(0, 0, 0, 0.75);
+  min-height: 100vh;
 }
-#cookie > #cookie-wrapper > #cookie-con {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  z-index: 1001;
-  width: auto;
-  height: auto;
-  margin-left: -300px;
-  margin-top: -225px;
+#cookie > #cookie-wrapper > #cookie-overlay > #cookie-con {
+  max-width: 600px;
+  margin: 0 auto;
   border-radius: 3px;
   background-color: #fff;
   justify-content: center;
-  opacity: 1;
+  opacity: 1 !important;
 }
-#cookie > #cookie-wrapper > #cookie-con > .cookie-header {
+#cookie > #cookie-wrapper > #cookie-overlay > #cookie-con > .cookie-header {
   padding: 15px 15px;
   border-bottom: 1px solid #ddd;
 }
-#cookie > #cookie-wrapper > #cookie-con > .cookie-header > h3 {
+#cookie > #cookie-wrapper > #cookie-overlay > #cookie-con > .cookie-header > h3 {
   font-size: 1.625rem;
   font-weight: 400;
   color: #333645;
 }
-#cookie > #cookie-wrapper > #cookie-con > .cookie-body {
+#cookie > #cookie-wrapper > #cookie-overlay > #cookie-con > .cookie-body {
   color: #888;
   padding: 15px 15px;
   border-bottom: 1px solid #ddd;
 }
-#cookie > #cookie-wrapper > #cookie-con > .cookie-bottom {
+#cookie > #cookie-wrapper > #cookie-overlay > #cookie-con > .cookie-bottom {
   padding: 10px 15px;
   justify-content: space-around;
 }
-#cookie > #cookie-wrapper > #cookie-con > .cookie-bottom > button {
+#cookie > #cookie-wrapper > #cookie-overlay > #cookie-con > .cookie-bottom > button {
   display: block;
   width: 90%;
   margin: 15px auto;
@@ -221,17 +218,17 @@ body {
   color: white;
   border-radius: 3px;
 }
-#cookie > #cookie-wrapper > #cookie-con > .cookie-bottom > button:first-of-type {
+#cookie > #cookie-wrapper > #cookie-overlay > #cookie-con > .cookie-bottom > button:first-of-type {
   background: #888;
 }
-#cookie > #cookie-wrapper > #cookie-con > .cookie-bottom > button:first-of-type:hover {
+#cookie > #cookie-wrapper > #cookie-overlay > #cookie-con > .cookie-bottom > button:first-of-type:hover {
   cursor: pointer;
   background: #444;
 }
-#cookie > #cookie-wrapper > #cookie-con > .cookie-bottom > button:last-of-type {
+#cookie > #cookie-wrapper > #cookie-overlay > #cookie-con > .cookie-bottom > button:last-of-type {
   background: #926fb1;
 }
-#cookie > #cookie-wrapper > #cookie-con > .cookie-bottom > button:last-of-type:hover {
+#cookie > #cookie-wrapper > #cookie-overlay > #cookie-con > .cookie-bottom > button:last-of-type:hover {
   cursor: pointer;
   background: #79539a;
 }
@@ -239,6 +236,10 @@ body {
 .logo {
   display: block;
   max-width: 100%;
+}
+
+#headerSTICK {
+  display: none;
 }
 
 .header {

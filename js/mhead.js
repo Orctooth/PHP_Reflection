@@ -78,12 +78,12 @@ var $head;
             }), n()
         }
         pin() {
-            appendHead();
+            //appendHead();
             this.header.classList.add("mh-pinned"), this.header.classList.remove("mh-unpinned"), this.state = o.PINNED;
             
         }
         unpin() {
-            removeHead();
+            //removeHead();
             this.header.classList.remove("mh-pinned"), this.header.classList.add("mh-unpinned"), this.state = o.UNPINNED;
             
         }
