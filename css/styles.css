@@ -243,7 +243,7 @@ body {
 }
 
 .header {
-  padding: 0 0px;
+  padding: 0px 0px;
   padding-top: 15px;
   position: sticky;
   z-index: 40;
@@ -1475,6 +1475,10 @@ body {
   border: none;
 }
 
+.can-not-scroll {
+  overflow-y: hidden;
+}
+
 @media only screen and (min-width: 768px) {
   .cookie-bottom {
     display: flex;
@@ -1516,9 +1520,6 @@ body {
     display: none;
   }
 
-  .header {
-    margin-bottom: 30px;
-  }
   .header > .searchbar-mobile {
     display: none;
   }

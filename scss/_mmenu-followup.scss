@@ -1,10 +1,11 @@
-.nav{
-    width: 300px;
-    padding-bottom: 0;
-    & > ul{
-        padding-bottom: 0;
-        margin-bottom: 0;
+
+
+.divider{
+    background-color: #262834;
+    &:hover{
+        background-color: #3d404e;
     }
+    
 }
 .inset-block{
     width: 80%; 
@@ -74,7 +75,7 @@
     
     &:hover{
         & > .inset-block, .divider{
-            background-color: hsla(0,0%,100%,.05);
+            background-color: #3d404e;
         }
         cursor: pointer;
     }
@@ -84,10 +85,11 @@
 
 
 #my-list{
-
+    background-color: #333645;
     & > ul{
+        background-color: #333645;
         & > li{
-            background-color: rgba(0,0,0,.25);
+            background-color: hsl(230,14%,23%);
         }
     }
 }
@@ -95,11 +97,12 @@
 
 
 .burger-item{
-    background-color: rgba(0,0,0,.25);
+    background-color: #262834;
+    color: #fff;
     margin: 0 auto;
     width: 80%;
     height: 40px;
-    padding-top: 10px;
+    //padding-top: 10px;
     text-align: center;
     vertical-align: middle;
     border-top: 1px solid hsla(0,0%,100%,.1);
@@ -128,15 +131,17 @@
     border-bottom: 1px solid rgba(0,0,0,.25);
     background-color: #333645;
     padding: 8px 0;
+    color: #fff;
     // padding-left: 15px;
 }
 
 .item-non-mobile{
-    background-color: rgba(0,0,0,.25);
+    background-color: #262834;
     padding: 15px 0;
     padding-left: 20px;
     border-top: 1px solid hsla(0,0%,100%,.1);
     border-bottom: 1px solid rgba(0,0,0,.25);
+    color: #fff;
     & > i{
         font-size: 0.35rem;
         vertical-align: middle;
@@ -151,7 +156,9 @@
     & > li{
         width: 80%;
         vertical-align: middle;
+        padding-top: 10px;
     }
+    background-color: #333645;
 }
 
 //burger queries
@@ -169,4 +176,30 @@
 
 .mm-panel::after{
     display: none;
+}
+
+.nav{
+    width: 300px;
+    padding-bottom: 0;
+    // -moz-appearance:none;
+    // -webkit-appearance:none;
+    // -o-appearance:none;
+    background-color: #333645;
+    & > ul{
+        background-color: #333645;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+}
+
+.can-not-scroll{
+    overflow: hidden;
+}
+
+.mm-listview{
+    background-color: #333645;
+}
+
+.mm-panel{
+    background-color: #333645;
 }

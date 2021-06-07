@@ -67,6 +67,8 @@ $mm_panelPadding: 30px 30px;
 
 }
 
+
+
 .card, .card-nav{
     display: block;
     position: relative;
@@ -220,7 +222,7 @@ $hamburger-types: (
 }
 
 .header{
-    padding: 0 0px;
+    padding: 0px 0px;
     padding-top: 15px;
     position: sticky;
     //margin: 15px 0px;
@@ -1787,7 +1789,9 @@ $hamburger-types: (
     border: none;
 }
 
-
+.can-not-scroll{
+    overflow-y: hidden;
+}
 
 //FONT STYLES
 

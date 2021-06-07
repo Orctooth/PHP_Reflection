@@ -1,33 +1,38 @@
 /******/ (function() { // webpackBootstrap
 var __webpack_exports__ = {};
-var $html = $(document.documentElement); //Assigns sticky plugin behaviour to the header COMMENTING OUT IN FAVOR OF ANOTHER PLUGIN
+var $html = $(document.documentElement); 
+
+//Transitions between static and sticky header based on scroll height
 var $scrollTop; 
 document.addEventListener('scroll', function(e){
   $scrollTop= $(window).scrollTop();
   //console.log($scrollTop);
-  if($scrollTop > 230){
+  if($scrollTop > 250){
     document.getElementById('headerSTICK').style.display="block";
   } else{
     document.getElementById('headerSTICK').style.display ="none";
   }
 });
 
-// document.getElementById('headerSTICK').addEventListener('onmouseover', function (e){
-//   $('body').css('overflow', 'hidden');
-// });
+//Locks page scrolling when header is moused over
+var headers = document.querySelectorAll("div.header");
+headers.forEach(function(headeritem) {
+  headeritem.addEventListener('mouseover', function(e){
+    $('body').css('overflow-y', 'hidden');
+  });
+  headeritem.addEventListener('mouseleave', function (e){
+    $('body').css('overflow-y', 'auto');
+  });
+});
 
-// document.getElementById('headerSTICK').addEventListener('onmouseleave', function (e){
-//   $('body').css('overflow', 'auto');
-// });
-
-
+//carousel
 document.addEventListener("DOMContentLoaded", function () {
   new Mhead("#headerSTICK", {// options
     scroll:{
       tolerance: 8
     }
   });
-}); //carousel
+});
 
 $('.slides').slick({
   autoplay: true,
@@ -60,17 +65,19 @@ document.addEventListener("DOMContentLoaded", function () {
     evnt.preventDefault();
     api.open();
     document.querySelector('.hamburger').classList.toggle("is-active");
+    document.querySelector('.mm-slideout').classList.toggle("can-not-scroll");
   });
   document.querySelector("#my-open-button2").addEventListener("click", function (evnt) {
     evnt.preventDefault();
     api.open();
     document.querySelector('.hamburger').classList.toggle("is-active");
+    document.querySelector('.mm-slideout').classList.toggle("can-not-scroll");
   });
 }); //cookie function that fires on loading the page
 
 window.onload = function () {
   if (localStorage.getItem('cookiesetting') !== 'true') {
-    document.getElementById("cookie").style.display = "block"; //$('body').css('overflow','hidden');
+    document.getElementById("cookie").style.display = "block"; 
 
     $('body').css('overflow', 'hidden');
     // document.getElementById("cookie").css('overflow-y', 'auto !important');
@@ -80,7 +87,7 @@ window.onload = function () {
 
 document.getElementById('accept').addEventListener('click', function (e) {
   localStorage.setItem('cookiesetting', 'true');
-  document.getElementById("cookie").style.display = "none"; //$('body').css('overflow','auto');
+  document.getElementById("cookie").style.display = "none";
 
   $('body').css('overflow', 'auto');
 });
