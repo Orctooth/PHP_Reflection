@@ -13,6 +13,7 @@
 .mh-sticky {
     position: -webkit-sticky;
     position: sticky;
+    
     top: 0;
     z-index: 1000;
     -webkit-transition: -webkit-transform .2s ease;
@@ -23,6 +24,14 @@
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0)
 }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    #headerSTICK{
+        position: fixed;
+        width: 100%;
+    }
+}
+
 
 .mh-sticky.mh-unpinned {
     -webkit-transform: translate3d(0, -100%, 0);

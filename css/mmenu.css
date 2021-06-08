@@ -548,7 +548,7 @@
     -o-transition: transform .4s ease;
     transition: transform .4s ease;
     transition: transform .4s ease, -webkit-transform .4s ease;
-    z-index: 1
+    z-index: 100;
 }
 
 .mm-wrapper_opened {
@@ -608,7 +608,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 2
+    z-index: 101
 }
 
 .mm-wrapper_blocking {
@@ -803,6 +803,8 @@
     transform: translate3d(-80vw, 0, 0)
 }
 
+
+
 @media all and (max-width:300px) {
     .mm-wrapper_opening .mm-menu_columns-1.mm-menu_position-right.mm-menu_opened~.mm-slideout {
         -webkit-transform: translate3d(-240px, 0, 0);
@@ -815,6 +817,7 @@
         -webkit-transform: translate3d(-440px, 0, 0);
         transform: translate3d(-440px, 0, 0)
     }
+    
 }
 
 [class*=mm-menu_columns-] .mm-panels>.mm-panel_columns-2 {
@@ -2201,6 +2204,7 @@ input.mm-check:checked:before {
         -webkit-transform: translate3d(-440px, 0, 0);
         transform: translate3d(-440px, 0, 0)
     }
+
 }
 
 .mm-menu_position-bottom,

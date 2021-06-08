@@ -1,6 +1,8 @@
 /******/ (function() { // webpackBootstrap
 var __webpack_exports__ = {};
-var $html = $(document.documentElement); 
+var $html = $(document.documentElement);
+
+
 
 //Transitions between static and sticky header based on scroll height
 var $scrollTop; 
@@ -32,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
       tolerance: 8
     }
   });
+  stickybits('#div-for-stickybits');
 });
 
 $('.slides').slick({
@@ -54,11 +57,11 @@ document.addEventListener("DOMContentLoaded", function () {
       add: false
     },
     //config
-    offCanvas: {
-      page: {
-          selector: "#my-page"
-      }
-    }
+    // offCanvas: {
+    //   page: {
+    //       selector: "#my-page"
+    //   }
+    // }
   });
   var api = menu.API;
   document.querySelector("#my-open-button").addEventListener("click", function (evnt) {
@@ -66,12 +69,16 @@ document.addEventListener("DOMContentLoaded", function () {
     api.open();
     document.querySelector('.hamburger').classList.toggle("is-active");
     document.querySelector('.mm-slideout').classList.toggle("can-not-scroll");
+    document.querySelector('#headerSTICK').classList.add("left");
+    
   });
   document.querySelector("#my-open-button2").addEventListener("click", function (evnt) {
     evnt.preventDefault();
     api.open();
     document.querySelector('.hamburger').classList.toggle("is-active");
     document.querySelector('.mm-slideout').classList.toggle("can-not-scroll");
+    
+    
   });
 }); //cookie function that fires on loading the page
 
@@ -91,6 +98,9 @@ document.getElementById('accept').addEventListener('click', function (e) {
 
   $('body').css('overflow', 'auto');
 });
+
+
+
 /******/ })()
 ;
 
