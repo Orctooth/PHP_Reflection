@@ -1,4 +1,4 @@
-@charset 'UTF-8';
+/* @charset 'UTF-8'; */
 /* Slider */
 .slick-loading .slick-list
 {
@@ -6,15 +6,7 @@
 }
 
 /* Icons */
-@font-face
-{
-    font-family: 'slick';
-    font-weight: 100;
-    font-style: normal;
 
-    src: url('./fonts/slick.eot');
-    src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
-}
 /* Arrows */
 .slick-prev,
 .slick-next
@@ -178,7 +170,7 @@
 }
 .slick-dots li button:before
 {
-    font-family: 'slick';
+    font-family: '';
     font-size: 44px;
     line-height: 20px;
 
@@ -208,12 +200,12 @@
     font-size: 85px;
     font-family: '';
     font-weight: 100 !important;
-    font-style: normal;
     line-height: 20px;
 
     position: absolute;
     top: 15px;
     left: -2px;
+    
 
     width: 10px;
     height: 10px;
@@ -226,4 +218,10 @@
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .slick-dots li.slick-active button::after{
+        top: 17px;
+    }
 }

@@ -261,6 +261,8 @@
 }
 
 
+
+
 //culture query
 @media only screen and (min-width:992px){
     .culture{
@@ -715,13 +717,20 @@
 }
 
 @media only screen and (min-width: 1260px){
-    .header-top, .searchbar-mobile, .banner-text, .tab-wrapper,
+    .header-top, .searchbar-mobile, .banner-text, .slides, .tab-wrapper,
     .xl-row-nav, .xxl-row-nav, .nav-cards,
     .culture-back, .news-header-section, .companies,
     .news-cards, .footer-content, .sign-up-form, .awards-1, .awards-2 {
         width: 1260px;
         margin: 0 auto;
     }
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        .slides{
+            width: 100vw;
+            margin-left: 100px;
+        }
+    }
+    
 }
 
 //cross browser fixes

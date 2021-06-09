@@ -11,10 +11,11 @@
  */
 
 .mh-sticky {
-    position: -webkit-sticky;
-    position: sticky;
-    
+    /* position: -webkit-sticky; */
+    position: absolute;
+    width: 100vw;
     top: 0;
+    left: 0;
     z-index: 1000;
     -webkit-transition: -webkit-transform .2s ease;
     transition: -webkit-transform .2s ease;
@@ -25,12 +26,13 @@
     transform: translate3d(0, 0, 0)
 }
 
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+/* @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     #headerSTICK{
-        position: fixed;
-        width: 100%;
+        position: absolute;
+        top: 0;
+        left:0;
     }
-}
+} */
 
 
 .mh-sticky.mh-unpinned {

@@ -3,39 +3,56 @@ var __webpack_exports__ = {};
 var $html = $(document.documentElement);
 
 
-
+function scrollup(){
+  document.getElementById('headerSTICK').style.transform ="translate3d(0, -100%, 0)";
+}
+function scrolldown(){
+  document.getElementById('headerSTICK').style.transform ="translate3d(0, 0, 0)";
+}
 //Transitions between static and sticky header based on scroll height
 var $scrollTop; 
-document.addEventListener('scroll', function(e){
-  $scrollTop= $(window).scrollTop();
+document.querySelector('#my-page').addEventListener('scroll', function(e){
+  $scrollTop= $('#my-page').scrollTop();
   //console.log($scrollTop);
-  if($scrollTop > 250){
+  if($scrollTop > 50){
     document.getElementById('headerSTICK').style.display="block";
   } else{
     document.getElementById('headerSTICK').style.display ="none";
   }
 });
 
+var lastScrollTop = 0;
+document.querySelector('#my-page').addEventListener("scroll", function(){
+  var st = document.querySelector('#my-page').scrollTop;
+  if (st > lastScrollTop){
+     // downscroll code
+     window.setTimeout(scrollup,800);
+     
+  } else {
+     // upscroll code
+     window.setTimeout(scrolldown,800);
+  }
+  lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+}, false);
+
 //Locks page scrolling when header is moused over
-var headers = document.querySelectorAll("div.header");
-headers.forEach(function(headeritem) {
-  headeritem.addEventListener('mouseover', function(e){
-    $('body').css('overflow-y', 'hidden');
-  });
-  headeritem.addEventListener('mouseleave', function (e){
-    $('body').css('overflow-y', 'auto');
-  });
+var header = document.querySelector("#headerSTICK");
+header.addEventListener('mouseover', function(e){
+  $('#my-page').css('overflow-y', 'hidden');
+});
+header.addEventListener('mouseleave', function(e){
+  $('#my-page').css('overflow-y', 'auto');
 });
 
 //carousel
-document.addEventListener("DOMContentLoaded", function () {
-  new Mhead("#headerSTICK", {// options
-    scroll:{
-      tolerance: 8
-    }
-  });
-  stickybits('#div-for-stickybits');
-});
+// document.addEventListener("DOMContentLoaded", function () {
+//   new Mhead("#headerSTICK", {// options
+//     scroll:{
+//       tolerance: 8
+//     }
+//   });
+  
+// });
 
 $('.slides').slick({
   autoplay: true,

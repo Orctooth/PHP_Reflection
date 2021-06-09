@@ -25,6 +25,9 @@
 * a {
   text-decoration: none;
 }
+* li:before {
+  display: none;
+}
 * input[type=text]::-ms-clear {
   display: none;
   width: 0;
@@ -67,6 +70,7 @@
 
 body {
   overflow-x: hidden;
+  position: static;
 }
 
 .hamburger {
@@ -233,20 +237,39 @@ body {
   background: #79539a;
 }
 
+#my-page {
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
 .logo {
   display: block;
   max-width: 100%;
 }
 
 #headerSTICK {
-  display: none;
+  position: absolute;
+  width: 100%;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  z-index: 1000;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  -o-transition: transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
 }
 
 .header {
   padding: 0px 0px;
   padding-top: 15px;
-  position: sticky;
-  z-index: 40;
   background-color: #fff;
 }
 .header > .header-top {
@@ -594,7 +617,7 @@ body {
 
 .banner {
   min-height: 600px;
-  min-width: 100%;
+  width: 100vw;
   margin-bottom: 80px;
 }
 .banner > .banner-overlay {
@@ -620,13 +643,18 @@ body {
 .banner > .banner-overlay > .slides div > .slide-sec {
   background: url("../img/security-pic.jpg");
 }
+.banner > .banner-overlay > .slides {
+  width: 100%;
+  background-repeat: no-repeat;
+}
 .banner > .banner-overlay > .slides div {
   background-size: cover;
+  background-position: right 600px;
   background-repeat: no-repeat;
   height: 600px;
 }
 .banner > .banner-overlay > .slides div > .s-overlay {
-  background: linear-gradient(270deg, transparent 0%, #000), rgba(0, 0, 0, 0.15);
+  background: linear-gradient(270deg, transparent 0%, #000), rgba(0, 0, 0, 0.05);
 }
 .banner > .banner-overlay > .slides div > .s-overlay > .banner-text {
   margin: 0 auto;
@@ -1220,7 +1248,7 @@ body {
 
 .newsletter {
   background-color: #ddd;
-  height: 100%;
+  height: 400px;
 }
 
 .sign-up-form {
@@ -1230,7 +1258,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 30px 30px;
-  margin: 0 30px;
+  margin: 30px 30px;
 }
 .sign-up-form > .form {
   padding: 20px 30px;
@@ -1269,6 +1297,7 @@ body {
   flex-direction: row;
   vertical-align: middle;
   position: relative;
+  z-index: 1;
   justify-content: space-between;
 }
 .sign-up-form > .form > .checkbox > .fakebox-IE {
@@ -1952,12 +1981,18 @@ body {
   }
 }
 @media only screen and (min-width: 1260px) {
-  .header-top, .searchbar-mobile, .banner-text, .tab-wrapper,
+  .header-top, .searchbar-mobile, .banner-text, .slides, .tab-wrapper,
 .xl-row-nav, .xxl-row-nav, .nav-cards,
 .culture-back, .news-header-section, .companies,
 .news-cards, .footer-content, .sign-up-form, .awards-1, .awards-2 {
     width: 1260px;
     margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 1260px) and (-ms-high-contrast: active), only screen and (min-width: 1260px) and (-ms-high-contrast: none) {
+  .slides {
+    width: 100vw;
+    margin-left: 100px;
   }
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
