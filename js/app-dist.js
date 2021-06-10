@@ -44,15 +44,7 @@ header.addEventListener('mouseleave', function(e){
   $('#my-page').css('overflow-y', 'auto');
 });
 
-//carousel
-// document.addEventListener("DOMContentLoaded", function () {
-//   new Mhead("#headerSTICK", {// options
-//     scroll:{
-//       tolerance: 8
-//     }
-//   });
-  
-// });
+
 
 $('.slides').slick({
   autoplay: true,
@@ -73,6 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
     navbar: {
       add: false
     },
+
     //config
     // offCanvas: {
     //   page: {
@@ -98,6 +91,11 @@ document.addEventListener("DOMContentLoaded", function () {
     
   });
 }); //cookie function that fires on loading the page
+const hiding = document.querySelectorAll('.mm-panel');
+for(var i = 0; i < hiding.length; i++){
+  hiding[i].classList.remove('mm-hidden');
+}
+
 
 window.onload = function () {
   if (localStorage.getItem('cookiesetting') !== 'true') {
