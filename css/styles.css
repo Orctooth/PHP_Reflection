@@ -161,10 +161,12 @@ body {
 .logo {
   display: block;
   max-width: 100%;
+  max-height: 100%;
 }
 
 .logo-con {
-  margin-right: 30px;
+  max-width: 100%;
+  display: flex;
 }
 
 .header {
@@ -184,6 +186,7 @@ body {
 .header > .header-top > .buttons {
   display: flex;
   margin-left: auto;
+  width: 100%;
 }
 .header > .header-top > .buttons > * {
   margin-left: 20px;
@@ -240,6 +243,9 @@ body {
 .header > .header-top > .buttons > .contact-xl:hover {
   background-color: #84858f;
 }
+.header > .header-top > .buttons > #hamburger {
+  width: 60px;
+}
 .header > .header-top > .buttons > .hamburger {
   background-color: #333645;
   color: #fff;
@@ -247,7 +253,8 @@ body {
   border-radius: 3px;
   font-size: 0.1rem;
   height: 56px;
-  width: 60px;
+  min-width: 60px;
+  max-width: 60px;
   display: block;
   padding: 10px 12px;
   margin-right: 0px;
@@ -1372,20 +1379,13 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
   .searchbar-mobile {
     margin: 0 auto;
   }
-}
-@media only screen and (max-width: 768px) and (-ms-high-contrast: active), only screen and (max-width: 768px) and (-ms-high-contrast: none) {
-  .searchbar-mobile > button {
-    margin-right: 20px;
-  }
-}
-@media only screen and (max-width: 768px) {
+
   .lg-row-nav {
     display: block;
     justify-content: space-around;
     margin: 0 auto;
   }
-}
-@media only screen and (max-width: 768px) {
+
   .security, .schools, .web-design, .telecoms, .marketing, .bespoke, .IT {
     width: 100%;
     display: block;
@@ -1796,6 +1796,34 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
     padding-right: 15px;
     margin: 0 auto;
   }
+
+  header {
+    width: 100%;
+    margin-left: 0;
+    padding-right: 30px;
+  }
+
+  .logo-con, .home-link, .logo {
+    min-width: 50%;
+    max-width: 100%;
+  }
+
+  #logo {
+    vertical-align: middle;
+  }
+
+  .logo-con {
+    vertical-align: middle;
+    align-items: center;
+  }
+
+  .buttons {
+    margin-left: 0;
+  }
+
+  .header-top {
+    width: auto;
+  }
 }
 @media only screen and (min-width: 768px) {
   .header-top, .banner-text,
@@ -1833,16 +1861,15 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
     line-height: 0.7rem;
     margin-bottom: 5px;
   }
-
-  .hamburger {
-    padding-bottom: 5px;
-  }
 }
 @-moz-document url-prefix() {
   .menutext {
     margin: 0 0;
     padding: 0 0;
   }
+}
+@-ms-viewport {
+  width: device-width;
 }
 
 /*# sourceMappingURL=styles.css.map */

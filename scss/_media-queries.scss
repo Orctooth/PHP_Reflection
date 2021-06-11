@@ -16,11 +16,7 @@
     
     
     .searchbar-mobile{
-        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-            & > button{
-                margin-right: 20px;
-            }
-        }
+       
         margin: 0 auto;
     }
     
@@ -683,7 +679,38 @@
         padding-right: 15px;
         margin: 0 auto;
     }
+    header{
+        width: 100%;
+        margin-left: 0;
+        padding-right: 30px;
+    }
+    .logo-con, .home-link, .logo{
+        min-width: 50%;
+        max-width: 100%;
+        
+        
+    }
+    #logo{
+        vertical-align: middle;
+    }
+    .logo-con{
+        vertical-align: middle;
+        align-items: center;
+    }
+    
+    
+    .buttons{
+        margin-left: 0;
+    }
+
+    
+    .header-top{
+        width: auto;
+    }
+
+    
 }
+
 //tablets
 @media only screen and (min-width: 768px){
     .header-top, .banner-text,
@@ -692,6 +719,8 @@
         max-width: 768px;
         margin: 0 auto;
     }
+
+    
 }
 //small laptops
 @media only screen and (min-width: 992px){
@@ -730,10 +759,7 @@
         margin-bottom: 5px;
         
     }
-    .hamburger{
-        padding-bottom: 5px;
-        
-    }
+    
     
 }
 
@@ -745,3 +771,8 @@
     }
     
 }
+
+@-ms-viewport {
+    width: device-width
+}
+
