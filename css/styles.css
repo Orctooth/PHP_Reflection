@@ -40,6 +40,10 @@
   width: 0;
   height: 0;
 }
+* ul {
+  list-style-type: none;
+  list-style: none;
+}
 
 .card, .card-nav {
   display: block;
@@ -160,7 +164,7 @@ body {
 }
 
 .logo-con {
-  margin-right: auto;
+  margin-right: 30px;
 }
 
 .header {
@@ -189,7 +193,7 @@ body {
   position: relative;
   margin-top: 15px;
   margin-left: auto;
-  margin-right: 15px;
+  margin-right: 10px;
   height: 56px;
   width: 26px;
   padding: 0 0;
@@ -197,7 +201,7 @@ body {
 .header > .header-top > .buttons > .support > i {
   width: 56px;
   height: 56px;
-  font-size: 32px;
+  font-size: 28px;
   margin: 0 0;
 }
 .header > .header-top > .buttons > .support::after {
@@ -259,6 +263,7 @@ body {
 .header > .searchbar > form {
   display: flex;
   flex-wrap: nowrap;
+  width: 100%;
 }
 .header > .searchbar > form > input[type=text] {
   padding: 6px;
@@ -1114,16 +1119,18 @@ body {
 }
 .sign-up-form > .form > .form-box > .form-group {
   margin-right: 30px;
+  margin-top: 10px;
+  width: 100%;
 }
 .sign-up-form > .form > .form-box > .form-group > label {
-  margin-bottom: 5px;
+  margin-bottom: 0px;
   font-weight: 600;
 }
 .sign-up-form > .form > .form-box > .form-group > label > span {
   color: #d24d57;
 }
 .sign-up-form > .form > .form-box > .form-group > .field {
-  margin-top: 15px;
+  margin-top: 5px;
   margin-bottom: 15px;
   padding: 5px 15px;
   border: 1px solid #ccc;
@@ -1139,6 +1146,7 @@ body {
 }
 .sign-up-form > .form > .checkbox {
   display: flex;
+  width: 100%;
   flex-direction: row;
   vertical-align: middle;
   position: relative;
@@ -1572,6 +1580,13 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
     display: block;
     margin: 0 auto;
   }
+
+  .lg-row-nav {
+    display: flex;
+    width: 992px;
+    justify-content: space-around;
+    margin: 0 auto;
+  }
 }
 @media only screen and (min-width: 1260px) {
   .nav-cards {
@@ -1583,6 +1598,10 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
     display: flex;
     flex-direction: row;
     margin: 45px auto;
+  }
+
+  .xl-row-nav {
+    width: 1260px;
   }
 
   .lg-row-nav {
@@ -1735,12 +1754,12 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
     margin: 0 auto;
     width: 20%;
   }
-  footer .footer-main .footer-content > .social-con > div {
-    width: 40%;
+  footer .footer-main .footer-content > .social-con {
+    width: 25%;
   }
   footer .footer-main .footer-content > .social-con > div > a {
     display: block;
-    width: 120px;
+    width: 40px;
   }
 }
 @-moz-document url-prefix() {
@@ -1769,19 +1788,12 @@ footer .footer-main .footer-content .social-con .button-container .linked-in:hov
     transform: scale(0.9);
   }
 }
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 768px) {
   .header-top, .searchbar-mobile, .banner-text,
 .nav-cards, .culture-back, .news-header-section,
 .news-cards, .companies, .sign-up-form, .footer-content {
-    max-width: 425px;
-    margin: 0 auto;
-  }
-}
-@media only screen and (min-width: 425px) {
-  .header-top, .searchbar-mobile, .banner-text,
-.nav-cards, .culture-back, .news-header-section,
-.news-cards, .companies, .sign-up-form, .footer-content {
-    min-width: 425px;
+    padding-left: 15px;
+    padding-right: 15px;
     margin: 0 auto;
   }
 }

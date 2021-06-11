@@ -58,6 +58,10 @@ $security-drop-bg: #de093f;
         width:0;
         height:0;
     }
+    ul{
+        list-style-type: none;
+        list-style: none;
+    }
     
    
 
@@ -120,7 +124,7 @@ $hamburger-types: (
 }
 
 .logo-con{
-    margin-right: auto;
+    margin-right: 30px;
 }
 
 .header{
@@ -159,14 +163,14 @@ $hamburger-types: (
                 position: relative;
                 margin-top: 15px;
                 margin-left: auto;
-                margin-right: 15px;
+                margin-right: 10px;
                 height: 56px;
                 width: 26px;
                 padding: 0 0;
                 & > i{
                     width: 56px;
                     height: 56px;
-                    font-size: 32px;
+                    font-size: 28px;
                     margin: 0 0;
                 }
                 &::after{
@@ -255,6 +259,7 @@ $hamburger-types: (
         & > form{
             display: flex;
             flex-wrap: nowrap;
+            width: 100%;
             & > input[type=text]{
                 padding: 6px;
                 margin-top: 8px;
@@ -1313,13 +1318,16 @@ $hamburger-types: (
         & > h2{
             font-size: 2rem;
             font-weight: 400;
+
         }
         
         & > .form-box {
             & > .form-group{
                 margin-right: 30px;
+                margin-top: 10px;
+                width: 100%;
                 & > label{
-                    margin-bottom: 5px;
+                    margin-bottom: 0px;
                     font-weight: 600;
                     & > span{
                         color:#d24d57;
@@ -1327,7 +1335,7 @@ $hamburger-types: (
                 }
         
                 & > .field{
-                    margin-top: 15px;
+                    margin-top: 5px;
                     margin-bottom: 15px;
                     padding: 5px 15px;
                     border: 1px solid #ccc;
@@ -1349,6 +1357,7 @@ $hamburger-types: (
 
         & > .checkbox{
             display: flex;
+            width: 100%;
             flex-direction: row;
             vertical-align: middle;
             position: relative;
