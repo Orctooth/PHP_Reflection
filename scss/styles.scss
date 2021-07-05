@@ -33,7 +33,7 @@ $mm_panelPadding: 30px 30px;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     
-    ul, li, a, p {
+    ul, li, a, p{
         margin: 0;
         padding: 0;
         border: 0;
@@ -74,6 +74,8 @@ $mm_panelPadding: 30px 30px;
    
 
     box-sizing: border-box;
+
+    
 
 }
 
@@ -151,16 +153,17 @@ $hamburger-types: (
         margin: inherit;
         //overflow-y: auto !important;
         & > #cookie-overlay{
-            padding: 120px 100px;
+            padding: 30px 30px;
             background-color:rgba(0,0,0,0.75);
             min-height: 100vh;
+            margin: 0 auto;
 
             & > #cookie-con{
                 
                 max-width:600px;
-                
+                //min-width:300px;
                 margin: 0 auto;
-                
+                //margin-top: 100px;
                 border-radius: 3px;
                 background-color: #fff;
                 justify-content: center;
@@ -182,15 +185,13 @@ $hamburger-types: (
                    
                 }
                 & > .cookie-bottom{
-                    padding: 10px 15px;
+                    padding: 10px 0px;
                     //display: flex;
-                    justify-content: space-around;  
-                    & > button{
+                    //justify-content: space-around;  
+                    & > .cookie-button{
                         display: block;
                         width: 90%;
                         margin: 15px auto;
-                        margin-left: 15px;
-                        margin-right: 15px;
                         height: 50px;
                         border:none;
                         color: white;
@@ -224,12 +225,14 @@ $hamburger-types: (
 
 #my-page{
     //position: relative;
+    background-color: #fff;
     top: 0;
     left: 0;
     height: 100vh;
     width: 100vw;
     overflow-y: scroll;
-    overflow-x: hidden;
+    //overflow-x: hidden;
+    
 }
 
 //header
@@ -248,7 +251,7 @@ $hamburger-types: (
 #headerSTICK{
     position: absolute;
     width: 100%;
-    top: 0%;
+    top: -230px;
     left: 0%;
     right: 0%;
     z-index: 1000;
@@ -257,8 +260,9 @@ $hamburger-types: (
     -o-transition: transform .2s ease;
     transition: transform .2s ease;
     transition: transform .2s ease, -webkit-transform .2s ease;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
+    // -webkit-transform: translate3d(0, -100%, 0);
+    // transform: translate3d(0, -100%, 0);
+    visibility: hidden;
 }
 
 .header{
@@ -770,7 +774,9 @@ $hamburger-types: (
         
         
         & >.slides div{
+            
             & >.slide-web{
+                
                 background: url('../img/web-pic.jpg');
                 
             }
@@ -885,6 +891,7 @@ $hamburger-types: (
 .nav-cards{
     padding-top: 30px;
     padding-bottom: 30px;
+    background-color: #fff;
     
     & > button:hover{
         cursor:pointer;
@@ -1199,6 +1206,7 @@ $hamburger-types: (
 .news-header-section{
     padding: 40px 30px;
     margin-bottom: 30px;
+    background-color: #fff;
 
     & > .latest{
         padding-left:0px;
@@ -1224,6 +1232,7 @@ $hamburger-types: (
 
 .news-section{
     box-shadow: 0 5px 35px rgb(0 0 0 / 10%);
+    background-color: #fff;
     .news-cards{
         padding: 10px 0px;
         margin: 0px auto;

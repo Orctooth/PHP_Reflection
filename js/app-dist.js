@@ -1,23 +1,36 @@
 /******/ (function() { // webpackBootstrap
 var __webpack_exports__ = {};
-var $html = $(document.documentElement);
+var $html = document.getElementById('my-page');
+
+var scrollBarWidth = $html.offsetWidth - $html.clientWidth;
+if (Modernizr.hiddenscroll === true) {
+  $('#headerSTICK').css("width", "100%");
+} else {
+  $('#headerSTICK').css("width", $html.offsetWidth - scrollBarWidth);
+}
+
+$( window ).resize(function() {
+  $('#headerSTICK').css("width", $html.offsetWidth - scrollBarWidth);
+});
 
 
 function scrollup(){
-  document.getElementById('headerSTICK').style.transform ="translate3d(0, -100%, 0)";
+  document.getElementById('headerSTICK').style.transform ="translate3d(0, 0, 0)";
+  
 }
 function scrolldown(){
-  document.getElementById('headerSTICK').style.transform ="translate3d(0, 0, 0)";
+  document.getElementById('headerSTICK').style.visibility ="visible";
+  document.getElementById('headerSTICK').style.transform ="translate3d(0, 100%, 0)";
 }
 //Transitions between static and sticky header based on scroll height
 var $scrollTop; 
 document.querySelector('#my-page').addEventListener('scroll', function(e){
   $scrollTop= $('#my-page').scrollTop();
   //console.log($scrollTop);
-  if($scrollTop > 50){
-    document.getElementById('headerSTICK').style.display="block";
+  if($scrollTop > 400){
+    document.getElementById('headerSTICK').style.visibility="visible";
   } else{
-    document.getElementById('headerSTICK').style.display ="none";
+    document.getElementById('headerSTICK').style.visibility ="hidden";
   }
 });
 
@@ -26,11 +39,11 @@ document.querySelector('#my-page').addEventListener("scroll", function(){
   var st = document.querySelector('#my-page').scrollTop;
   if (st > lastScrollTop){
      // downscroll code
-     window.setTimeout(scrollup,800);
+     window.setTimeout(scrollup,600);
      
   } else {
      // upscroll code
-     window.setTimeout(scrolldown,800);
+     window.setTimeout(scrolldown,600);
   }
   lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
 }, false);
@@ -38,7 +51,7 @@ document.querySelector('#my-page').addEventListener("scroll", function(){
 //Locks page scrolling when header is moused over
 var header = document.querySelector("#headerSTICK");
 header.addEventListener('mouseover', function(e){
-  $('#my-page').css('overflow-y', 'hidden');
+  $('#my-page').css('overflow', 'hidden');
 });
 header.addEventListener('mouseleave', function(e){
   $('#my-page').css('overflow-y', 'auto');
@@ -85,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelector("#my-open-button2").addEventListener("click", function (evnt) {
     evnt.preventDefault();
     api.open();
-    document.querySelector('.hamburger').classList.toggle("is-active");
+    document.querySelector('.hamburger-2').classList.toggle("is-active");
     document.querySelector('.mm-slideout').classList.toggle("can-not-scroll");
     
     

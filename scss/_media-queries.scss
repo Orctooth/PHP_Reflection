@@ -1,9 +1,21 @@
 //header queries
+@media only screen and (max-width:768px){
+    .cookie-bottom{
+        padding: 10px 0;
+        & > .cookie-button{
+            margin: 0 auto;
+        }
+    }
+}
 @media only screen and (min-width:768px){
     .cookie-bottom{
         display: flex;
-        & > button{
-            width: 60%;
+        padding: 20px 20px;
+        & > .cookie-button{
+            width: 50%;
+            display: block;
+            margin: 15px 15px;
+            float: left;
         }
     }
 }
@@ -40,6 +52,7 @@
 //hide call button and mobile search
 @media only screen and (min-width:768px){
     .support{
+        
         & > i{
             display: none;
         }
@@ -540,7 +553,7 @@
 }
 //footer queries
 @media (min-width: 768px) {
-    footer {
+    #footer {
         .footer-main {
     
             .footer-content {
@@ -557,7 +570,7 @@
 }
 
 @media (min-width: 992px) {
-    footer {
+    #footer {
 
         .footer-main {
             
@@ -577,7 +590,7 @@
 }
 
 @media (min-width: 1260px) {
-    footer {
+    #footer {
 
         .footer-main {
             
@@ -734,7 +747,7 @@
 }
 
 @media only screen and (min-width: 1260px){
-    .header-top, .banner-text, .slides, .tab-wrapper,
+    .header-top, .banner-text, .tab-wrapper,
     .xl-row-nav, .xxl-row-nav, .nav-cards,
     .culture-back, .news-header-section, .companies,
     .news-cards, .footer-content, .sign-up-form, .awards-1, .awards-2 {

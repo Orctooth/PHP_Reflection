@@ -185,9 +185,10 @@ body {
   margin: inherit;
 }
 #cookie > #cookie-wrapper > #cookie-overlay {
-  padding: 120px 100px;
+  padding: 30px 30px;
   background-color: rgba(0, 0, 0, 0.75);
   min-height: 100vh;
+  margin: 0 auto;
 }
 #cookie > #cookie-wrapper > #cookie-overlay > #cookie-con {
   max-width: 600px;
@@ -212,42 +213,39 @@ body {
   border-bottom: 1px solid #ddd;
 }
 #cookie > #cookie-wrapper > #cookie-overlay > #cookie-con > .cookie-bottom {
-  padding: 10px 15px;
-  justify-content: space-around;
+  padding: 10px 0px;
 }
-#cookie > #cookie-wrapper > #cookie-overlay > #cookie-con > .cookie-bottom > button {
+#cookie > #cookie-wrapper > #cookie-overlay > #cookie-con > .cookie-bottom > .cookie-button {
   display: block;
   width: 90%;
   margin: 15px auto;
-  margin-left: 15px;
-  margin-right: 15px;
   height: 50px;
   border: none;
   color: white;
   border-radius: 3px;
 }
-#cookie > #cookie-wrapper > #cookie-overlay > #cookie-con > .cookie-bottom > button:first-of-type {
+#cookie > #cookie-wrapper > #cookie-overlay > #cookie-con > .cookie-bottom > .cookie-button:first-of-type {
   background: #888;
 }
-#cookie > #cookie-wrapper > #cookie-overlay > #cookie-con > .cookie-bottom > button:first-of-type:hover {
+#cookie > #cookie-wrapper > #cookie-overlay > #cookie-con > .cookie-bottom > .cookie-button:first-of-type:hover {
   cursor: pointer;
   background: #444;
 }
-#cookie > #cookie-wrapper > #cookie-overlay > #cookie-con > .cookie-bottom > button:last-of-type {
+#cookie > #cookie-wrapper > #cookie-overlay > #cookie-con > .cookie-bottom > .cookie-button:last-of-type {
   background: #926fb1;
 }
-#cookie > #cookie-wrapper > #cookie-overlay > #cookie-con > .cookie-bottom > button:last-of-type:hover {
+#cookie > #cookie-wrapper > #cookie-overlay > #cookie-con > .cookie-bottom > .cookie-button:last-of-type:hover {
   cursor: pointer;
   background: #79539a;
 }
 
 #my-page {
+  background-color: #fff;
   top: 0;
   left: 0;
   height: 100vh;
   width: 100vw;
   overflow-y: scroll;
-  overflow-x: hidden;
 }
 
 .logo {
@@ -264,7 +262,7 @@ body {
 #headerSTICK {
   position: absolute;
   width: 100%;
-  top: 0%;
+  top: -230px;
   left: 0%;
   right: 0%;
   z-index: 1000;
@@ -273,8 +271,7 @@ body {
   -o-transition: transform 0.2s ease;
   transition: transform 0.2s ease;
   transition: transform 0.2s ease, -webkit-transform 0.2s ease;
-  -webkit-transform: translate3d(0, -100%, 0);
-  transform: translate3d(0, -100%, 0);
+  visibility: hidden;
 }
 
 .header {
@@ -742,6 +739,7 @@ body {
 .nav-cards {
   padding-top: 30px;
   padding-bottom: 30px;
+  background-color: #fff;
 }
 .nav-cards > button:hover {
   cursor: pointer;
@@ -1022,6 +1020,7 @@ body {
 .news-header-section {
   padding: 40px 30px;
   margin-bottom: 30px;
+  background-color: #fff;
 }
 .news-header-section > .latest {
   padding-left: 0px;
@@ -1044,6 +1043,7 @@ body {
 
 .news-section {
   box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 }
 .news-section .news-cards {
   padding: 10px 0px;
@@ -1530,12 +1530,28 @@ body {
   border: none;
 }
 
+.can-not-scroll {
+  overflow-y: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+  .cookie-bottom {
+    padding: 10px 0;
+  }
+  .cookie-bottom > .cookie-button {
+    margin: 0 auto;
+  }
+}
 @media only screen and (min-width: 768px) {
   .cookie-bottom {
     display: flex;
+    padding: 20px 20px;
   }
-  .cookie-bottom > button {
-    width: 60%;
+  .cookie-bottom > .cookie-button {
+    width: 50%;
+    display: block;
+    margin: 15px 15px;
+    float: left;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -1546,11 +1562,13 @@ body {
   .searchbar-mobile {
     margin: 0 auto;
   }
+
   .lg-row-nav {
     display: block;
     justify-content: space-around;
     margin: 0 auto;
   }
+
   .security, .schools, .web-design, .telecoms, .marketing, .bespoke, .IT {
     width: 100%;
     display: block;
@@ -1891,7 +1909,7 @@ body {
   }
 }
 @media (min-width: 768px) {
-  footer .footer-main .footer-content {
+  #footer .footer-main .footer-content {
     flex-direction: row;
     flex-wrap: wrap;
     padding: 30px 15px;
@@ -1901,7 +1919,7 @@ body {
   }
 }
 @media (min-width: 992px) {
-  footer .footer-main .footer-content {
+  #footer .footer-main .footer-content {
     width: 992px;
     padding: 30px 30px;
   }
@@ -1911,7 +1929,7 @@ body {
   }
 }
 @media (min-width: 1260px) {
-  footer .footer-main .footer-content {
+  #footer .footer-main .footer-content {
     width: 1260px;
     padding: 30px 0px;
   }
@@ -1919,10 +1937,10 @@ body {
     margin: 0 auto;
     width: 20%;
   }
-  footer .footer-main .footer-content > .social-con {
+  #footer .footer-main .footer-content > .social-con {
     width: 25%;
   }
-  footer .footer-main .footer-content > .social-con > div > a {
+  #footer .footer-main .footer-content > .social-con > div > a {
     display: block;
     width: 40px;
   }
@@ -2007,7 +2025,7 @@ body {
   }
 }
 @media only screen and (min-width: 1260px) {
-  .header-top, .banner-text, .slides, .tab-wrapper,
+  .header-top, .banner-text, .tab-wrapper,
 .xl-row-nav, .xxl-row-nav, .nav-cards,
 .culture-back, .news-header-section, .companies,
 .news-cards, .footer-content, .sign-up-form, .awards-1, .awards-2 {

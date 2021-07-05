@@ -4457,7 +4457,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       ["mm-wrapper_opened", "mm-wrapper_blocking", "mm-wrapper_modal", "mm-wrapper_background"].forEach(function (t) {
         e.node.wrpr.classList.remove(t);
       }), e.vars.opened = !1, e.trigger("close:finish");
-    }, this.conf.transitionDuration), this.trigger("close:start"), document.querySelector('.hamburger').classList.toggle("is-active"), this.node.wrpr.classList.remove("mm-wrapper_opening"), this.trigger("close:after"));
+    }, this.conf.transitionDuration), this.trigger("close:start"), document.querySelector('.hamburger-2').classList.remove("is-active"), document.querySelector('.hamburger').classList.remove("is-active"), this.node.wrpr.classList.remove("mm-wrapper_opening"), this.trigger("close:after"));
   }, S.prototype.closeAllOthers = function () {
     var e = this;
     g(document.body, ".mm-menu_offcanvas").forEach(function (t) {
