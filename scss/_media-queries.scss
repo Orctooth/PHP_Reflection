@@ -1,7 +1,7 @@
 //header queries
 @media only screen and (max-width:768px){
     .cookie-bottom{
-        padding: 10px 0;
+        
         & > .cookie-button{
             margin: 0 auto;
         }
@@ -14,8 +14,15 @@
         & > .cookie-button{
             width: 50%;
             display: block;
-            margin: 15px 15px;
-            float: left;
+            margin: 10px auto;
+        }
+        & > #change{
+            margin-right: 10px;
+            margin-left: 15px;
+        }
+        & > #accept{
+            margin-left: 10px;
+            margin-right: 15px;
         }
     }
 }
@@ -52,7 +59,7 @@
 //hide call button and mobile search
 @media only screen and (min-width:768px){
     .support{
-        
+        visibility: hidden;
         & > i{
             display: none;
         }
@@ -696,7 +703,7 @@
         margin-left: 0;
         padding-right: 30px;
     }
-    .logo-con, .home-link, .logo{
+    .logo-con, .home-link, #logo{
         min-width: 50%;
         max-width: 100%;
         

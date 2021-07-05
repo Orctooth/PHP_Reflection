@@ -19,7 +19,6 @@ function scrollup(){
   
 }
 function scrolldown(){
-  document.getElementById('headerSTICK').style.visibility ="visible";
   document.getElementById('headerSTICK').style.transform ="translate3d(0, 100%, 0)";
 }
 //Transitions between static and sticky header based on scroll height
@@ -28,9 +27,9 @@ document.querySelector('#my-page').addEventListener('scroll', function(e){
   $scrollTop= $('#my-page').scrollTop();
   //console.log($scrollTop);
   if($scrollTop > 400){
-    document.getElementById('headerSTICK').style.visibility="visible";
+    document.getElementById('headerSTICK').style.display="block";
   } else{
-    document.getElementById('headerSTICK').style.visibility ="hidden";
+    document.getElementById('headerSTICK').style.display ="none";
   }
 });
 

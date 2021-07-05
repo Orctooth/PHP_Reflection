@@ -214,6 +214,7 @@
     top: -3px;
     left: 1px;
     
+    
 
     width: 23px;
     height: 23px;
@@ -231,7 +232,10 @@
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    .slick-dots li.slick-active button::after{
-        top: 17px;
+    .slick-dots li.slick-active button::after
+    {
+        top: -4px;
+        left: 1px;
     }
+    
 }
