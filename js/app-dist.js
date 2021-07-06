@@ -69,30 +69,41 @@ function scrollup(){
 function scrolldown(){
   document.getElementById('headerSTICK').style.transform ="translate3d(0, 100%, 0)";
 }
+function removeHead(){
+  document.getElementById('headerSTICK').style.display ="none";
+}
 //Transitions between static and sticky header based on scroll height
 var $scrollTop; 
 var lastScrollTop = 0;
-document.querySelector('#my-page').addEventListener('scroll', function(e){
+document.querySelector('#my-page').addEventListener('scroll', function(){
   $scrollTop= $('#my-page').scrollTop();
   //console.log($scrollTop);
-  if(($scrollTop > 400) && ($scrollTop < lastScrollTop)){
+  
+  if($scrollTop < 400){
+    removeHead();
+  } else if(($scrollTop > 400) && ($scrollTop < lastScrollTop)){
     document.getElementById('headerSTICK').style.display="block";
-  } else{
-    document.getElementById('headerSTICK').style.display ="none";
   }
-});
-
-
-document.querySelector('#my-page').addEventListener("scroll", function(){
-  var st = document.querySelector('#my-page').scrollTop;
-  if (st < lastScrollTop){
-     // upscroll code
-     window.setTimeout(scrolldown,600);
+  
+  if($scrollTop < lastScrollTop) {
+    window.setTimeout(scrolldown,600);
   }else{
     window.setTimeout(scrollup,600);
   }
-  lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+  lastScrollTop = $scrollTop <= 0 ? 0 : $scrollTop; // For Mobile or negative scrolling
 }, false);
+
+
+// document.querySelector('#my-page').addEventListener("scroll", function(){
+//   var st = document.querySelector('#my-page').scrollTop;
+//   if (st < lastScrollTop){
+//      // upscroll code
+//      window.setTimeout(scrolldown,600);
+//   }else{
+//     window.setTimeout(scrollup,600);
+//   }
+//   lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+// }, false);
 
 //Locks page scrolling when header is moused over
 var header = document.querySelector("#headerSTICK");
