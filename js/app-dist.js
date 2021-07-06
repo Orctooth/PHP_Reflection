@@ -2,6 +2,54 @@
 var __webpack_exports__ = {};
 var $html = document.getElementById('my-page');
 
+document.getElementById('web-tab-s').addEventListener('mouseover', function(e){
+  document.getElementById('dd-universal-background-s').style.background = "#79539a";
+});
+
+document.querySelector('#IT-tab-s').addEventListener('mouseover', function(e){
+  document.querySelector('#dd-universal-background-s').style.background = "#286abd";
+});
+
+document.querySelector('#telecoms-tab-s').addEventListener('mouseover', function(e){
+  document.querySelector('#dd-universal-background-s').style.background = "#bc2c28";
+});
+
+document.querySelector('#bespoke-tab-s').addEventListener('mouseover', function(e){
+  document.querySelector('#dd-universal-background-s').style.background = "#526781";
+});
+
+document.querySelector('#marketing-tab-s').addEventListener('mouseover', function(e){
+  document.querySelector('#dd-universal-background-s').style.background = "#25a25a";
+});
+
+document.querySelector('#security-tab-s').addEventListener('mouseover', function(e){
+  document.querySelector('#dd-universal-background-s').style.background = "#de093f";
+});
+
+document.getElementById('web-tab-ns').addEventListener('mouseover', function(e){
+  document.getElementById('dd-universal-background-ns').style.background = "#79539a";
+});
+
+document.querySelector('#IT-tab-ns').addEventListener('mouseover', function(e){
+  document.querySelector('#dd-universal-background-ns').style.background = "#286abd";
+});
+
+document.querySelector('#telecoms-tab-ns').addEventListener('mouseover', function(e){
+  document.querySelector('#dd-universal-background-ns').style.background = "#bc2c28";
+});
+
+document.querySelector('#bespoke-tab-ns').addEventListener('mouseover', function(e){
+  document.querySelector('#dd-universal-background-ns').style.background = "#526781";
+});
+
+document.querySelector('#marketing-tab-ns').addEventListener('mouseover', function(e){
+  document.querySelector('#dd-universal-background-ns').style.background = "#25a25a";
+});
+
+document.querySelector('#security-tab-ns').addEventListener('mouseover', function(e){
+  document.querySelector('#dd-universal-background-ns').style.background = "#de093f";
+});
+
 var scrollBarWidth = $html.offsetWidth - $html.clientWidth;
 if (Modernizr.hiddenscroll === true) {
   $('#headerSTICK').css("width", "100%");
@@ -23,26 +71,25 @@ function scrolldown(){
 }
 //Transitions between static and sticky header based on scroll height
 var $scrollTop; 
+var lastScrollTop = 0;
 document.querySelector('#my-page').addEventListener('scroll', function(e){
   $scrollTop= $('#my-page').scrollTop();
   //console.log($scrollTop);
-  if($scrollTop > 400){
+  if(($scrollTop > 400) && ($scrollTop < lastScrollTop)){
     document.getElementById('headerSTICK').style.display="block";
   } else{
     document.getElementById('headerSTICK').style.display ="none";
   }
 });
 
-var lastScrollTop = 0;
+
 document.querySelector('#my-page').addEventListener("scroll", function(){
   var st = document.querySelector('#my-page').scrollTop;
-  if (st > lastScrollTop){
-     // downscroll code
-     window.setTimeout(scrollup,600);
-     
-  } else {
+  if (st < lastScrollTop){
      // upscroll code
      window.setTimeout(scrolldown,600);
+  }else{
+    window.setTimeout(scrollup,600);
   }
   lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
 }, false);
@@ -50,10 +97,19 @@ document.querySelector('#my-page').addEventListener("scroll", function(){
 //Locks page scrolling when header is moused over
 var header = document.querySelector("#headerSTICK");
 header.addEventListener('mouseover', function(e){
-  $('#my-page').css('overflow', 'hidden');
+  // $('#my-page').css('overflow-y', 'hidden');
 });
 header.addEventListener('mouseleave', function(e){
   $('#my-page').css('overflow-y', 'auto');
+
+});
+document.querySelector('#navbar-ns').addEventListener('mouseleave', function(e){
+  document.querySelector("#dd-universal-background-ns").style.background = "rgba(0,0,0,0)";
+
+});
+document.querySelector('#navbar-s').addEventListener('mouseleave', function(e){
+  document.querySelector("#dd-universal-background-s").style.background = "rgba(0,0,0,0)";
+
 });
 
 
@@ -103,7 +159,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
   });
 }); //cookie function that fires on loading the page
-const hiding = document.querySelectorAll('.mm-panel');
+const hiding = document.querySelector('.mm-panel');
 for(var i = 0; i < hiding.length; i++){
   hiding[i].classList.remove('mm-hidden');
 }
@@ -125,6 +181,7 @@ document.getElementById('accept').addEventListener('click', function (e) {
 
   $('body').css('overflow', 'auto');
 });
+
 
 
 

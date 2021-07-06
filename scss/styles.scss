@@ -261,6 +261,8 @@ $hamburger-types: (
     
 }
 
+
+
 .header{
     padding: 0px 0px;
     padding-top: 15px;
@@ -456,6 +458,18 @@ $hamburger-types: (
         background-color: $navy-ish;
         position: relative;
         padding: 0 0;
+
+        & > #dd-universal-background-s, #dd-universal-background-ns{
+            width: 100%;
+            position: absolute;
+            top: 100%;
+            left: 0%;
+            z-index: 20;
+            padding: 22px 0px;
+            background-color: rgba(0,0,0,0);
+            display:block;
+        }
+        
         
         
         & > .tab-wrapper{
@@ -466,6 +480,7 @@ $hamburger-types: (
             border-right: 1px solid rgba(0,0,0,.25);
             background-color: $navy-ish;
             max-width: 100%;
+            
             
             & > .bar-child{
                 width: 16.7%;
@@ -518,11 +533,11 @@ $hamburger-types: (
                     position:absolute;
                     z-index:20;
                     top: 100%;
-                    width: 200vw;
-                    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-                        width: 200vw;
-                        left: -100%;
-                    }
+                    // //width: 200vw;
+                    // @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+                    //     //width: 200vw;
+                    //     left: -100%;
+                    // }
                 }
 
                 & > .drop-down{
@@ -532,7 +547,7 @@ $hamburger-types: (
                     z-index:21;
                     top: 100%;
                     left: 0%;
-                    width: 100vw;
+                    width: 100%;
                     padding: 8px 0px;
                     
                     //margin: 0 auto;

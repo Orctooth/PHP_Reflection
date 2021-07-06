@@ -421,6 +421,16 @@ body {
   position: relative;
   padding: 0 0;
 }
+.header > .navbar > #dd-universal-background-s, .header > .navbar #dd-universal-background-ns {
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  z-index: 20;
+  padding: 22px 0px;
+  background-color: rgba(0, 0, 0, 0);
+  display: block;
+}
 .header > .navbar > .tab-wrapper {
   display: flex;
   position: relative;
@@ -467,13 +477,6 @@ body {
   position: absolute;
   z-index: 20;
   top: 100%;
-  width: 200vw;
-}
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  .header > .navbar > .tab-wrapper > .bar-child > .dd-background {
-    width: 200vw;
-    left: -100%;
-  }
 }
 .header > .navbar > .tab-wrapper > .bar-child > .drop-down {
   display: none;
@@ -482,7 +485,7 @@ body {
   z-index: 21;
   top: 100%;
   left: 0%;
-  width: 100vw;
+  width: 100%;
   padding: 8px 0px;
 }
 .header > .navbar > .tab-wrapper > .bar-child > .drop-down > ul {
@@ -2055,6 +2058,16 @@ body {
 }
 @-ms-viewport {
   width: device-width;
+}
+@media only screen and (min-width: 768px) {
+  #headerSTICK {
+    top: -160px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #headerSTICK {
+    top: -230px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

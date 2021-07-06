@@ -795,3 +795,16 @@
     width: device-width
 }
 
+@media only screen and (min-width: 768px){
+    #headerSTICK{
+        top: -160px;
+    }
+}
+
+@media only screen and (min-width: 992px){
+    #headerSTICK{
+        top: -230px;
+    }
+}
+
+
