@@ -59,7 +59,7 @@
 //hide call button and mobile search
 @media only screen and (min-width:768px){
     .support{
-        visibility: hidden;
+        display: none !important;
         & > i{
             display: none;
         }
@@ -175,7 +175,7 @@
             & > input{
                 display:block;
                 border: 1px solid $gray-ish;
-                
+                width:240px;
             }
             & > button{
                 border-top-left-radius: 0px;
@@ -244,7 +244,7 @@
 @media only screen and (min-width:768px)
 {
     .banner-text{
-        padding-left: 15px;
+        //padding-left: 15px;
         & > h1, p{
             text-align: left;
         }
@@ -268,6 +268,8 @@
 
 
 
+
+
 //culture query
 @media only screen and (min-width:992px){
     .culture{
@@ -278,7 +280,6 @@
         background-position: right;
     }
     .culture-back{
-        width: 992px;
         margin: 0 auto;
         background-color: rgba(0,0,0,0);
         
@@ -354,7 +355,7 @@
 @media only screen and (min-width: 1260px){
     .nav-cards{
         width: 1260px;
-        margin: 0 auto;
+        margin: 30px auto;
     }
     
     .xxl-row-nav{
@@ -701,21 +702,13 @@
     header{
         width: 100%;
         margin-left: 0;
-        padding-right: 30px;
+        //padding-right: 30px;
     }
-    .logo-con, .home-link, #logo{
-        min-width: 50%;
-        max-width: 100%;
-        
-        
-    }
+    
     #logo{
         vertical-align: middle;
     }
-    .logo-con{
-        vertical-align: middle;
-        align-items: center;
-    }
+    
     
     
     .buttons{
@@ -737,8 +730,13 @@
     .news-cards, .companies, .sign-up-form, .footer-content {
         max-width: 768px;
         margin: 0 auto;
+    
+       
     }
-
+    .buttons{
+        margin-left: 0 !important;
+    }
+    
     
 }
 //small laptops
@@ -764,7 +762,7 @@
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
         .slides{
             width: 100vw;
-            margin-left: 100px;
+            //margin-left: 100px;
         }
     }
     
@@ -804,6 +802,12 @@
 @media only screen and (min-width: 992px){
     #headerSTICK{
         top: -230px;
+    }
+}
+
+@media only screen and (min-width:1260px){
+    .banner-text{
+        padding-top: 20vh !important;
     }
 }
 
