@@ -299,6 +299,10 @@
         display:block;
         margin: 0 auto;
     }
+    .card-IT, .card-bespoke, .card-marketing{
+        margin-top: 30px !important;
+        margin-bottom: 15px !important;
+    }
 }
 
 @media only screen and (min-width: 768px){
@@ -320,6 +324,16 @@
         width: 50%;
         display:block;
         margin: 0 auto;
+    }
+
+    
+
+    .card-telecoms, .card-security{
+        margin-right: 15px !important;
+    }
+    
+    .card-web, .card-schools{
+        margin-left: 15px !important;
     }
 }
 
@@ -348,6 +362,17 @@
         justify-content: space-around;
         margin: 0 auto;
     }
+
+    .card-bespoke, .card-telecoms, .card-security{
+        margin-right: 15px !important;
+    }
+    .card-IT{
+        margin-right: 15px !important;
+        margin-left: 15px !important;
+    }
+    .card-marketing, .card-web, .card-schools{
+        margin-left: 15px !important;
+    }
     
     
 
@@ -363,6 +388,7 @@
         display:flex;
         flex-direction: row;
         //justify-content: stretch;
+        
         margin: 45px auto;
     }
 
@@ -379,16 +405,31 @@
     }
 
     .card-security,.card-schools,.card-web,.card-telecoms{
-        width: 45%;
+        
         height: 100%;
         display:block;
         float:left;
         margin: 0 auto;
-        
+        margin-left: 15px !important;
+        margin-right: 15px !important;
         
     }
+    .card-telecoms{
+        margin-left: 0px !important;
+        height: 100%;
+        display:block;
+        float:left;
+        margin: 0 auto;
+    }
+    .card-schools{
+        margin-right: 0px !important;
+        height: 100%;
+        display:block;
+        float:left;
+        margin: 0 auto;
+    }
     .security,.schools,.web-design,.telecoms{
-        width: 45%;
+        
         height: 100%;
         display:block;
         float:left;
@@ -404,6 +445,17 @@
         float:left;
         margin: 0 auto;
     }
+    .card-bespoke{
+        margin-right: 15px !important;
+    }
+    .card-IT{
+        margin-right: 15px !important;
+        margin-left: 15px !important;
+    }
+    .card-marketing{
+        margin-left: 15px !important;
+    }
+    
 
     
 
@@ -420,18 +472,11 @@
 }
 
 //news queries
-// @media only screen and (max-width: 768px){
-//     .news-image{
-//         max-height: 200px;
-//         & > .img-overlay{
-//             height: auto;
-//             & > img{
-//                 //min-height: 100px;
-//                 height: 200px;
-//             }
-//         }
-//     }
-// }
+@media only screen and (max-width: 768px){
+    .card-news{
+        margin: 20px 20px !important;
+    }
+}
 
 
 @media only screen and (min-width: 768px){
@@ -455,7 +500,9 @@
         
     }
 
-    
+    .second-news{
+        margin-right: 0px !important;
+    }
 
 }
 
@@ -499,6 +546,10 @@
             background-color: #fff;
         }
                 
+    }
+
+    .second-news{
+        margin-right: 20px !important;
     }
 }
 
@@ -600,7 +651,7 @@
                 
                 & > div {
                     
-                    margin: 0 auto;
+                    flex-grow: 1;
                     width: 40%;
                 }
             }
@@ -761,6 +812,16 @@
     // .card-nav{
     //     margin-left: 0px !important;
     //     margin-right: 0px !important;
+    // }
+    // .nav-cards{
+    //     padding-left: 0;
+    //     padding-right: 0;
+    //     & > div{
+    //         padding-left: 0;
+    //         padding-right: 0;
+    //         margin-right: 0px;
+    //         margin-left: -15px;
+    //     }
     // }
     
     
