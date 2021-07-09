@@ -198,10 +198,11 @@
 @media only screen and (min-width:992px){
     .navbar{
         min-width: 992px;
-       
+        
         & > .tab-wrapper{
             width: 992px;
             margin: 0 auto;
+            
             & > .bar-child{
                 & > .drop-down{
                     & > ul{
@@ -241,7 +242,7 @@
 }
 
 //banner query
-@media only screen and (min-width:768px)
+@media only screen and (min-width:992px)
 {
     .banner-text{
         //padding-left: 15px;
@@ -303,8 +304,8 @@
 @media only screen and (min-width: 768px){
     .lg-row-nav{
         display: flex;
-        width: 768px;
-        justify-content: space-around;
+        //width: 768px;
+        //justify-content: space-around;
         margin: 0 auto;
     }
 
@@ -325,9 +326,9 @@
 @media only screen and (min-width: 992px){
     .xl-row-nav{
         display:flex;
-        width: 992px;
+        max-width: 992px;
         //justify-content: space-between;
-        margin: 0px auto;
+        //margin: 0px auto;
         & > .card-nav{
             min-width: 30%;
         }
@@ -468,11 +469,11 @@
         }
         & > .card{
            & > .news-image{
-               height: 220px;
+               height: 200px;
                & > .img-overlay{
-                height: 220px;
+                height: 200px;
                 & > img{
-                    min-height: 230px;
+                    min-height: 180px;
                 }
             }
            }
@@ -506,7 +507,17 @@
         width: 1260px;
         margin: 0 auto;
         
-        
+        & > .card{
+            & > .news-image{
+                height: 220px;
+                & > .img-overlay{
+                 height: 220px;
+                 & > img{
+                     min-height: 230px;
+                 }
+             }
+            }
+         }
         
         
     }
@@ -747,6 +758,11 @@
         max-width: 992px;
         margin: 0 auto;
     }
+    // .card-nav{
+    //     margin-left: 0px !important;
+    //     margin-right: 0px !important;
+    // }
+    
     
     
 }
@@ -803,6 +819,8 @@
     #headerSTICK{
         top: -230px;
     }
+    
+    
 }
 
 @media only screen and (min-width:1260px){
