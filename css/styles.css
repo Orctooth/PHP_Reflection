@@ -2170,5 +2170,11 @@ body {
     padding-top: 20vh !important;
   }
 }
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+  .culture-back, .nav-cards, .news-cards, .header-top, .footer {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */
