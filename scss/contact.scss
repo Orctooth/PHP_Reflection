@@ -1,0 +1,112 @@
+input, textarea{
+    border: 1px solid #e5e5e5;
+    border-radius: 2px;
+    padding: 5px 15px;
+    height: 47px;
+}
+textarea{
+    min-height: 100px;
+}
+
+#contact-home{
+    margin: 30px 30px;
+}
+
+#contact-form-section{
+    padding: 60px 30px;
+    & > #contact-form{
+        border-radius: 10px;
+        background-color: #e6e7e9;
+        padding: 30px 30px;
+        & > .form-row {
+            display: flex;
+            flex-grow: 1;
+            flex-wrap: no-wrap;
+            margin-top: 30px;
+            & > .form-item{
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+                &:first-of-type{
+                    margin-right: 15px;
+                }
+                &:last-of-type{
+                    margin-left: 15px;
+                }
+                & > label{
+                    display: block;
+                    
+                    & > span{
+                        color:#d24d57;
+                    }
+                }
+                & > input{
+                    display: block;
+                    width: 100%;
+                    
+                }
+            }
+            
+        }
+        & > .form-last-row{
+            display: flex;
+            flex-grow: 1;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            & > label{
+                width: 100%;
+                display: block;
+                & > span{
+                    color:#d24d57;
+                }
+            }
+            & > textarea{
+                width: 100%;
+                display: block;
+            }
+        }
+        & > .readmore-btn{
+            color: #fff;
+            background-color: #926fb1;
+            border-radius: 3px;
+            border: none;
+            margin-top: 30px;
+            
+            padding: 10px 15px;
+            
+        
+            &:hover{
+                background-color: #7e57a0;
+                cursor: pointer;
+            }
+        }
+    }
+    
+
+}
+
+
+
+#message{
+    resize: none;
+    overflow: auto;
+}
+
+@media only screen and (max-width: 768px){
+    .form-row{
+        display: block;
+        
+        & > .form-item{
+            width: 100%;
+            & > input{
+                width: 100%;
+            }
+            &:first-of-type{
+                margin-right: 0px;
+            }
+            &:last-of-type{
+                margin-left: 0px;
+            }
+        }
+    }
+}

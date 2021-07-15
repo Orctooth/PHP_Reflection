@@ -2081,7 +2081,7 @@ body {
   }
 }
 @media only screen and (max-width: 768px) {
-  .header-top, .searchbar-mobile, .banner-text,
+  .header-top, #contact-form, .searchbar-mobile, .banner-text,
 .nav-cards, .culture-back, .news-header-section,
 .news-cards, .companies, .sign-up-form, .footer-content {
     padding-left: 15px;
@@ -2109,7 +2109,7 @@ body {
 @media only screen and (min-width: 768px) {
   .header-top, .banner-text,
 .nav-cards, .culture-back, .news-header-section,
-.news-cards, .companies, .sign-up-form, .footer-content {
+.news-cards, .companies, .sign-up-form, .footer-content, #contact-form {
     max-width: 768px;
     margin: 0 auto;
   }
@@ -2121,7 +2121,7 @@ body {
 @media only screen and (min-width: 992px) {
   .header-top, .banner-text, .tab-wrapper,
 .lg-row-nav, .nav-cards, .culture-back, .news-header-section,
-.news-cards, .companies, .sign-up-form, .footer-content, .awards-1, .awards-2 {
+.news-cards, .companies, .sign-up-form, .footer-content, .awards-1, .awards-2, #contact-form {
     max-width: 992px;
     margin: 0 auto;
   }
@@ -2130,7 +2130,7 @@ body {
   .header-top, .banner-text, .tab-wrapper,
 .xl-row-nav, .xxl-row-nav, .nav-cards,
 .culture-back, .news-header-section, .companies,
-.news-cards, .footer-content, .sign-up-form, .awards-1, .awards-2 {
+.news-cards, .footer-content, .sign-up-form, .awards-1, .awards-2, #contact-form {
     max-width: 1260px;
     margin: 0 auto;
   }

@@ -1,0 +1,104 @@
+input, textarea {
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+  padding: 5px 15px;
+  height: 47px;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+#contact-home {
+  margin: 30px 30px;
+}
+
+#contact-form-section {
+  padding: 60px 30px;
+}
+#contact-form-section > #contact-form {
+  border-radius: 10px;
+  background-color: #e6e7e9;
+  padding: 30px 30px;
+}
+#contact-form-section > #contact-form > .form-row {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: no-wrap;
+  margin-top: 30px;
+}
+#contact-form-section > #contact-form > .form-row > .form-item {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+#contact-form-section > #contact-form > .form-row > .form-item:first-of-type {
+  margin-right: 15px;
+}
+#contact-form-section > #contact-form > .form-row > .form-item:last-of-type {
+  margin-left: 15px;
+}
+#contact-form-section > #contact-form > .form-row > .form-item > label {
+  display: block;
+}
+#contact-form-section > #contact-form > .form-row > .form-item > label > span {
+  color: #d24d57;
+}
+#contact-form-section > #contact-form > .form-row > .form-item > input {
+  display: block;
+  width: 100%;
+}
+#contact-form-section > #contact-form > .form-last-row {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+#contact-form-section > #contact-form > .form-last-row > label {
+  width: 100%;
+  display: block;
+}
+#contact-form-section > #contact-form > .form-last-row > label > span {
+  color: #d24d57;
+}
+#contact-form-section > #contact-form > .form-last-row > textarea {
+  width: 100%;
+  display: block;
+}
+#contact-form-section > #contact-form > .readmore-btn {
+  color: #fff;
+  background-color: #926fb1;
+  border-radius: 3px;
+  border: none;
+  margin-top: 30px;
+  padding: 10px 15px;
+}
+#contact-form-section > #contact-form > .readmore-btn:hover {
+  background-color: #7e57a0;
+  cursor: pointer;
+}
+
+#message {
+  resize: none;
+  overflow: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .form-row {
+    display: block;
+  }
+  .form-row > .form-item {
+    width: 100%;
+  }
+  .form-row > .form-item > input {
+    width: 100%;
+  }
+  .form-row > .form-item:first-of-type {
+    margin-right: 0px;
+  }
+  .form-row > .form-item:last-of-type {
+    margin-left: 0px;
+  }
+}
+
+/*# sourceMappingURL=contact.css.map */
