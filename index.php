@@ -19,6 +19,7 @@
     </head>
 
     <body>
+        <?php include 'inc/getnews.php'; ?>
         <div id="cookie">
             <div id="cookie-wrapper">
                 <div id="cookie-overlay">
@@ -192,17 +193,8 @@
             <?php include 'inc/header.php'; ?>
 
     
-            <?php include 'inc/connection.php';
-                $conn = OpenCon();
-                try{
-                    $results = $conn->query("SELECT tag FROM news WHERE id = 1");
-                    $tag1 = $results->fetch();
-                    echo $tag1;
-                }catch(Exception $e){
-                    throw $e;
-                }
-                
-            ?>
+            
+
     
     
             <!-- banner that will eventually contain slides. for now it hosts a static image under text -->
@@ -431,28 +423,28 @@
             These are all uniform -->
             <div class="news-section">
                 <div class="news-cards">
-                
+                    <?php $card = separateIntoVars();?>
                     <div class="card card-news">
-                        <a class="minilink" href=""><?php writeTag() ?></a>
+                        <a class="minilink" href=""><?php echo $card[0]["tag"]; ?></a>
                         <div class="news-image">
                             <div class="img-overlay">
                                 <div class="cover"></div>
-                                <img src="img/matt-IE.jpg" alt="Matt">
+                                <img src="<?php echo $card[0]["img"]; ?>" alt="Matt">
                             </div>
                         </div>
                         <div class="news-container">
-                          <h4 class="heading-link">Matt Achieves the Long Service Award</h4>
-                          <p>Netmatters would like to take this time to congratulate our Senior Technical Support, Matt...</p>
+                          <h4 class="heading-link"><?php echo $card[0]["title"]; ?></h4>
+                          <p><?php echo $card[0]["desc"]; ?></p>
                           <button class="readmore-btn">READ MORE</button>
                           <div class="foot-wrapper">
                             <div class="card-foot">
                                 
                                 <div class="avatar">
-                                    <img class="minilogo" src="img/netmatters-ltd-IE.jpg" alt="netmatters logo">
+                                    <img class="minilogo" src="<?php echo $card[0]["avatar"]; ?>" alt="netmatters logo">
                                 </div>
                                 <div class="post-info">
-                                    <h4><strong>Posted by Netmatters Ltd</strong></h4>
-                                    <p>9th March 2021</p>
+                                    <h4><strong>Posted by <?php echo $card[0]["author"]; ?></strong></h4>
+                                    <p><?php echo $card[0]["date"]; ?></p>
                                 </div>
                             </div>
                           </div>
@@ -460,26 +452,26 @@
                     </div>
                     
                     <div class="card card-news second-news">
-                        <a class="minilink" href="">NEWS</a>
+                        <a class="minilink" href=""><?php echo $card[1]["tag"]; ?></a>
                         <div class="news-image">
                             <div class="img-overlay">
                                 <div class="cover"></div>
-                                <img src="img/carbon-jpeg.jpg" alt="carbon-neutral">
+                                <img src="<?php echo $card[1]["img"]; ?>" alt="carbon-neutral">
                             </div>
                         </div>
                         <div class="news-container">
-                          <h4 class="heading-link">Netmatters is carbon neutral!</h4>
-                          <p>As a business, Netmatters pledged that 2021 would be the year that we became carbon neutral....</p>
+                          <h4 class="heading-link"><?php echo $card[1]["title"]; ?></h4>
+                          <p><?php echo $card[1]["desc"]; ?></p>
                           <button class="readmore-btn">READ MORE</button>
                           <div class="foot-wrapper">
                             <div class="card-foot">
                                 
                                 <div class="avatar">
-                                    <img class="minilogo" src="img/netmatters-ltd-IE.jpg" alt="netmatters logo">
+                                    <img class="minilogo" src="<?php echo $card[1]["avatar"]; ?>" alt="netmatters logo">
                                 </div>
                                 <div class="post-info">
-                                    <h4><strong>Posted by Netmatters Ltd</strong></h4>
-                                    <p>2nd March 2021</p>
+                                    <h4><strong>Posted by <?php echo $card[1]["author"]; ?></strong></h4>
+                                    <p><?php echo $card[1]["date"]; ?></p>
                                 </div>
                             </div>
                           </div>
@@ -487,27 +479,27 @@
                     </div>
         
                     <div class="card card-news">
-                        <a class="minilink" href="">NEWS</a>
+                        <a class="minilink" href=""><?php echo $card[2]["tag"]; ?></a>
                         <div class="news-image">
                             <div class="img-overlay">
                                 <div class="cover"></div>
-                                <img src="img/faizel-IE.jpg" alt="Faizel">
+                                <img src="<?php echo $card[2]["img"]; ?>" alt="Faizel">
                             </div>
                         </div>
                         <div class="news-container">
-                          <h4 class="heading-link">Faizel Achieves the Long Service Award</h4>
-                          <p>Netmatters would like to take this time to congratulate our Commercial Head of Web, Faizel De...</p>
+                          <h4 class="heading-link"><?php echo $card[2]["title"]; ?></h4>
+                          <p><?php echo $card[2]["desc"]; ?></p>
                           <button class="readmore-btn">READ MORE
                               
                           </button>
                           <div class="foot-wrapper">
                             <div class="card-foot">
                                 <div class="avatar">
-                                    <img class="minilogo" src="img/netmatters-ltd-IE.jpg" alt="netmatters logo">
+                                    <img class="minilogo" src="<?php echo $card[2]["avatar"]; ?>" alt="netmatters logo">
                                 </div>
                                 <div class="post-info">
-                                    <h4><strong>Posted by Netmatters Ltd</strong></h4>
-                                    <p>26th February 2021</p>
+                                    <h4><strong>Posted by <?php echo $card[2]["author"]; ?></strong></h4>
+                                    <p><?php echo $card[2]["date"]; ?></p>
                                 </div>
                             </div>
                           </div>

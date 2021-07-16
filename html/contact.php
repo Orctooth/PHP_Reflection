@@ -161,7 +161,7 @@
             <div id ="contact-form-section">
                 <h6 id="contact-home"><a href="../index.php">Home</a> / Contact Us</h6>
                 
-                <form id="contact-form">
+                <form id="contact-form" method="post" action="/HTML-and-CSS-Reflection/inc/postsubmission.php">
                     <div class="form-row">
                         <div class="form-item">
                             <label for="name">Your Name <span>*</span></label>

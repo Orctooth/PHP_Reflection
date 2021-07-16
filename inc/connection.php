@@ -1,5 +1,7 @@
 <?php
-
+require __DIR__ . '/../vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 $conn;
 
 //remove before finishing
@@ -8,20 +10,14 @@ ini_set('display_errors', 'On');
 function OpenCon()
 {
     
- $dbhost = "localhost";
+ $dbhost = getenv('HTTP_HOST');
  $database = "php_reflection";
- $port = "127.0.0.1";
+ $port = 3306;
  $dbuser = "Orctooth";
- $password = null;
+ $password = "HniN!szAV9aYfWn";
 //  $db = "newscards_php_reflection";
- $conn = new PDO('sqlite:'.$database . ":host=" .$dbhost . ';port=' .$port, $dbuser, $password);
+ $conn = new PDO('mysql:'. "host=" .$dbhost. ";dbname=" . $database . ';port=' .$port, $dbuser, $password);
  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
  return $conn;
 
 }
-
-function writeTag(){
-    
-}
-
-
