@@ -100,5 +100,9 @@ textarea {
     margin-left: 0px;
   }
 }
+.alert {
+  background-color: #d24d57;
+  color: #fff;
+}
 
 /*# sourceMappingURL=contact.css.map */

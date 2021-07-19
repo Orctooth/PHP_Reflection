@@ -2176,5 +2176,9 @@ body {
     padding-right: 30px !important;
   }
 }
+.alert {
+  background: #d24d57;
+  color: #fff;
+}
 
 /*# sourceMappingURL=styles.css.map */

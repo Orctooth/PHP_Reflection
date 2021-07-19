@@ -19,7 +19,7 @@
     </head>
 
     <body>
-
+        <?php include '../inc/connection.php'; ?>
         <div id ="my-page">
         <nav id ="my-menu">
                 <ul>
@@ -160,37 +160,37 @@
 
             <div id ="contact-form-section">
                 <h6 id="contact-home"><a href="../index.php">Home</a> / Contact Us</h6>
-                
+                <?php echo display_errors(); ?>
                 <form id="contact-form" method="post" action="/HTML-and-CSS-Reflection/inc/postsubmission.php">
                     <div class="form-row">
                         <div class="form-item">
                             <label for="name">Your Name <span>*</span></label>
-                            <input type ="text" id="name">
+                            <input type ="text" id="name" name="name" required>
                         </div>
                             
                         <div class="form-item">
                             <label for="email">Your Email <span>*</span></label>
-                            <input type ="email" id="email">
+                            <input type ="email" id="email" name="email" required>
                         </div>
                         
                     </div>
                     <div class="form-row">
                         <div class="form-item">
                             <label for="phone">Your Telephone Number <span>*</span></label>
-                            <input type ="tel" id="phone">
+                            <input type ="tel" id="phone" name="phone" required>
                         </div>
                         <div class="form-item">
                             <label for="subject">Subject <span>*</span></label>
-                            <input type ="text" id="subject">
+                            <input type ="text" id="subject" name="subject" required>
                         </div>
                         
                     </div>
                     <div class="form-last-row">
                         <label for="message">Message <span>*</span></label>
-                        <textarea id="message"></textarea>
+                        <textarea id="message" name="message" required></textarea>
                     </div>
 
-                    <button class="readmore-btn">SEND ENQUIRY</button>
+                    <button class="readmore-btn" type="submit" value = "Submit">SEND ENQUIRY</button>
                     
                 </form>
                
