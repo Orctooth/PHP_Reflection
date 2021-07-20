@@ -336,12 +336,14 @@ body {
 }
 .header > .header-top > .buttons > .support-xl:hover {
   background-color: #2a6ec6;
+  cursor: pointer;
 }
 .header > .header-top > .buttons > .contact-xl {
   background-color: #999aa2;
 }
 .header > .header-top > .buttons > .contact-xl:hover {
   background-color: #84858f;
+  cursor: pointer;
 }
 .header > .header-top > .buttons > #hamburger {
   width: 60px;
@@ -2175,10 +2177,6 @@ body {
     padding-left: 30px !important;
     padding-right: 30px !important;
   }
-}
-.alert {
-  background: #d24d57;
-  color: #fff;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -345,6 +345,7 @@ $hamburger-types: (
                 background-color: $IT-tab-bg;
                 &:hover{
                     background-color: #2a6ec6;
+                    cursor: pointer;
                 }
             }
             
@@ -352,6 +353,7 @@ $hamburger-types: (
                 background-color: $gray-ish;
                 &:hover{
                     background-color: #84858f;
+                    cursor: pointer;
                 }
             }
     
@@ -1894,7 +1896,3 @@ $hamburger-types: (
 
 @import "media-queries";
 
-.alert{
-    background: #d24d57;
-    color: #fff;
-}

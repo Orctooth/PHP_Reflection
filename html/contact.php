@@ -157,10 +157,18 @@
             <!-- where the non-sticky header will go -->
             <?php include '../inc/header.php'; ?>
 
-
+            <!-- the php enabled contact form -->
             <div id ="contact-form-section">
                 <h6 id="contact-home"><a href="../index.php">Home</a> / Contact Us</h6>
-                <?php echo display_errors(); ?>
+                
+                <?php 
+                    echo display_notice();
+                     
+                    echo display_errors();
+                    
+                ?>
+                
+                
                 <form id="contact-form" method="post" action="/HTML-and-CSS-Reflection/inc/postsubmission.php">
                     <div class="form-row">
                         <div class="form-item">
